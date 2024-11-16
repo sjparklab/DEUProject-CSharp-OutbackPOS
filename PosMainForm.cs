@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DEUProject_CSharp_OutbackPOS
 {
-    public partial class Form1 : Form
+    public partial class PosMainForm : Form
     {
-        public Form1()
+        public PosMainForm()
         {
             InitializeComponent();
         }
