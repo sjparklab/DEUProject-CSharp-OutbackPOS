@@ -11,7 +11,7 @@ namespace DEUProject_CSharp_OutbackPOS.Model
         public int Id { get; set; }
         public string UserId { get; set; }
         public string Password { get; set; }
-        public string Name { get; set; }
+        public string UserName { get; set; }
         public string Position { get; set; }
 
         public User() { } // 기본생성자
@@ -19,7 +19,7 @@ namespace DEUProject_CSharp_OutbackPOS.Model
         {
             this.UserId = UserId;
             this.Password = Password;
-            this.Name = Name;
+            this.UserName = Name;
             this.Position = Position;
         }
     }

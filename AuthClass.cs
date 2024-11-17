@@ -40,34 +40,35 @@ namespace DEUProject_CSharp_OutbackPOS
             }
         }
 
-        public bool Login(string UserId, string Password)
+        public User Login(string UserId, string Password)
         {
+            User user = null;
             if (string.IsNullOrWhiteSpace(UserId) || string.IsNullOrWhiteSpace(Password))
             {
                 MessageBox.Show("입력되지 않은 값이 있습니다!");
-                return false;
+                return null;
             }
             try
             {
-                User user = userRepository.findByUserId(UserId);
+                user = userRepository.findByUserId(UserId);
                 if (user == null)
                 {
                     MessageBox.Show("사용자를 검색하지 못했습니다!");
-                    return false;
+                    return user;
                 }
                 if(user.Password.Equals(Password))
                 {
-                    return true;
+                    return user;
                 }
                 else
                 {
-                    return false;
+                    return user;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"등록 중 오류가 발생했습니다: {ex.Message}");
-                return false;
+                return user;
             }
         }
 

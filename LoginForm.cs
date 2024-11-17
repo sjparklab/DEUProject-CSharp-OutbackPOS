@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DEUProject_CSharp_OutbackPOS.Model;
 
 namespace DEUProject_CSharp_OutbackPOS
 {
@@ -21,10 +22,13 @@ namespace DEUProject_CSharp_OutbackPOS
 
         private void btnLogin_Click(object sender, EventArgs e) // 로그인 버튼 눌렀을 때 동작
         {
-            bool isLoggedIn = authSystem.Login(txtBoxId.Text, txtBoxPW.Text);
-            if (isLoggedIn)
+            User loggedInUser = authSystem.Login(txtBoxId.Text, txtBoxPW.Text);
+            if (loggedInUser != null)
             {
-                txtLoginResult.Text = "로그인 성공!";
+                PosMainForm pos = new PosMainForm(loggedInUser);
+                this.Hide();
+                pos.FormClosed += (s, args) => this.Close();
+                pos.Show();
             }
             else
             {

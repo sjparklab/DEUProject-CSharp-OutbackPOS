@@ -26,7 +26,7 @@ namespace DEUProject_CSharp_OutbackPOS.Data
                         {
                             Id = reader.GetInt32(0),
                             UserId = reader.GetString(1),
-                            Name = reader.GetString(3),
+                            UserName = reader.GetString(3),
                             Position = reader.GetString(4),
                         });
                     }
@@ -54,7 +54,7 @@ namespace DEUProject_CSharp_OutbackPOS.Data
                                 Id = reader.GetInt32(0),
                                 UserId = reader.GetString(1),
                                 Password = reader.GetString(2),
-                                Name = reader.GetString(3),
+                                UserName = reader.GetString(3),
                                 Position = reader.GetString(4),
                             };
                         }
@@ -74,7 +74,7 @@ namespace DEUProject_CSharp_OutbackPOS.Data
                 {
                     command.Parameters.AddWithValue("@UserId", user.UserId);
                     command.Parameters.AddWithValue("@Password", user.Password);
-                    command.Parameters.AddWithValue("@Name", user.Name);
+                    command.Parameters.AddWithValue("@Name", user.UserName);
                     command.Parameters.AddWithValue("@Position", user.Position);
                     command.ExecuteNonQuery();
                 }

@@ -41,5 +41,13 @@ namespace DEUProject_CSharp_OutbackPOS
                 MessageBox.Show("회원가입 실패!");
             }
         }
+
+        private void groupBox1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnRegister.PerformClick(); // 버튼 클릭
+            }
+        }
     }
 }
