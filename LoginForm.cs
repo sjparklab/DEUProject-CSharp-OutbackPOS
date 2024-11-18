@@ -42,5 +42,11 @@ namespace DEUProject_CSharp_OutbackPOS
             RegisterForm registerForm = new RegisterForm();
             registerForm.ShowDialog();
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            Font defaultFont = FontControl.GetFont("Pretendard-Regular", null);
+            FontControl.ApplyFontToAllControls(this, defaultFont);
+        }
     }
 }

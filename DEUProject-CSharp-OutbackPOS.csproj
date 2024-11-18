@@ -53,7 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\DatabaseHelper.cs" />
+    <Compile Include="Data\TableRepository.cs" />
     <Compile Include="Data\UserRepository.cs" />
+    <Compile Include="FontControl.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +63,7 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AuthClass.cs" />
+    <Compile Include="Model\Table.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="PosMainForm.cs">
       <SubType>Form</SubType>
@@ -115,6 +118,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Resources\Pretendard-Black.otf" />
+    <EmbeddedResource Include="Resources\Pretendard-Bold.otf" />
+    <EmbeddedResource Include="Resources\Pretendard-ExtraBold.otf" />
+    <EmbeddedResource Include="Resources\Pretendard-ExtraLight.otf" />
+    <EmbeddedResource Include="Resources\Pretendard-Light.otf" />
+    <EmbeddedResource Include="Resources\Pretendard-Medium.otf" />
+    <EmbeddedResource Include="Resources\Pretendard-Regular.otf" />
+    <EmbeddedResource Include="Resources\Pretendard-SemiBold.otf" />
+    <EmbeddedResource Include="Resources\Pretendard-Thin.otf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
