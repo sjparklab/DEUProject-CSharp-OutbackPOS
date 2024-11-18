@@ -35,10 +35,10 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnTableManage = new System.Windows.Forms.Button();
-            this.btnMenuManage = new System.Windows.Forms.Button();
-            this.btnCustomerManage = new System.Windows.Forms.Button();
             this.btnAnalysisManage = new System.Windows.Forms.Button();
+            this.btnCustomerManage = new System.Windows.Forms.Button();
+            this.btnMenuManage = new System.Windows.Forms.Button();
+            this.btnTableManage = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -55,12 +55,11 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.786364F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.21364F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(2720, 1562);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1904, 1041);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -68,18 +67,18 @@
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(69)))), ((int)(((byte)(79)))));
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 399F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 279F));
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtUserInform, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(184)))), ((int)(((byte)(193)))));
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(397, 1);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(278, 1);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 121F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(2322, 121);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 81F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1625, 80);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
             // label2
@@ -88,10 +87,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(766, 38);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(539, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(391, 45);
+            this.label2.Size = new System.Drawing.Size(268, 30);
             this.label2.TabIndex = 2;
             this.label2.Text = "판매관리 - 주문관리(영업)";
             // 
@@ -101,10 +99,10 @@
             this.txtUserInform.AutoSize = true;
             this.txtUserInform.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserInform.ForeColor = System.Drawing.Color.White;
-            this.txtUserInform.Location = new System.Drawing.Point(2096, 15);
-            this.txtUserInform.Margin = new System.Windows.Forms.Padding(4, 0, 71, 0);
+            this.txtUserInform.Location = new System.Drawing.Point(1470, 10);
+            this.txtUserInform.Margin = new System.Windows.Forms.Padding(3, 0, 50, 0);
             this.txtUserInform.Name = "txtUserInform";
-            this.txtUserInform.Size = new System.Drawing.Size(155, 90);
+            this.txtUserInform.Size = new System.Drawing.Size(105, 60);
             this.txtUserInform.TabIndex = 1;
             this.txtUserInform.Text = "사용자 ID: -\r\n사용자 이름 : -\r\n직책 : -";
             // 
@@ -121,7 +119,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(395, 121);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(276, 80);
             this.tableLayoutPanel3.TabIndex = 5;
             // 
             // label1
@@ -130,16 +128,16 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(34, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(34, 0, 0, 0);
+            this.label1.Location = new System.Drawing.Point(24, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(24, 0, 0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 76);
+            this.label1.Size = new System.Drawing.Size(88, 50);
             this.label1.TabIndex = 0;
             this.label1.Text = "지점정보\r\n부산진";
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(69)))), ((int)(((byte)(79)))));
+            this.tableLayoutPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Controls.Add(this.btnAnalysisManage, 0, 3);
@@ -147,7 +145,7 @@
             this.tableLayoutPanel4.Controls.Add(this.btnMenuManage, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.btnTableManage, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(1, 123);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(1, 82);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 4;
@@ -155,51 +153,8 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(395, 1438);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(276, 958);
             this.tableLayoutPanel4.TabIndex = 6;
-            // 
-            // btnTableManage
-            // 
-            this.btnTableManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(119)))), ((int)(((byte)(136)))));
-            this.btnTableManage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnTableManage.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTableManage.ForeColor = System.Drawing.Color.White;
-            this.btnTableManage.Location = new System.Drawing.Point(0, 0);
-            this.btnTableManage.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTableManage.Name = "btnTableManage";
-            this.btnTableManage.Size = new System.Drawing.Size(395, 359);
-            this.btnTableManage.TabIndex = 4;
-            this.btnTableManage.Text = "테이블 관리";
-            this.btnTableManage.UseVisualStyleBackColor = false;
-            this.btnTableManage.Click += new System.EventHandler(this.btnTableManage_Click);
-            // 
-            // btnMenuManage
-            // 
-            this.btnMenuManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(119)))), ((int)(((byte)(136)))));
-            this.btnMenuManage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMenuManage.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuManage.ForeColor = System.Drawing.Color.White;
-            this.btnMenuManage.Location = new System.Drawing.Point(0, 359);
-            this.btnMenuManage.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMenuManage.Name = "btnMenuManage";
-            this.btnMenuManage.Size = new System.Drawing.Size(395, 359);
-            this.btnMenuManage.TabIndex = 5;
-            this.btnMenuManage.Text = "메뉴(재고) 관리";
-            this.btnMenuManage.UseVisualStyleBackColor = false;
-            // 
-            // btnCustomerManage
-            // 
-            this.btnCustomerManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(119)))), ((int)(((byte)(136)))));
-            this.btnCustomerManage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCustomerManage.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomerManage.ForeColor = System.Drawing.Color.White;
-            this.btnCustomerManage.Location = new System.Drawing.Point(0, 718);
-            this.btnCustomerManage.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCustomerManage.Name = "btnCustomerManage";
-            this.btnCustomerManage.Size = new System.Drawing.Size(395, 359);
-            this.btnCustomerManage.TabIndex = 6;
-            this.btnCustomerManage.Text = "회원 관리";
-            this.btnCustomerManage.UseVisualStyleBackColor = false;
             // 
             // btnAnalysisManage
             // 
@@ -207,24 +162,66 @@
             this.btnAnalysisManage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAnalysisManage.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnalysisManage.ForeColor = System.Drawing.Color.White;
-            this.btnAnalysisManage.Location = new System.Drawing.Point(0, 1077);
-            this.btnAnalysisManage.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAnalysisManage.Location = new System.Drawing.Point(18, 767);
+            this.btnAnalysisManage.Margin = new System.Windows.Forms.Padding(18, 50, 18, 50);
             this.btnAnalysisManage.Name = "btnAnalysisManage";
-            this.btnAnalysisManage.Size = new System.Drawing.Size(395, 361);
+            this.btnAnalysisManage.Size = new System.Drawing.Size(240, 141);
             this.btnAnalysisManage.TabIndex = 7;
             this.btnAnalysisManage.Text = "통계 관리";
             this.btnAnalysisManage.UseVisualStyleBackColor = false;
             // 
+            // btnCustomerManage
+            // 
+            this.btnCustomerManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(119)))), ((int)(((byte)(136)))));
+            this.btnCustomerManage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCustomerManage.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomerManage.ForeColor = System.Drawing.Color.White;
+            this.btnCustomerManage.Location = new System.Drawing.Point(18, 528);
+            this.btnCustomerManage.Margin = new System.Windows.Forms.Padding(18, 50, 18, 50);
+            this.btnCustomerManage.Name = "btnCustomerManage";
+            this.btnCustomerManage.Size = new System.Drawing.Size(240, 139);
+            this.btnCustomerManage.TabIndex = 6;
+            this.btnCustomerManage.Text = "회원 관리";
+            this.btnCustomerManage.UseVisualStyleBackColor = false;
+            // 
+            // btnMenuManage
+            // 
+            this.btnMenuManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(119)))), ((int)(((byte)(136)))));
+            this.btnMenuManage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMenuManage.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuManage.ForeColor = System.Drawing.Color.White;
+            this.btnMenuManage.Location = new System.Drawing.Point(18, 289);
+            this.btnMenuManage.Margin = new System.Windows.Forms.Padding(18, 50, 18, 50);
+            this.btnMenuManage.Name = "btnMenuManage";
+            this.btnMenuManage.Size = new System.Drawing.Size(240, 139);
+            this.btnMenuManage.TabIndex = 5;
+            this.btnMenuManage.Text = "메뉴(재고) 관리";
+            this.btnMenuManage.UseVisualStyleBackColor = false;
+            // 
+            // btnTableManage
+            // 
+            this.btnTableManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(119)))), ((int)(((byte)(136)))));
+            this.btnTableManage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnTableManage.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTableManage.ForeColor = System.Drawing.Color.White;
+            this.btnTableManage.Location = new System.Drawing.Point(18, 50);
+            this.btnTableManage.Margin = new System.Windows.Forms.Padding(18, 50, 18, 50);
+            this.btnTableManage.Name = "btnTableManage";
+            this.btnTableManage.Size = new System.Drawing.Size(240, 139);
+            this.btnTableManage.TabIndex = 4;
+            this.btnTableManage.Text = "테이블 관리";
+            this.btnTableManage.UseVisualStyleBackColor = false;
+            this.btnTableManage.Click += new System.EventHandler(this.btnTableManage_Click);
+            // 
             // PosMainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2720, 1562);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PosMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PosMainForm";
+            this.Text = "아웃백스테이크하우스 POS";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();

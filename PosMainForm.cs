@@ -27,7 +27,9 @@ namespace DEUProject_CSharp_OutbackPOS
 
         private void btnTableManage_Click(object sender, EventArgs e)
         {
-
+            TableManageForm tableManageForm = new TableManageForm();
+            tableManageForm.Show();
+            //this.Hide();
         }
     }
 }

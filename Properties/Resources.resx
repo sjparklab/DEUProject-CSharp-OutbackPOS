@@ -124,33 +124,6 @@
   <data name="outback_logo_half_trans" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\outback_logo_half_trans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Pretendard_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pretendard-Black.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Pretendard_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pretendard-Bold.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Pretendard_ExtraBold" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pretendard-ExtraBold.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Pretendard_ExtraLight" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pretendard-ExtraLight.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Pretendard_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pretendard-Light.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Pretendard_Medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pretendard-Medium.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Pretendard_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pretendard-Regular.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Pretendard_SemiBold" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pretendard-SemiBold.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Pretendard_Thin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pretendard-Thin.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="_4table" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4table.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

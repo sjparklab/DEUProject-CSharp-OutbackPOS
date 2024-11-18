@@ -54,7 +54,6 @@
   <ItemGroup>
     <Compile Include="Data\DatabaseHelper.cs" />
     <Compile Include="Data\UserRepository.cs" />
-    <Compile Include="FontManager.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,15 +115,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Resources\Pretendard-Black.otf" />
-    <EmbeddedResource Include="Resources\Pretendard-Bold.otf" />
-    <EmbeddedResource Include="Resources\Pretendard-ExtraBold.otf" />
-    <EmbeddedResource Include="Resources\Pretendard-ExtraLight.otf" />
-    <EmbeddedResource Include="Resources\Pretendard-Light.otf" />
-    <EmbeddedResource Include="Resources\Pretendard-Medium.otf" />
-    <EmbeddedResource Include="Resources\Pretendard-Regular.otf" />
-    <EmbeddedResource Include="Resources\Pretendard-SemiBold.otf" />
-    <EmbeddedResource Include="Resources\Pretendard-Thin.otf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
