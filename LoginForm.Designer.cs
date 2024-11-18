@@ -50,9 +50,10 @@
             this.panel1.BackColor = System.Drawing.Color.Snow;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(583, 191);
+            this.panel1.Location = new System.Drawing.Point(834, 287);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(413, 475);
+            this.panel1.Size = new System.Drawing.Size(589, 712);
             this.panel1.TabIndex = 1;
             // 
             // groupBox1
@@ -68,18 +69,21 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("나눔고딕", 25F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.Location = new System.Drawing.Point(21, 12);
+            this.groupBox1.Location = new System.Drawing.Point(30, 18);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(366, 441);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(523, 662);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // btnRegister
             // 
-            this.btnRegister.Font = new System.Drawing.Font("나눔고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnRegister.Location = new System.Drawing.Point(41, 333);
+            this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.Location = new System.Drawing.Point(59, 500);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(295, 58);
+            this.btnRegister.Size = new System.Drawing.Size(421, 87);
             this.btnRegister.TabIndex = 7;
             this.btnRegister.Text = "회원가입";
             this.btnRegister.UseVisualStyleBackColor = true;
@@ -87,10 +91,11 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Font = new System.Drawing.Font("나눔고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnLogin.Location = new System.Drawing.Point(41, 260);
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(59, 390);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(295, 58);
+            this.btnLogin.Size = new System.Drawing.Size(421, 87);
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "로그인";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -99,47 +104,52 @@
             // txtLoginResult
             // 
             this.txtLoginResult.AutoSize = true;
-            this.txtLoginResult.Font = new System.Drawing.Font("나눔고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtLoginResult.Location = new System.Drawing.Point(37, 219);
+            this.txtLoginResult.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLoginResult.Location = new System.Drawing.Point(53, 328);
+            this.txtLoginResult.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtLoginResult.Name = "txtLoginResult";
-            this.txtLoginResult.Size = new System.Drawing.Size(123, 23);
+            this.txtLoginResult.Size = new System.Drawing.Size(191, 41);
             this.txtLoginResult.TabIndex = 5;
             this.txtLoginResult.Text = "로그인 결과: ";
             // 
             // txtBoxPW
             // 
             this.txtBoxPW.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtBoxPW.Location = new System.Drawing.Point(100, 152);
+            this.txtBoxPW.Location = new System.Drawing.Point(143, 228);
+            this.txtBoxPW.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxPW.Name = "txtBoxPW";
             this.txtBoxPW.PasswordChar = '*';
-            this.txtBoxPW.Size = new System.Drawing.Size(236, 22);
+            this.txtBoxPW.Size = new System.Drawing.Size(335, 30);
             this.txtBoxPW.TabIndex = 4;
             // 
             // txtBoxId
             // 
             this.txtBoxId.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtBoxId.Location = new System.Drawing.Point(100, 90);
+            this.txtBoxId.Location = new System.Drawing.Point(143, 135);
+            this.txtBoxId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxId.Name = "txtBoxId";
-            this.txtBoxId.Size = new System.Drawing.Size(236, 22);
+            this.txtBoxId.Size = new System.Drawing.Size(335, 30);
             this.txtBoxId.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("나눔고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(37, 87);
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(53, 130);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 23);
+            this.label3.Size = new System.Drawing.Size(49, 41);
             this.label3.TabIndex = 2;
             this.label3.Text = "ID";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("나눔고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(37, 149);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(53, 224);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 23);
+            this.label2.Size = new System.Drawing.Size(66, 41);
             this.label2.TabIndex = 1;
             this.label2.Text = "PW";
             // 
@@ -147,9 +157,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(129, 0);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(172, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 39);
+            this.label1.Size = new System.Drawing.Size(179, 67);
             this.label1.TabIndex = 0;
             this.label1.Text = "로그인";
             // 
@@ -161,21 +173,21 @@
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1580, 857);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(2257, 1286);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1580, 857);
+            this.ClientSize = new System.Drawing.Size(2257, 1286);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "아웃백스테이크하우스POS";

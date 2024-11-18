@@ -22,7 +22,12 @@ namespace DEUProject_CSharp_OutbackPOS
             this.UserName = user.UserName;
             this.Position = user.Position;
             InitializeComponent();
-            txtUserInform.Text = $"사용자 ID: {Id}\n사용자 이름: {UserName}\n직책:{Position}";
+            txtUserInform.Text = $"사용자 ID: {Id}\n사용자 이름: {UserName}\n직책: {Position}";
+        }
+
+        private void btnTableManage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

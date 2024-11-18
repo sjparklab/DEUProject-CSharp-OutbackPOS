@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DEUProject_CSharp_OutbackPOS.Model;
+using DEUProject_CSharp_OutbackPOS;
 
 namespace DEUProject_CSharp_OutbackPOS
 {
