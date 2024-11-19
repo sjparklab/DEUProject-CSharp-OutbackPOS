@@ -31,5 +31,10 @@ namespace DEUProject_CSharp_OutbackPOS
             tableManageForm.Show();
             //this.Hide();
         }
+
+        private void PosMainForm_Load(object sender, EventArgs e)
+        {
+            FontControl.ApplyFontToAllControls(this, "Pretendard-Medium");
+        }
     }
 }

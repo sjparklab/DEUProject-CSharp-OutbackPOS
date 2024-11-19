@@ -49,5 +49,10 @@ namespace DEUProject_CSharp_OutbackPOS
                 btnRegister.PerformClick(); // 버튼 클릭
             }
         }
+
+        private void RegisterForm_Load(object sender, EventArgs e)
+        {
+            FontControl.ApplyFontToAllControls(this, "Pretendard-Medium");
+        }
     }
 }

@@ -19,10 +19,10 @@ namespace DEUProject_CSharp_OutbackPOS
         static void Main()
         {
             DatabaseHelper.Initialize();
+            FontControl.LoadPretendardFonts();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());
-            FontControl.LoadPretendardFonts();
         }
     }
 }

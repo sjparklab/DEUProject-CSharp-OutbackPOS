@@ -104,10 +104,11 @@
             // 
             // tablePanel
             // 
+            this.tablePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tablePanel.Location = new System.Drawing.Point(0, 0);
             this.tablePanel.Margin = new System.Windows.Forms.Padding(0);
             this.tablePanel.Name = "tablePanel";
-            this.tablePanel.Size = new System.Drawing.Size(2169, 1280);
+            this.tablePanel.Size = new System.Drawing.Size(2169, 1432);
             this.tablePanel.TabIndex = 0;
             // 
             // tableLayoutSystem
@@ -115,6 +116,7 @@
             this.tableLayoutSystem.BackColor = System.Drawing.Color.White;
             this.tableLayoutSystem.ColumnCount = 1;
             this.tableLayoutSystem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutSystem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutSystem.Location = new System.Drawing.Point(2169, 0);
             this.tableLayoutSystem.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutSystem.Name = "tableLayoutSystem";
@@ -123,7 +125,7 @@
             this.tableLayoutSystem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutSystem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutSystem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55F));
-            this.tableLayoutSystem.Size = new System.Drawing.Size(543, 1280);
+            this.tableLayoutSystem.Size = new System.Drawing.Size(543, 1432);
             this.tableLayoutSystem.TabIndex = 1;
             // 
             // TableManageForm

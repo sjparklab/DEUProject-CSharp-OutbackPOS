@@ -153,6 +153,7 @@ namespace DEUProject_CSharp_OutbackPOS
                 // 패널에 추가
                 tablePanel.Controls.Add(tableIcon);
             }
+            FontControl.ApplyFontToAllControls(this, "Pretendard-Medium");
         }
     }
 }

@@ -45,8 +45,7 @@ namespace DEUProject_CSharp_OutbackPOS
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            Font defaultFont = FontControl.GetFont("Pretendard-Regular", null);
-            FontControl.ApplyFontToAllControls(this, defaultFont);
+            FontControl.ApplyFontToAllControls(this, "Pretendard-Medium");
         }
     }
 }

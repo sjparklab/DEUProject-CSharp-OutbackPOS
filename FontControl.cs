@@ -39,16 +39,16 @@ public static class FontControl
         return new Font(fontFamilies[fontName], size, style);
     }
 
-    public static void ApplyFontToAllControls(Control parent)
+    public static void ApplyFontToAllControls(Control parent, string fontName)
     {
         foreach (Control control in parent.Controls)
         {
             float fontSize = control.Font.Size;
-            control.Font = GetFont(fontSize);
+            control.Font = GetFont(fontName, fontSize);
 
             if (control.HasChildren)
             {
-                ApplyFontToAllControls(control);
+                ApplyFontToAllControls(control, fontName);
             }
         }
     }
