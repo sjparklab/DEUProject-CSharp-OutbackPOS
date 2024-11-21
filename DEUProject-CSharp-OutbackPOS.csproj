@@ -55,7 +55,6 @@
     <Compile Include="Data\DatabaseHelper.cs" />
     <Compile Include="Data\TableRepository.cs" />
     <Compile Include="Data\UserRepository.cs" />
-    <Compile Include="FontControl.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +72,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,14 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,15 +117,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Resources\Pretendard-Black.otf" />
-    <EmbeddedResource Include="Resources\Pretendard-Bold.otf" />
-    <EmbeddedResource Include="Resources\Pretendard-ExtraBold.otf" />
-    <EmbeddedResource Include="Resources\Pretendard-ExtraLight.otf" />
-    <EmbeddedResource Include="Resources\Pretendard-Light.otf" />
-    <EmbeddedResource Include="Resources\Pretendard-Medium.otf" />
-    <EmbeddedResource Include="Resources\Pretendard-Regular.otf" />
-    <EmbeddedResource Include="Resources\Pretendard-SemiBold.otf" />
-    <EmbeddedResource Include="Resources\Pretendard-Thin.otf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

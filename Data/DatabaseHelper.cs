@@ -43,8 +43,9 @@ namespace DEUProject_CSharp_OutbackPOS.Data
                     Name TEXT NOT NULL,
                     X INTEGER NOT NULL,
                     Y INTEGER NOT NULL,
-                    ImagePath TEXT NOT NULL
-                ); 
+                    Width INTEGER NOT NULL,
+                    Height INTEGER NOT NULL
+                );
                 CREATE TABLE IF NOT EXISTS Users (
                     Id INTEGER PRIMARY KEY AUTOINCREMENT, 
                     UserId TEXT NOT NULL UNIQUE, 

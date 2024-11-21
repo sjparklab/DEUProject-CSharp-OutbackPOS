@@ -87,12 +87,12 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("맑은 고딕", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(766, 38);
+            this.label2.Location = new System.Drawing.Point(764, 38);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(391, 45);
+            this.label2.Size = new System.Drawing.Size(395, 45);
             this.label2.TabIndex = 2;
             this.label2.Text = "판매관리 - 주문관리(영업)";
             // 
@@ -100,12 +100,12 @@
             // 
             this.txtUserInform.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtUserInform.AutoSize = true;
-            this.txtUserInform.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserInform.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserInform.ForeColor = System.Drawing.Color.White;
-            this.txtUserInform.Location = new System.Drawing.Point(2096, 15);
+            this.txtUserInform.Location = new System.Drawing.Point(2090, 15);
             this.txtUserInform.Margin = new System.Windows.Forms.Padding(4, 0, 71, 0);
             this.txtUserInform.Name = "txtUserInform";
-            this.txtUserInform.Size = new System.Drawing.Size(155, 90);
+            this.txtUserInform.Size = new System.Drawing.Size(161, 90);
             this.txtUserInform.TabIndex = 1;
             this.txtUserInform.Text = "사용자 ID: -\r\n사용자 이름 : -\r\n직책 : -";
             // 
@@ -129,7 +129,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(34, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(34, 0, 0, 0);
@@ -163,7 +163,7 @@
             // 
             this.btnAnalysisManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(119)))), ((int)(((byte)(136)))));
             this.btnAnalysisManage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAnalysisManage.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnalysisManage.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnalysisManage.ForeColor = System.Drawing.Color.White;
             this.btnAnalysisManage.Location = new System.Drawing.Point(26, 1152);
             this.btnAnalysisManage.Margin = new System.Windows.Forms.Padding(26, 75, 26, 75);
@@ -177,7 +177,7 @@
             // 
             this.btnCustomerManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(119)))), ((int)(((byte)(136)))));
             this.btnCustomerManage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCustomerManage.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomerManage.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomerManage.ForeColor = System.Drawing.Color.White;
             this.btnCustomerManage.Location = new System.Drawing.Point(26, 793);
             this.btnCustomerManage.Margin = new System.Windows.Forms.Padding(26, 75, 26, 75);
@@ -191,7 +191,7 @@
             // 
             this.btnMenuManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(119)))), ((int)(((byte)(136)))));
             this.btnMenuManage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMenuManage.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuManage.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenuManage.ForeColor = System.Drawing.Color.White;
             this.btnMenuManage.Location = new System.Drawing.Point(26, 434);
             this.btnMenuManage.Margin = new System.Windows.Forms.Padding(26, 75, 26, 75);
@@ -205,7 +205,7 @@
             // 
             this.btnTableManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(119)))), ((int)(((byte)(136)))));
             this.btnTableManage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnTableManage.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTableManage.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTableManage.ForeColor = System.Drawing.Color.White;
             this.btnTableManage.Location = new System.Drawing.Point(26, 75);
             this.btnTableManage.Margin = new System.Windows.Forms.Padding(26, 75, 26, 75);
@@ -227,7 +227,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "아웃백스테이크하우스 POS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.PosMainForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DEUProject_CSharp_OutbackPOS.Data;
+using System.Drawing;
 
 namespace DEUProject_CSharp_OutbackPOS
 {
@@ -19,7 +20,7 @@ namespace DEUProject_CSharp_OutbackPOS
         static void Main()
         {
             DatabaseHelper.Initialize();
-            FontControl.LoadPretendardFonts();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());

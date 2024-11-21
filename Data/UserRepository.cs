@@ -69,7 +69,8 @@ namespace DEUProject_CSharp_OutbackPOS.Data
             using (var connection = DatabaseHelper.GetConnection())
             {
                 connection.Open();
-                string query = "INSERT INTO Users (UserId, Password, Name, Position) VALUES (@UserId, @Password, @Name, @Position);";
+                string query = "INSERT INTO Users (UserId, Password, Name, Position) " +
+                    "VALUES (@UserId, @Password, @Name, @Position);";
                 using (var command = new SQLiteCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@UserId", user.UserId);

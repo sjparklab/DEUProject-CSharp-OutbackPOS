@@ -34,9 +34,12 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tablePanel = new System.Windows.Forms.Panel();
             this.tableLayoutSystem = new System.Windows.Forms.TableLayoutPanel();
+            this.btnTableAdd = new System.Windows.Forms.Button();
+            this.btnTableLayoutSave = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanelTitle.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutSystem.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -60,9 +63,11 @@
             // tableLayoutPanelTitle
             // 
             this.tableLayoutPanelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(61)))), ((int)(((byte)(75)))));
-            this.tableLayoutPanelTitle.ColumnCount = 1;
-            this.tableLayoutPanelTitle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelTitle.ColumnCount = 2;
+            this.tableLayoutPanelTitle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.02207F));
+            this.tableLayoutPanelTitle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.97792F));
             this.tableLayoutPanelTitle.Controls.Add(this.txtTitle, 0, 0);
+            this.tableLayoutPanelTitle.Controls.Add(this.btnTableLayoutSave, 1, 0);
             this.tableLayoutPanelTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(184)))), ((int)(((byte)(193)))));
             this.tableLayoutPanelTitle.Location = new System.Drawing.Point(1, 1);
@@ -77,12 +82,12 @@
             // 
             this.txtTitle.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtTitle.AutoSize = true;
-            this.txtTitle.Font = new System.Drawing.Font("Pretendard", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtTitle.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTitle.ForeColor = System.Drawing.Color.White;
-            this.txtTitle.Location = new System.Drawing.Point(50, 44);
+            this.txtTitle.Location = new System.Drawing.Point(50, 41);
             this.txtTitle.Margin = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(142, 33);
+            this.txtTitle.Size = new System.Drawing.Size(167, 38);
             this.txtTitle.TabIndex = 0;
             this.txtTitle.Text = "테이블 편집\n";
             // 
@@ -116,6 +121,7 @@
             this.tableLayoutSystem.BackColor = System.Drawing.Color.White;
             this.tableLayoutSystem.ColumnCount = 1;
             this.tableLayoutSystem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutSystem.Controls.Add(this.btnTableAdd, 0, 0);
             this.tableLayoutSystem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutSystem.Location = new System.Drawing.Point(2169, 0);
             this.tableLayoutSystem.Margin = new System.Windows.Forms.Padding(0);
@@ -127,6 +133,33 @@
             this.tableLayoutSystem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55F));
             this.tableLayoutSystem.Size = new System.Drawing.Size(543, 1432);
             this.tableLayoutSystem.TabIndex = 1;
+            // 
+            // btnTableAdd
+            // 
+            this.btnTableAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnTableAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.btnTableAdd.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnTableAdd.Location = new System.Drawing.Point(146, 32);
+            this.btnTableAdd.Name = "btnTableAdd";
+            this.btnTableAdd.Size = new System.Drawing.Size(250, 150);
+            this.btnTableAdd.TabIndex = 0;
+            this.btnTableAdd.Text = "테이블 추가";
+            this.btnTableAdd.UseVisualStyleBackColor = false;
+            this.btnTableAdd.Click += new System.EventHandler(this.btnTableAdd_Click);
+            // 
+            // btnTableLayoutSave
+            // 
+            this.btnTableLayoutSave.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnTableLayoutSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.btnTableLayoutSave.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnTableLayoutSave.ForeColor = System.Drawing.Color.White;
+            this.btnTableLayoutSave.Location = new System.Drawing.Point(2201, 21);
+            this.btnTableLayoutSave.Name = "btnTableLayoutSave";
+            this.btnTableLayoutSave.Size = new System.Drawing.Size(490, 79);
+            this.btnTableLayoutSave.TabIndex = 1;
+            this.btnTableLayoutSave.Text = "저장하기";
+            this.btnTableLayoutSave.UseVisualStyleBackColor = false;
+            this.btnTableLayoutSave.Click += new System.EventHandler(this.btnTableLayoutSave_Click);
             // 
             // TableManageForm
             // 
@@ -141,6 +174,7 @@
             this.tableLayoutPanelTitle.ResumeLayout(false);
             this.tableLayoutPanelTitle.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutSystem.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -153,5 +187,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel tablePanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutSystem;
+        private System.Windows.Forms.Button btnTableAdd;
+        private System.Windows.Forms.Button btnTableLayoutSave;
     }
 }

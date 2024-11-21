@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DEUProject_CSharp_OutbackPOS.Model;
 using DEUProject_CSharp_OutbackPOS;
+using System.Reflection.Emit;
 
 namespace DEUProject_CSharp_OutbackPOS
 {
@@ -41,11 +42,6 @@ namespace DEUProject_CSharp_OutbackPOS
         {
             RegisterForm registerForm = new RegisterForm();
             registerForm.ShowDialog();
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-            FontControl.ApplyFontToAllControls(this, "Pretendard-Medium");
         }
     }
 }
