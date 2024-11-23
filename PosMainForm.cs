@@ -62,11 +62,24 @@ namespace DEUProject_CSharp_OutbackPOS
                     Dock = DockStyle.Fill,
                     TextAlign = ContentAlignment.MiddleCenter
                 };
-
+                tableNameLable.MouseClick += (LabelSender, LabelEvent) => { TablePanel_MouseClick(tablePanel, LabelEvent); };
                 tablePanel.Controls.Add(tableNameLable);
-
+                tablePanel.MouseClick += TablePanel_MouseClick;
                 tableLayoutMenuPanel.Controls.Add(tablePanel);
             }
         }
+
+        private void TablePanel_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderAndPayForm orderAndPayForm = new OrderAndPayForm(this, (Panel) sender);
+            orderAndPayForm.Show();
+        }
+
+        private void btnCustomerManage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

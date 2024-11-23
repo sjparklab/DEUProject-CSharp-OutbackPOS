@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\DatabaseHelper.cs" />
+    <Compile Include="Data\MenuRepository.cs" />
     <Compile Include="Data\TableRepository.cs" />
     <Compile Include="Data\UserRepository.cs" />
     <Compile Include="LoginForm.cs">
@@ -62,8 +63,15 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AuthClass.cs" />
+    <Compile Include="Model\Menu.cs" />
     <Compile Include="Model\Table.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="OrderAndPayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderAndPayForm.Designer.cs">
+      <DependentUpon>OrderAndPayForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PosMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +100,9 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderAndPayForm.resx">
+      <DependentUpon>OrderAndPayForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PosMainForm.resx">
       <DependentUpon>PosMainForm.cs</DependentUpon>

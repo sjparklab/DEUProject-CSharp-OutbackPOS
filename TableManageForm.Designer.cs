@@ -35,25 +35,25 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel = new System.Windows.Forms.Panel();
             this.tableLayoutSystem = new System.Windows.Forms.TableLayoutPanel();
-            this.btnTableAdd = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnTableRemove = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnTableRemove = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnTableAdd = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanelTitle.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutSystem.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -147,6 +147,7 @@
             // tableLayoutSystem
             // 
             this.tableLayoutSystem.BackColor = System.Drawing.Color.White;
+            this.tableLayoutSystem.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutSystem.ColumnCount = 1;
             this.tableLayoutSystem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutSystem.Controls.Add(this.button2, 0, 3);
@@ -165,18 +166,29 @@
             this.tableLayoutSystem.Size = new System.Drawing.Size(543, 1432);
             this.tableLayoutSystem.TabIndex = 1;
             // 
-            // btnTableAdd
+            // button2
             // 
-            this.btnTableAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTableAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
-            this.btnTableAdd.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnTableAdd.Location = new System.Drawing.Point(146, 29);
-            this.btnTableAdd.Name = "btnTableAdd";
-            this.btnTableAdd.Size = new System.Drawing.Size(250, 150);
-            this.btnTableAdd.TabIndex = 0;
-            this.btnTableAdd.Text = "테이블 추가";
-            this.btnTableAdd.UseVisualStyleBackColor = false;
-            this.btnTableAdd.Click += new System.EventHandler(this.btnTableAdd_Click);
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.button2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button2.Location = new System.Drawing.Point(146, 1412);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(250, 15);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "테이블 추가";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.button1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button1.Location = new System.Drawing.Point(146, 1390);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(250, 14);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "테이블 추가";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel3
             // 
@@ -188,7 +200,7 @@
             this.tableLayoutPanel3.Controls.Add(this.panel5, 0, 4);
             this.tableLayoutPanel3.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(100, 308);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(102, 311);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(100);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 5;
@@ -197,8 +209,54 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(343, 983);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(339, 974);
             this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnTableRemove);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 197);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(333, 188);
+            this.panel2.TabIndex = 1;
+            // 
+            // btnTableRemove
+            // 
+            this.btnTableRemove.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnTableRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.btnTableRemove.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnTableRemove.Location = new System.Drawing.Point(41, 19);
+            this.btnTableRemove.Name = "btnTableRemove";
+            this.btnTableRemove.Size = new System.Drawing.Size(250, 150);
+            this.btnTableRemove.TabIndex = 1;
+            this.btnTableRemove.Text = "테이블 삭제";
+            this.btnTableRemove.UseVisualStyleBackColor = false;
+            this.btnTableRemove.Click += new System.EventHandler(this.btnTableRemove_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 391);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(333, 188);
+            this.panel3.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(3, 585);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(333, 188);
+            this.panel4.TabIndex = 1;
+            // 
+            // panel5
+            // 
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(3, 779);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(333, 192);
+            this.panel5.TabIndex = 1;
             // 
             // panel1
             // 
@@ -207,49 +265,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(337, 190);
+            this.panel1.Size = new System.Drawing.Size(333, 188);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnTableRemove);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 199);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(337, 190);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 395);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(337, 190);
-            this.panel3.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 591);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(337, 190);
-            this.panel4.TabIndex = 1;
-            // 
-            // panel5
-            // 
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 787);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(337, 193);
-            this.panel5.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(43, 113);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 28);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -261,42 +278,26 @@
             this.label1.Text = "테이블명";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // textBox1
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
-            this.button1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(146, 1394);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 14);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "테이블 추가";
-            this.button1.UseVisualStyleBackColor = false;
+            this.textBox1.Location = new System.Drawing.Point(43, 113);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(250, 28);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // button2
+            // btnTableAdd
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
-            this.button2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button2.Location = new System.Drawing.Point(146, 1414);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 15);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "테이블 추가";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // btnTableRemove
-            // 
-            this.btnTableRemove.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTableRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
-            this.btnTableRemove.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnTableRemove.Location = new System.Drawing.Point(43, 20);
-            this.btnTableRemove.Name = "btnTableRemove";
-            this.btnTableRemove.Size = new System.Drawing.Size(250, 150);
-            this.btnTableRemove.TabIndex = 1;
-            this.btnTableRemove.Text = "테이블 삭제";
-            this.btnTableRemove.UseVisualStyleBackColor = false;
-            this.btnTableRemove.Click += new System.EventHandler(this.btnTableRemove_Click);
+            this.btnTableAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnTableAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.btnTableAdd.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnTableAdd.Location = new System.Drawing.Point(146, 30);
+            this.btnTableAdd.Name = "btnTableAdd";
+            this.btnTableAdd.Size = new System.Drawing.Size(250, 150);
+            this.btnTableAdd.TabIndex = 0;
+            this.btnTableAdd.Text = "테이블 추가";
+            this.btnTableAdd.UseVisualStyleBackColor = false;
+            this.btnTableAdd.Click += new System.EventHandler(this.btnTableAdd_Click);
             // 
             // TableManageForm
             // 
@@ -313,9 +314,9 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutSystem.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

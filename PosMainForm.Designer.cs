@@ -152,7 +152,8 @@
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tableLayoutPanel4.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel4.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Controls.Add(this.btnAnalysisManage, 0, 3);
@@ -173,56 +174,57 @@
             // 
             // btnAnalysisManage
             // 
-            this.btnAnalysisManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(119)))), ((int)(((byte)(136)))));
-            this.btnAnalysisManage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAnalysisManage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAnalysisManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
             this.btnAnalysisManage.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnalysisManage.ForeColor = System.Drawing.Color.White;
-            this.btnAnalysisManage.Location = new System.Drawing.Point(26, 1152);
+            this.btnAnalysisManage.ForeColor = System.Drawing.Color.Black;
+            this.btnAnalysisManage.Location = new System.Drawing.Point(72, 1181);
             this.btnAnalysisManage.Margin = new System.Windows.Forms.Padding(26, 75, 26, 75);
             this.btnAnalysisManage.Name = "btnAnalysisManage";
-            this.btnAnalysisManage.Size = new System.Drawing.Size(343, 211);
+            this.btnAnalysisManage.Size = new System.Drawing.Size(250, 150);
             this.btnAnalysisManage.TabIndex = 7;
             this.btnAnalysisManage.Text = "통계 관리";
             this.btnAnalysisManage.UseVisualStyleBackColor = false;
             // 
             // btnCustomerManage
             // 
-            this.btnCustomerManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(119)))), ((int)(((byte)(136)))));
-            this.btnCustomerManage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCustomerManage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCustomerManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
             this.btnCustomerManage.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomerManage.ForeColor = System.Drawing.Color.White;
-            this.btnCustomerManage.Location = new System.Drawing.Point(26, 793);
+            this.btnCustomerManage.ForeColor = System.Drawing.Color.Black;
+            this.btnCustomerManage.Location = new System.Drawing.Point(72, 821);
             this.btnCustomerManage.Margin = new System.Windows.Forms.Padding(26, 75, 26, 75);
             this.btnCustomerManage.Name = "btnCustomerManage";
-            this.btnCustomerManage.Size = new System.Drawing.Size(343, 209);
+            this.btnCustomerManage.Size = new System.Drawing.Size(250, 150);
             this.btnCustomerManage.TabIndex = 6;
             this.btnCustomerManage.Text = "회원 관리";
             this.btnCustomerManage.UseVisualStyleBackColor = false;
+            this.btnCustomerManage.Click += new System.EventHandler(this.btnCustomerManage_Click);
             // 
             // btnMenuManage
             // 
-            this.btnMenuManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(119)))), ((int)(((byte)(136)))));
-            this.btnMenuManage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMenuManage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnMenuManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
             this.btnMenuManage.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuManage.ForeColor = System.Drawing.Color.White;
-            this.btnMenuManage.Location = new System.Drawing.Point(26, 434);
+            this.btnMenuManage.ForeColor = System.Drawing.Color.Black;
+            this.btnMenuManage.Location = new System.Drawing.Point(72, 463);
             this.btnMenuManage.Margin = new System.Windows.Forms.Padding(26, 75, 26, 75);
             this.btnMenuManage.Name = "btnMenuManage";
-            this.btnMenuManage.Size = new System.Drawing.Size(343, 209);
+            this.btnMenuManage.Size = new System.Drawing.Size(250, 150);
             this.btnMenuManage.TabIndex = 5;
             this.btnMenuManage.Text = "메뉴(재고) 관리";
             this.btnMenuManage.UseVisualStyleBackColor = false;
             // 
             // btnTableManage
             // 
-            this.btnTableManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(119)))), ((int)(((byte)(136)))));
-            this.btnTableManage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnTableManage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnTableManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
             this.btnTableManage.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTableManage.ForeColor = System.Drawing.Color.White;
-            this.btnTableManage.Location = new System.Drawing.Point(26, 75);
+            this.btnTableManage.ForeColor = System.Drawing.Color.Black;
+            this.btnTableManage.Location = new System.Drawing.Point(72, 105);
             this.btnTableManage.Margin = new System.Windows.Forms.Padding(26, 75, 26, 75);
             this.btnTableManage.Name = "btnTableManage";
-            this.btnTableManage.Size = new System.Drawing.Size(343, 209);
+            this.btnTableManage.Size = new System.Drawing.Size(250, 150);
             this.btnTableManage.TabIndex = 4;
             this.btnTableManage.Text = "테이블 관리";
             this.btnTableManage.UseVisualStyleBackColor = false;
