@@ -179,6 +179,11 @@ namespace DEUProject_CSharp_OutbackPOS
             }
         }
 
+        private void btnTableRemove_Click(object sender, EventArgs e)
+        {
+            tableLayoutPanel.Controls.Remove(selectedTablePanel);
+        }
+
         //private void TableIcon_MouseDown(object sender, MouseEventArgs e)
         //{
         //    if (sender is PictureBox originalIcon)
