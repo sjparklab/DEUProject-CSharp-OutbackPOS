@@ -16,6 +16,8 @@ namespace DEUProject_CSharp_OutbackPOS
         public string Id { get; set; }
         public string UserName { get; set; }
         public string Position { get; set; }
+        TableRepository tableRepository = new TableRepository();
+
         public PosMainForm(User user)
         {
             this.Id = user.UserId;
@@ -27,9 +29,44 @@ namespace DEUProject_CSharp_OutbackPOS
 
         private void btnTableManage_Click(object sender, EventArgs e)
         {
-            TableManageForm tableManageForm = new TableManageForm();
+            TableManageForm tableManageForm = new TableManageForm(this);
             tableManageForm.Show();
             //this.Hide();
+        }
+
+        private void PosMainForm_Load(object sender, EventArgs e)
+        {
+            LoadTablePanel();
+        }
+
+        internal void LoadTablePanel()
+        {
+            tableLayoutMenuPanel.Controls.Clear();
+
+            List<Table> tables = tableRepository.GetAllTables();
+            foreach (Table table in tables)
+            {
+                Panel tablePanel = new Panel
+                {
+                    Name = table.Name,
+                    Location = new Point(table.X, table.Y),
+                    Width = table.Width,
+                    Height = table.Height,
+                    BackColor = Color.White,
+                    BorderStyle = BorderStyle.FixedSingle,
+                };
+
+                Label tableNameLable = new Label
+                {
+                    Text = tablePanel.Name,
+                    Dock = DockStyle.Fill,
+                    TextAlign = ContentAlignment.MiddleCenter
+                };
+
+                tablePanel.Controls.Add(tableNameLable);
+
+                tableLayoutMenuPanel.Controls.Add(tablePanel);
+            }
         }
     }
 }

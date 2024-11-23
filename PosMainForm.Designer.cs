@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutMenuPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUserInform = new System.Windows.Forms.Label();
@@ -51,6 +52,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.55212F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.44788F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutMenuPanel, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 1);
@@ -63,6 +65,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.21364F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(2720, 1562);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // tableLayoutMenuPanel
+            // 
+            this.tableLayoutMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(235)))));
+            this.tableLayoutMenuPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutMenuPanel.Location = new System.Drawing.Point(397, 123);
+            this.tableLayoutMenuPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutMenuPanel.Name = "tableLayoutMenuPanel";
+            this.tableLayoutMenuPanel.Size = new System.Drawing.Size(2322, 1438);
+            this.tableLayoutMenuPanel.TabIndex = 7;
             // 
             // tableLayoutPanel2
             // 
@@ -227,6 +239,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "아웃백스테이크하우스 POS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.PosMainForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -238,8 +251,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label txtUserInform;
@@ -250,5 +261,7 @@
         private System.Windows.Forms.Button btnAnalysisManage;
         private System.Windows.Forms.Button btnCustomerManage;
         private System.Windows.Forms.Button btnMenuManage;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel tableLayoutMenuPanel;
     }
 }
