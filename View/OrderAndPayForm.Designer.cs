@@ -55,6 +55,19 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.메뉴삭제ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoryComboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtBoxID = new System.Windows.Forms.TextBox();
+            this.txtBoxPrice = new System.Windows.Forms.TextBox();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblCat2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanelTitle.SuspendLayout();
             this.orderpayLayout.SuspendLayout();
@@ -290,6 +303,19 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.lblCat2);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.txtBoxPrice);
+            this.groupBox1.Controls.Add(this.lblPrice);
+            this.groupBox1.Controls.Add(this.txtBoxID);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.categoryComboBox);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox1.Location = new System.Drawing.Point(22, 23);
@@ -360,6 +386,122 @@
             this.메뉴삭제ToolStripMenuItem.Size = new System.Drawing.Size(162, 32);
             this.메뉴삭제ToolStripMenuItem.Text = "메뉴 삭제";
             // 
+            // categoryComboBox
+            // 
+            this.categoryComboBox.FormattingEnabled = true;
+            this.categoryComboBox.Location = new System.Drawing.Point(682, 88);
+            this.categoryComboBox.Name = "categoryComboBox";
+            this.categoryComboBox.Size = new System.Drawing.Size(191, 36);
+            this.categoryComboBox.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(677, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 28);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "카테고리";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(115, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 28);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "ID";
+            // 
+            // txtBoxID
+            // 
+            this.txtBoxID.Location = new System.Drawing.Point(120, 88);
+            this.txtBoxID.Multiline = true;
+            this.txtBoxID.Name = "txtBoxID";
+            this.txtBoxID.Size = new System.Drawing.Size(197, 36);
+            this.txtBoxID.TabIndex = 5;
+            // 
+            // txtBoxPrice
+            // 
+            this.txtBoxPrice.Location = new System.Drawing.Point(404, 88);
+            this.txtBoxPrice.Multiline = true;
+            this.txtBoxPrice.Name = "txtBoxPrice";
+            this.txtBoxPrice.Size = new System.Drawing.Size(197, 36);
+            this.txtBoxPrice.TabIndex = 7;
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Location = new System.Drawing.Point(399, 47);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(52, 28);
+            this.lblPrice.TabIndex = 6;
+            this.lblPrice.Text = "가격";
+            // 
+            // lblCat2
+            // 
+            this.lblCat2.AutoSize = true;
+            this.lblCat2.Location = new System.Drawing.Point(952, 47);
+            this.lblCat2.Name = "lblCat2";
+            this.lblCat2.Size = new System.Drawing.Size(132, 28);
+            this.lblCat2.TabIndex = 9;
+            this.lblCat2.Text = "세부카테고리";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(957, 88);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(191, 36);
+            this.comboBox1.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(1227, 47);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 28);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "원산지";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(1232, 88);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(191, 36);
+            this.comboBox2.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(1508, 47);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(108, 28);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "재고 유/무";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(1513, 88);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(57, 32);
+            this.radioButton1.TabIndex = 14;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "유";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(1576, 88);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(57, 32);
+            this.radioButton2.TabIndex = 15;
+            this.radioButton2.Text = "무";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
             // OrderAndPayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -378,6 +520,7 @@
             this.menuSearch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.menuGrid)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -412,5 +555,18 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 메뉴삭제ToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox categoryComboBox;
+        private System.Windows.Forms.TextBox txtBoxID;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtBoxPrice;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label lblCat2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
