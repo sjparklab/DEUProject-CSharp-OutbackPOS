@@ -63,9 +63,13 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AuthClass.cs" />
+    <Compile Include="Model\DrinkMenu.cs" />
     <Compile Include="Model\Menu.cs" />
+    <Compile Include="Model\SetMenu.cs" />
+    <Compile Include="Model\SteakMenu.cs" />
     <Compile Include="Model\Table.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="Model\WineMenu.cs" />
     <Compile Include="OrderAndPayForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +137,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next">
+      <Version>4.0.3</Version>
+    </PackageReference>
     <PackageReference Include="EntityFramework" Version="6.5.1" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.119" />
     <PackageReference Include="System.Data.SQLite.EF6" Version="1.0.119" />

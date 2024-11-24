@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DEUProject_CSharp_OutbackPOS.Data;
 using DEUProject_CSharp_OutbackPOS.Model;
@@ -19,7 +13,6 @@ namespace DEUProject_CSharp_OutbackPOS
         public string Name { get; set; }
         public string Position { get; set; }
 
-
         public bool Register(string UserId, string Password, string Name, string Position = "관리자")
         {
             if (string.IsNullOrWhiteSpace(UserId) || string.IsNullOrWhiteSpace(Password) || string.IsNullOrWhiteSpace(Name))
@@ -29,10 +22,14 @@ namespace DEUProject_CSharp_OutbackPOS
             }
             try
             {
-                User user = new User(UserId, Password, Name, Position);
+                // 비밀번호 해싱
+                string hashedPassword = BCrypt.Net.BCrypt.HashPassword(Password);
+
+                // 사용자 생성 및 저장
+                User user = new User(UserId, hashedPassword, Name, Position);
                 userRepository.AddUser(user);
                 return true;
-            } 
+            }
             catch (Exception ex)
             {
                 MessageBox.Show($"등록 중 오류가 발생했습니다: {ex.Message}");
@@ -42,7 +39,6 @@ namespace DEUProject_CSharp_OutbackPOS
 
         public User Login(string UserId, string Password)
         {
-            User user = null;
             if (string.IsNullOrWhiteSpace(UserId) || string.IsNullOrWhiteSpace(Password))
             {
                 MessageBox.Show("입력되지 않은 값이 있습니다!");
@@ -50,27 +46,30 @@ namespace DEUProject_CSharp_OutbackPOS
             }
             try
             {
-                user = userRepository.findByUserId(UserId);
+                // 데이터베이스에서 사용자 검색
+                User user = userRepository.findByUserId(UserId);
                 if (user == null)
                 {
                     MessageBox.Show("사용자를 검색하지 못했습니다!");
-                    return user;
+                    return null;
                 }
-                if(user.Password.Equals(Password))
+
+                // 비밀번호 검증
+                if (BCrypt.Net.BCrypt.Verify(Password, user.Password))
                 {
-                    return user;
+                    return user; // 로그인 성공
                 }
                 else
                 {
-                    return user;
+                    MessageBox.Show("비밀번호가 일치하지 않습니다!");
+                    return null;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"등록 중 오류가 발생했습니다: {ex.Message}");
-                return user;
+                MessageBox.Show($"로그인 중 오류가 발생했습니다: {ex.Message}");
+                return null;
             }
         }
-
     }
 }

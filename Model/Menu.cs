@@ -14,5 +14,6 @@ namespace DEUProject_CSharp_OutbackPOS.Model
         public decimal Price { get; set; }    // 가격
         public string Description { get; set; } // 설명
         public int Stock { get; set; }        // 재고
+        public string IngredientOrigin { get; set; }
     }
 }

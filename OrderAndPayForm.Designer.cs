@@ -33,19 +33,24 @@
             this.txtTitle = new System.Windows.Forms.Label();
             this.orderpayLayout = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel = new System.Windows.Forms.Panel();
+            this.menuGrid = new System.Windows.Forms.DataGridView();
             this.orderPaySystem = new System.Windows.Forms.TableLayoutPanel();
             this.listView1 = new System.Windows.Forms.ListView();
             this.menu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.quantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.menuGrid = new System.Windows.Forms.DataGridView();
             this.priceSum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanelTitle.SuspendLayout();
             this.orderpayLayout.SuspendLayout();
             this.tableLayoutPanel.SuspendLayout();
-            this.orderPaySystem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuGrid)).BeginInit();
+            this.orderPaySystem.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -122,6 +127,24 @@
             this.tableLayoutPanel.Size = new System.Drawing.Size(2034, 1432);
             this.tableLayoutPanel.TabIndex = 0;
             // 
+            // menuGrid
+            // 
+            this.menuGrid.AllowUserToResizeColumns = false;
+            this.menuGrid.AllowUserToResizeRows = false;
+            this.menuGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.menuGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.menuGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.menuGrid.Location = new System.Drawing.Point(0, 0);
+            this.menuGrid.Margin = new System.Windows.Forms.Padding(0);
+            this.menuGrid.Name = "menuGrid";
+            this.menuGrid.ReadOnly = true;
+            this.menuGrid.RowHeadersWidth = 62;
+            this.menuGrid.RowTemplate.Height = 30;
+            this.menuGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.menuGrid.Size = new System.Drawing.Size(2034, 1432);
+            this.menuGrid.TabIndex = 0;
+            this.menuGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.menuGrid_CellDoubleClick);
+            // 
             // orderPaySystem
             // 
             this.orderPaySystem.BackColor = System.Drawing.Color.White;
@@ -129,14 +152,16 @@
             this.orderPaySystem.ColumnCount = 1;
             this.orderPaySystem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.orderPaySystem.Controls.Add(this.listView1, 0, 1);
+            this.orderPaySystem.Controls.Add(this.listView2, 0, 2);
             this.orderPaySystem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.orderPaySystem.Location = new System.Drawing.Point(2034, 0);
             this.orderPaySystem.Margin = new System.Windows.Forms.Padding(0);
             this.orderPaySystem.Name = "orderPaySystem";
-            this.orderPaySystem.RowCount = 3;
-            this.orderPaySystem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.orderPaySystem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.orderPaySystem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.orderPaySystem.RowCount = 4;
+            this.orderPaySystem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.523809F));
+            this.orderPaySystem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.61905F));
+            this.orderPaySystem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.80952F));
+            this.orderPaySystem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.04762F));
             this.orderPaySystem.Size = new System.Drawing.Size(678, 1432);
             this.orderPaySystem.TabIndex = 1;
             // 
@@ -149,10 +174,10 @@
             this.priceSum});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(2, 146);
+            this.listView1.Location = new System.Drawing.Point(2, 139);
             this.listView1.Margin = new System.Windows.Forms.Padding(0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(674, 996);
+            this.listView1.Size = new System.Drawing.Size(674, 677);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -172,28 +197,47 @@
             this.quantity.Text = "갯수";
             this.quantity.Width = 88;
             // 
-            // menuGrid
-            // 
-            this.menuGrid.AllowUserToResizeColumns = false;
-            this.menuGrid.AllowUserToResizeRows = false;
-            this.menuGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.menuGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.menuGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.menuGrid.Location = new System.Drawing.Point(0, 0);
-            this.menuGrid.Margin = new System.Windows.Forms.Padding(0);
-            this.menuGrid.Name = "menuGrid";
-            this.menuGrid.ReadOnly = true;
-            this.menuGrid.RowHeadersWidth = 62;
-            this.menuGrid.RowTemplate.Height = 30;
-            this.menuGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.menuGrid.Size = new System.Drawing.Size(2034, 1432);
-            this.menuGrid.TabIndex = 0;
-            this.menuGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.menuGrid_CellDoubleClick);
-            // 
             // priceSum
             // 
             this.priceSum.Text = "총액";
             this.priceSum.Width = 189;
+            // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(2, 818);
+            this.listView2.Margin = new System.Windows.Forms.Padding(0);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(674, 338);
+            this.listView2.TabIndex = 1;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "메뉴명";
+            this.columnHeader1.Width = 368;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "가격";
+            this.columnHeader2.Width = 124;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "갯수";
+            this.columnHeader3.Width = 88;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "총액";
+            this.columnHeader4.Width = 189;
             // 
             // OrderAndPayForm
             // 
@@ -208,8 +252,8 @@
             this.tableLayoutPanelTitle.PerformLayout();
             this.orderpayLayout.ResumeLayout(false);
             this.tableLayoutPanel.ResumeLayout(false);
-            this.orderPaySystem.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.menuGrid)).EndInit();
+            this.orderPaySystem.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -228,5 +272,10 @@
         private System.Windows.Forms.ColumnHeader quantity;
         private System.Windows.Forms.DataGridView menuGrid;
         private System.Windows.Forms.ColumnHeader priceSum;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
