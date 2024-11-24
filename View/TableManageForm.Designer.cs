@@ -1,4 +1,4 @@
-﻿namespace DEUProject_CSharp_OutbackPOS
+﻿namespace DEUProject_CSharp_OutbackPOS.View
 {
     partial class TableManageForm
     {
@@ -306,6 +306,7 @@
             this.ClientSize = new System.Drawing.Size(2720, 1562);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "TableManageForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "아웃백스테이크하우스 - 테이블관리";
             this.Load += new System.EventHandler(this.TableManageForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

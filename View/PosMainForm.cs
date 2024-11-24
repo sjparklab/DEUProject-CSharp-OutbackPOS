@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DEUProject_CSharp_OutbackPOS.Model;
 
-namespace DEUProject_CSharp_OutbackPOS
+namespace DEUProject_CSharp_OutbackPOS.View
 {
     public partial class PosMainForm : Form
     {

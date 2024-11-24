@@ -7,14 +7,12 @@ namespace DEUProject_CSharp_OutbackPOS.Data
 {
     public class MenuRepository
     {
-        private readonly string connectionString = "Data Source=database.db;Version=3;";
-
-        // 모든 메뉴 가져오기
-        // 모든 메뉴 가져오기
+        private readonly string connectionString = "Data Source=database.db;Version=3;";        
+        
+        // 메뉴 가져오기
         public List<Menu> GetAllMenus()
         {
             var menus = new List<Menu>();
-
             using (var connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();

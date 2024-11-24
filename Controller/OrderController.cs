@@ -8,5 +8,9 @@ namespace DEUProject_CSharp_OutbackPOS.Controller
 {
     public class OrderController
     {
+        public void AddNewOrder()
+        {
+
+        }
     }
 }

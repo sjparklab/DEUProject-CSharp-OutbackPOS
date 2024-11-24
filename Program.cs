@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DEUProject_CSharp_OutbackPOS.Data;
 using System.Drawing;
+using DEUProject_CSharp_OutbackPOS.View;
 
 namespace DEUProject_CSharp_OutbackPOS
 {

@@ -10,12 +10,13 @@ using System.Windows.Forms;
 using DEUProject_CSharp_OutbackPOS.Model;
 using DEUProject_CSharp_OutbackPOS;
 using System.Reflection.Emit;
+using DEUProject_CSharp_OutbackPOS.Controller;
 
-namespace DEUProject_CSharp_OutbackPOS
+namespace DEUProject_CSharp_OutbackPOS.View
 {
     public partial class LoginForm : Form
     {
-        AuthClass authSystem = new AuthClass();
+        AuthController authSystem = new AuthController();
 
         public LoginForm()
         {

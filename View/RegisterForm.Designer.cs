@@ -1,4 +1,4 @@
-﻿namespace DEUProject_CSharp_OutbackPOS
+﻿namespace DEUProject_CSharp_OutbackPOS.View
 {
     partial class RegisterForm
     {

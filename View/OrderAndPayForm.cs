@@ -7,19 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DEUProject_CSharp_OutbackPOS.Controller;
 using DEUProject_CSharp_OutbackPOS.Data;
 using DEUProject_CSharp_OutbackPOS.Model;
 
-namespace DEUProject_CSharp_OutbackPOS
+namespace DEUProject_CSharp_OutbackPOS.View
 {
     public partial class OrderAndPayForm : Form
     {
+        OrderController orderController = new OrderController();
         MenuRepository menuRepository = new MenuRepository();
         public OrderAndPayForm(PosMainForm refreshingForm, Panel table)
         {
             InitializeComponent();
 
             LoadMenu();
+            lbltableName.Text = table.Name;
         }
 
         public void LoadMenu()
@@ -41,7 +44,7 @@ namespace DEUProject_CSharp_OutbackPOS
                 decimal price = Convert.ToDecimal(row.Cells["Price"].Value);
 
                 bool itemExists = false;
-                foreach (ListViewItem item in listView1.Items)
+                foreach (ListViewItem item in nowMenuListView.Items)
                 {
                     if (Convert.ToInt32(item.Tag) == menuId) // Tag를 MenuID로 설정
                     {
@@ -67,9 +70,14 @@ namespace DEUProject_CSharp_OutbackPOS
                     listItem.SubItems.Add("1"); // 초기 수량
                     listItem.SubItems.Add(price.ToString("C")); // 총 가격 (수량 * 단가)
 
-                    listView1.Items.Add(listItem);
+                    nowMenuListView.Items.Add(listItem);
                 }
             }
+        }
+
+        private void btnTableOrder_Click(object sender, EventArgs e)
+        {
+            orderController.AddNewOrder();
         }
     }
 }

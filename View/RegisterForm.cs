@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DEUProject_CSharp_OutbackPOS.Data;
 using DEUProject_CSharp_OutbackPOS.Model;
+using DEUProject_CSharp_OutbackPOS.Controller;
 
-namespace DEUProject_CSharp_OutbackPOS
+namespace DEUProject_CSharp_OutbackPOS.View
 {
     public partial class RegisterForm : Form
     {
-        UserRepository userRepository = new UserRepository();
-        AuthClass authSystem = new AuthClass();
+        AuthController authController = new AuthController();
         public RegisterForm()
         {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace DEUProject_CSharp_OutbackPOS
                 return;
             }
 
-            bool isRegisted = authSystem.Register(txtBoxId.Text, txtBoxPW.Text, txtBoxUserName.Text, txtBoxPosition.Text);
+            bool isRegisted = authController.Register(txtBoxId.Text, txtBoxPW.Text, txtBoxUserName.Text, txtBoxPosition.Text);
             if (isRegisted)
             {
                 MessageBox.Show("회원가입 성공!");

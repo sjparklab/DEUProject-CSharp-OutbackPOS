@@ -1,4 +1,4 @@
-﻿namespace DEUProject_CSharp_OutbackPOS
+﻿namespace DEUProject_CSharp_OutbackPOS.View
 {
     partial class PosMainForm
     {
@@ -148,7 +148,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(129, 76);
             this.label1.TabIndex = 0;
-            this.label1.Text = "지점정보\r\n부산진";
+            this.label1.Text = "지점정보\r\n서면점\r\n";
             // 
             // tableLayoutPanel4
             // 

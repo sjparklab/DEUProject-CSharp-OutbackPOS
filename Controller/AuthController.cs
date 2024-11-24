@@ -3,9 +3,9 @@ using System.Windows.Forms;
 using DEUProject_CSharp_OutbackPOS.Data;
 using DEUProject_CSharp_OutbackPOS.Model;
 
-namespace DEUProject_CSharp_OutbackPOS
+namespace DEUProject_CSharp_OutbackPOS.Controller
 {
-    internal class AuthClass
+    public class AuthController
     {
         UserRepository userRepository = new UserRepository();
         public string Id { get; set; }
