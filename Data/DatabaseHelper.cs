@@ -61,7 +61,7 @@ namespace DEUProject_CSharp_OutbackPOS.Data
                         Price REAL NOT NULL,
                         Stock INTEGER NOT NULL,
                         IngredientOrigin TEXT,
-                        Description TEXT, -- 설명을 저장하는 컬럼 추가
+                        Description TEXT,
                         Size TEXT,
                         Category2 TEXT,
                         Doneness TEXT,

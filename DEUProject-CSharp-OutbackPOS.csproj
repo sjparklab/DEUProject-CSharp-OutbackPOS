@@ -52,6 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\OrderController.cs" />
+    <Compile Include="Controller\TableController.cs" />
     <Compile Include="Data\DatabaseHelper.cs" />
     <Compile Include="Data\MenuRepository.cs" />
     <Compile Include="Data\TableRepository.cs" />
@@ -160,5 +162,6 @@
   <ItemGroup>
     <None Include="Resources\4table.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
