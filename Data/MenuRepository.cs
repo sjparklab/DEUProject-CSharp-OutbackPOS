@@ -10,9 +10,9 @@ namespace DEUProject_CSharp_OutbackPOS.Data
         private readonly string connectionString = "Data Source=database.db;Version=3;";        
         
         // 메뉴 가져오기
-        public List<Menu> GetAllMenus()
+        public List<OutbackMenu> GetAllMenus()
         {
-            var menus = new List<Menu>();
+            var menus = new List<OutbackMenu>();
             using (var connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
@@ -25,7 +25,7 @@ namespace DEUProject_CSharp_OutbackPOS.Data
                     {
                         string category = reader["Category"].ToString();
 
-                        Menu menu;
+                        OutbackMenu menu;
                         switch (category)
                         {
                             case "SetMenu":
@@ -55,7 +55,7 @@ namespace DEUProject_CSharp_OutbackPOS.Data
                                 break;
 
                             default:
-                                menu = new Menu();
+                                menu = new OutbackMenu();
                                 break;
                         }
 
@@ -76,7 +76,7 @@ namespace DEUProject_CSharp_OutbackPOS.Data
         }
 
         // 메뉴 추가
-        public void AddMenu(Menu menu)
+        public void AddMenu(OutbackMenu menu)
         {
             using (var connection = new SQLiteConnection(connectionString))
             {
@@ -143,7 +143,7 @@ namespace DEUProject_CSharp_OutbackPOS.Data
         }
 
         // 메뉴 수정
-        public void UpdateMenu(Menu menu)
+        public void UpdateMenu(OutbackMenu menu)
         {
             try
             {

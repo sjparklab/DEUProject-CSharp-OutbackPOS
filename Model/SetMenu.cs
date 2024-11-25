@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DEUProject_CSharp_OutbackPOS.Model
 {
-    public class SetMenu : Menu
+    public class SetMenu : OutbackMenu
     {
         public string SteakOption { get; set; }
         public string PremiumSidesOption { get; set; }

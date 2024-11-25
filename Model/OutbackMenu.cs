@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DEUProject_CSharp_OutbackPOS.Model
 {
-    public class Menu
+    public class OutbackMenu
     {
         public int MenuID { get; set; }       // 메뉴 ID (Primary Key)
         public string Name { get; set; }      // 메뉴 이름

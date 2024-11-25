@@ -61,7 +61,8 @@
     <Compile Include="Data\TableRepository.cs" />
     <Compile Include="Data\UserRepository.cs" />
     <Compile Include="Model\DrinkMenu.cs" />
-    <Compile Include="Model\Menu.cs" />
+    <Compile Include="Model\MenuItem.cs" />
+    <Compile Include="Model\OutbackMenu.cs" />
     <Compile Include="Model\Order.cs" />
     <Compile Include="Model\SetMenu.cs" />
     <Compile Include="Model\SteakMenu.cs" />

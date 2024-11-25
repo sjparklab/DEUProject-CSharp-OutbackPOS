@@ -17,6 +17,10 @@ namespace DEUProject_CSharp_OutbackPOS.View
     {
         OrderController orderController = new OrderController();
         MenuRepository menuRepository = new MenuRepository();
+        List<int> newOrderMenuIDs = new List<int>();
+        List<int> nowOrderMenuIDs = new List<int>();
+
+
         public OrderAndPayForm(PosMainForm refreshingForm, Panel table)
         {
             InitializeComponent();
@@ -77,7 +81,13 @@ namespace DEUProject_CSharp_OutbackPOS.View
 
         private void btnTableOrder_Click(object sender, EventArgs e)
         {
-            orderController.AddNewOrder();
+            newOrderMenuIDs.Clear();
+            foreach (ListViewItem i in nowMenuListView.Items) {
+                List<int> menuList = new List<int>();
+                Console.WriteLine((int)i.Tag);
+                //menuList.Add(i);
+            }
+            //orderController.AddNewOrder();
         }
     }
 }
