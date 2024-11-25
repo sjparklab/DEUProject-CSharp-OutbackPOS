@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DEUProject_CSharp_OutbackPOS.Controller;
 using DEUProject_CSharp_OutbackPOS.Data;
 using DEUProject_CSharp_OutbackPOS.Model;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DEUProject_CSharp_OutbackPOS.View
 {
@@ -31,7 +32,14 @@ namespace DEUProject_CSharp_OutbackPOS.View
         public void LoadMenu()
         {
             var menus = menuRepository.GetAllMenus();
+
             menuGrid.DataSource = menus;
+            var uniqueCategories = menus
+                .Select(item => item.Category)
+                .Distinct() // 중복제거               
+                .ToList();
+
+            categoryComboBox.DataSource = uniqueCategories;
         }
 
         private void menuGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -81,6 +89,11 @@ namespace DEUProject_CSharp_OutbackPOS.View
                 // 새 수량 설정
                 int newQuantity = Convert.ToInt32(nowMenuGridView.Rows[rowIndex].Cells["Quantity"].Value);
                 orderItem.Quantity = newQuantity;
+
+                if(orderItem.Quantity <= 0)
+                {
+                    currentOrderItems.RemoveAt(rowIndex);
+                }
 
                 // UI 업데이트
                 nowMenuGridView.Refresh();

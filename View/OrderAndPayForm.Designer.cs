@@ -38,11 +38,6 @@
             this.메뉴삭제ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbltableName = new System.Windows.Forms.Label();
-            this.addMenuListView = new System.Windows.Forms.ListView();
-            this.newMenuName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.newMenuPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.newMenuQuantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.newMenuPriceSum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnTablePay = new System.Windows.Forms.Button();
             this.btnTableOrder = new System.Windows.Forms.Button();
@@ -56,7 +51,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.lblCat2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.category2ComboBox = new System.Windows.Forms.ComboBox();
             this.txtBoxPrice = new System.Windows.Forms.TextBox();
             this.lblPrice = new System.Windows.Forms.Label();
             this.txtBoxID = new System.Windows.Forms.TextBox();
@@ -69,6 +64,12 @@
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceSum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanelTitle.SuspendLayout();
             this.orderpayLayout.SuspendLayout();
@@ -80,6 +81,7 @@
             this.menuSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -152,8 +154,8 @@
             this.orderPaySystem.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.orderPaySystem.ColumnCount = 1;
             this.orderPaySystem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.orderPaySystem.Controls.Add(this.dataGridView1, 0, 2);
             this.orderPaySystem.Controls.Add(this.panel1, 0, 0);
-            this.orderPaySystem.Controls.Add(this.addMenuListView, 0, 2);
             this.orderPaySystem.Controls.Add(this.tableLayoutPanel2, 0, 3);
             this.orderPaySystem.Controls.Add(this.nowMenuGridView, 0, 1);
             this.orderPaySystem.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -195,6 +197,7 @@
             // 
             // lbltableName
             // 
+            this.lbltableName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(235)))));
             this.lbltableName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbltableName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbltableName.Font = new System.Drawing.Font("맑은 고딕", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -204,45 +207,6 @@
             this.lbltableName.TabIndex = 4;
             this.lbltableName.Text = "lbltableName";
             this.lbltableName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // addMenuListView
-            // 
-            this.addMenuListView.CheckBoxes = true;
-            this.addMenuListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.newMenuName,
-            this.newMenuPrice,
-            this.newMenuQuantity,
-            this.newMenuPriceSum});
-            this.addMenuListView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addMenuListView.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.addMenuListView.HideSelection = false;
-            this.addMenuListView.Location = new System.Drawing.Point(2, 858);
-            this.addMenuListView.Margin = new System.Windows.Forms.Padding(0);
-            this.addMenuListView.Name = "addMenuListView";
-            this.addMenuListView.Size = new System.Drawing.Size(674, 284);
-            this.addMenuListView.TabIndex = 1;
-            this.addMenuListView.UseCompatibleStateImageBehavior = false;
-            this.addMenuListView.View = System.Windows.Forms.View.Details;
-            // 
-            // newMenuName
-            // 
-            this.newMenuName.Text = "메뉴명";
-            this.newMenuName.Width = 300;
-            // 
-            // newMenuPrice
-            // 
-            this.newMenuPrice.Text = "가격";
-            this.newMenuPrice.Width = 100;
-            // 
-            // newMenuQuantity
-            // 
-            this.newMenuQuantity.Text = "갯수";
-            this.newMenuQuantity.Width = 100;
-            // 
-            // newMenuPriceSum
-            // 
-            this.newMenuPriceSum.Text = "총액";
-            this.newMenuPriceSum.Width = 100;
             // 
             // tableLayoutPanel2
             // 
@@ -288,6 +252,7 @@
             this.nowMenuGridView.AllowUserToResizeColumns = false;
             this.nowMenuGridView.AllowUserToResizeRows = false;
             this.nowMenuGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.nowMenuGridView.BackgroundColor = System.Drawing.Color.White;
             this.nowMenuGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.nowMenuGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MenuID,
@@ -329,6 +294,7 @@
             this.menuGrid.AllowUserToResizeColumns = false;
             this.menuGrid.AllowUserToResizeRows = false;
             this.menuGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.menuGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(235)))));
             this.menuGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.menuGrid.Location = new System.Drawing.Point(1, 216);
             this.menuGrid.Margin = new System.Windows.Forms.Padding(0);
@@ -350,7 +316,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.lblCat2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.category2ComboBox);
             this.groupBox1.Controls.Add(this.txtBoxPrice);
             this.groupBox1.Controls.Add(this.lblPrice);
             this.groupBox1.Controls.Add(this.txtBoxID);
@@ -423,13 +389,14 @@
             this.lblCat2.TabIndex = 9;
             this.lblCat2.Text = "세부카테고리";
             // 
-            // comboBox1
+            // category2ComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(957, 88);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(191, 36);
-            this.comboBox1.TabIndex = 8;
+            this.category2ComboBox.Enabled = false;
+            this.category2ComboBox.FormattingEnabled = true;
+            this.category2ComboBox.Location = new System.Drawing.Point(957, 88);
+            this.category2ComboBox.Name = "category2ComboBox";
+            this.category2ComboBox.Size = new System.Drawing.Size(191, 36);
+            this.category2ComboBox.TabIndex = 8;
             // 
             // txtBoxPrice
             // 
@@ -532,6 +499,72 @@
             this.PriceSum.Name = "PriceSum";
             this.PriceSum.ReadOnly = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(2, 858);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 30;
+            this.dataGridView1.Size = new System.Drawing.Size(674, 284);
+            this.dataGridView1.TabIndex = 5;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MenuID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "MenuID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "MenuName";
+            this.dataGridViewTextBoxColumn2.FillWeight = 350F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "메뉴명";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Price";
+            this.dataGridViewTextBoxColumn3.HeaderText = "가격";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Quantity";
+            this.dataGridViewTextBoxColumn4.HeaderText = "수량";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "PriceSum";
+            this.dataGridViewTextBoxColumn5.HeaderText = "총액";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
             // OrderAndPayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -554,6 +587,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.menuGrid)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -566,11 +600,6 @@
         private System.Windows.Forms.TableLayoutPanel orderpayLayout;
         private System.Windows.Forms.TableLayoutPanel orderPaySystem;
         private System.Windows.Forms.DataGridView menuGrid;
-        private System.Windows.Forms.ListView addMenuListView;
-        private System.Windows.Forms.ColumnHeader newMenuName;
-        private System.Windows.Forms.ColumnHeader newMenuPrice;
-        private System.Windows.Forms.ColumnHeader newMenuQuantity;
-        private System.Windows.Forms.ColumnHeader newMenuPriceSum;
         private System.Windows.Forms.TableLayoutPanel menuSearch;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
@@ -591,7 +620,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label lblCat2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox category2ComboBox;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.DataGridView nowMenuGridView;
@@ -600,5 +629,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceSum;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }
