@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DEUProject_CSharp_OutbackPOS.Data;
 using DEUProject_CSharp_OutbackPOS.Model;
 
 namespace DEUProject_CSharp_OutbackPOS.Controller
 {
     public class OrderController
     {
-        public void AddNewOrder(List<OutbackMenu> menu)
+        OrderRepository orderRepository = new OrderRepository();
+        public void AddNewOrder(OutbackOrder order)
         {
-            Order order = new Order();
+            //orderRepository.AddNewOrder();
         }
     }
 }

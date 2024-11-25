@@ -17,16 +17,15 @@ namespace DEUProject_CSharp_OutbackPOS.View
     {
         OrderController orderController = new OrderController();
         MenuRepository menuRepository = new MenuRepository();
-        List<int> newOrderMenuIDs = new List<int>();
-        List<int> nowOrderMenuIDs = new List<int>();
-
+        BindingList<OutbackOrderItem> currentOrderItems = new BindingList<OutbackOrderItem>();
 
         public OrderAndPayForm(PosMainForm refreshingForm, Panel table)
         {
             InitializeComponent();
-
             LoadMenu();
             lbltableName.Text = table.Name;
+            nowMenuGridView.AutoGenerateColumns = false;
+            nowMenuGridView.DataSource = currentOrderItems;
         }
 
         public void LoadMenu()
@@ -39,55 +38,64 @@ namespace DEUProject_CSharp_OutbackPOS.View
         {
             if (e.RowIndex >= 0)
             {
-                // 선택된 행 데이터 가져오기
+                // 메뉴 가져오기
                 DataGridViewRow row = menuGrid.Rows[e.RowIndex];
-
                 int menuId = Convert.ToInt32(row.Cells["MenuID"].Value);
                 string name = row.Cells["Name"].Value.ToString();
-                string category = row.Cells["Category"].Value.ToString();
                 decimal price = Convert.ToDecimal(row.Cells["Price"].Value);
 
-                bool itemExists = false;
-                foreach (ListViewItem item in nowMenuListView.Items)
+                // 메뉴 추가 또는 업데이트
+                OutbackOrderItem existingItem = currentOrderItems.FirstOrDefault(orderItem => orderItem.outbackMenuItem.MenuID == menuId);
+                if (existingItem != null)
                 {
-                    if (Convert.ToInt32(item.Tag) == menuId) // Tag를 MenuID로 설정
-                    {
-                        // 수량 증가
-                        int currentQuantity = Convert.ToInt32(item.SubItems[2].Text);
-                        currentQuantity++;
-
-                        // 총 가격 업데이트
-                        item.SubItems[2].Text = currentQuantity.ToString();
-                        item.SubItems[3].Text = (currentQuantity * price).ToString("C");
-
-                        itemExists = true;
-                        break;
-                    }
+                    existingItem.Quantity++;
+                }
+                else
+                {
+                    currentOrderItems.Add(new OutbackOrderItem
+                    { 
+                        Quantity = 1,
+                        outbackMenuItem = new OutbackMenuItem
+                        {
+                            MenuID = menuId,
+                            MenuName = name,
+                            Price = price,
+                        }
+                    });
                 }
 
-                if (!itemExists)
-                {
-                    // 새로운 항목 추가
-                    ListViewItem listItem = new ListViewItem(name);
-                    listItem.Tag = menuId; // Tag에 MenuID 저장
-                    listItem.SubItems.Add(price.ToString("C"));
-                    listItem.SubItems.Add("1"); // 초기 수량
-                    listItem.SubItems.Add(price.ToString("C")); // 총 가격 (수량 * 단가)
+                // DataGridView 갱신
+                nowMenuGridView.Refresh();
+            }
+        }
 
-                    nowMenuListView.Items.Add(listItem);
-                }
+        private void nowMenuGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            Console.Write("Debugging TEST\n");
+            if (e.ColumnIndex >= 0 && nowMenuGridView.Columns[e.ColumnIndex].Name == "Quantity")
+            {
+                // 수정된 수량 가져오기
+                int rowIndex = e.RowIndex;
+                var orderItem = currentOrderItems[rowIndex];
+
+                // 새 수량 설정
+                int newQuantity = Convert.ToInt32(nowMenuGridView.Rows[rowIndex].Cells["Quantity"].Value);
+                orderItem.Quantity = newQuantity;
+
+                // UI 업데이트
+                nowMenuGridView.Refresh();
             }
         }
 
         private void btnTableOrder_Click(object sender, EventArgs e)
         {
-            newOrderMenuIDs.Clear();
-            foreach (ListViewItem i in nowMenuListView.Items) {
-                List<int> menuList = new List<int>();
-                Console.WriteLine((int)i.Tag);
-                //menuList.Add(i);
-            }
-            //orderController.AddNewOrder();
+            OutbackOrder order = new OutbackOrder
+            {
+                outbackOrderItem = currentOrderItems
+            };
+
+            // 주문 처리 로직
+            orderController.AddNewOrder(order);
         }
     }
 }
