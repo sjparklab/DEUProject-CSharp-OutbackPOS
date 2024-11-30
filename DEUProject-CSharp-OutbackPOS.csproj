@@ -53,8 +53,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\AuthController.cs" />
+    <Compile Include="CustomControl\CustomTablePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controller\OrderController.cs" />
     <Compile Include="Controller\TableController.cs" />
+    <Compile Include="CustomControl\DoubleBufferedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Data\DatabaseHelper.cs" />
     <Compile Include="Data\MenuRepository.cs" />
     <Compile Include="Data\OrderRepository.cs" />
@@ -165,6 +171,8 @@
   <ItemGroup>
     <None Include="Resources\4table.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\2145.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
