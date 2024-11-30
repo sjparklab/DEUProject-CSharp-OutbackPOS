@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\AuthController.cs" />
+    <Compile Include="Controller\MenuController.cs" />
     <Compile Include="CustomControl\CustomTablePanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -89,6 +90,12 @@
     <Compile Include="View\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\MenuManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MenuManageForm.Designer.cs">
+      <DependentUpon>MenuManageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\OrderAndPayForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MenuManageForm.resx">
+      <DependentUpon>MenuManageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\OrderAndPayForm.resx">
       <DependentUpon>OrderAndPayForm.cs</DependentUpon>

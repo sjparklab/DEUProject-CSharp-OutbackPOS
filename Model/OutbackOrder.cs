@@ -9,6 +9,7 @@ namespace DEUProject_CSharp_OutbackPOS.Model
 {
     public class OutbackOrder
     {
+        public int Id { get; set; }
         public int OrderID { get; set; }
         public int TableID { get; set; }
         public string TableName { get; set; }

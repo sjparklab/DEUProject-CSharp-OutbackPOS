@@ -79,7 +79,7 @@ namespace DEUProject_CSharp_OutbackPOS.Controller
                     table.GetBorderColor(), // 컬러 값 저장, // 기본 테두리 색상
                     3            // 기본 테두리 두께
                 );
-
+                panel.Tag = table.Id;
                 addPanelAction(panel);
             }
         }

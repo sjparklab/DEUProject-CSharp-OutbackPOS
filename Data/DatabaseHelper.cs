@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SQLite;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace DEUProject_CSharp_OutbackPOS.Data
@@ -75,6 +71,23 @@ namespace DEUProject_CSharp_OutbackPOS.Data
                         Sweetness INTEGER,
                         Body INTEGER,
                         Tannin INTEGER
+                    );
+                    CREATE TABLE IF NOT EXISTS Orders (
+                        OrderID INTEGER PRIMARY KEY AUTOINCREMENT,
+                        TableID INTEGER NOT NULL,
+                        TableName TEXT NOT NULL,
+                        OrderTime TEXT NOT NULL
+                    );
+
+                    CREATE TABLE IF NOT EXISTS OrderItems (
+                        OrderItemID INTEGER PRIMARY KEY AUTOINCREMENT,
+                        OrderID INTEGER NOT NULL,
+                        MenuID INTEGER NOT NULL,
+                        MenuName TEXT NOT NULL,
+                        Quantity INTEGER NOT NULL,
+                        Price REAL NOT NULL,
+                        TotalPrice REAL NOT NULL,
+                        FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
                     );
                 ";
 

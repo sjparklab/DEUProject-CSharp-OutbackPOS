@@ -1,27 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DEUProject_CSharp_OutbackPOS.Model;
+﻿using DEUProject_CSharp_OutbackPOS.Controller;
 using DEUProject_CSharp_OutbackPOS.CustomControl;
-using DEUProject_CSharp_OutbackPOS.Controller;
+using DEUProject_CSharp_OutbackPOS.Model;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace DEUProject_CSharp_OutbackPOS.View
 {
     public partial class TableManageForm : Form
     {
         private readonly TableController tableController;
+        private PosMainForm refreshingForm;
         private CustomTablePanel selectedTablePanel;
         private Point movingOffset;
 
         public TableManageForm(PosMainForm refreshingForm)
         {
             InitializeComponent();
+            this.refreshingForm = refreshingForm;
             tableController = new TableController(new TableRepository(), tableLayoutPanel);
             LoadTables();
         }
@@ -71,8 +67,10 @@ namespace DEUProject_CSharp_OutbackPOS.View
 
             if (result == DialogResult.Yes)
             {
-                Close();
+                refreshingForm.Refresh();
+                this.Close();
             }
+            refreshingForm.Refresh();
         }
 
         private void btnTableRemove_Click(object sender, EventArgs e)

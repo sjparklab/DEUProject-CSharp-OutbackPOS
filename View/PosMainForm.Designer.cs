@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutMenuPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUserInform = new System.Windows.Forms.Label();
@@ -40,6 +39,7 @@
             this.btnAnalysisManage = new System.Windows.Forms.Button();
             this.btnCustomerManage = new System.Windows.Forms.Button();
             this.btnMenuManage = new System.Windows.Forms.Button();
+            this.tableLayoutMenuPanel = new DEUProject_CSharp_OutbackPOS.CustomControl.DoubleBufferedPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -52,10 +52,10 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.55212F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.44788F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutMenuPanel, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutMenuPanel, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
@@ -65,17 +65,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.21364F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1898, 1024);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // tableLayoutMenuPanel
-            // 
-            this.tableLayoutMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(235)))));
-            this.tableLayoutMenuPanel.BackgroundImage = global::DEUProject_CSharp_OutbackPOS.Properties.Resources._2145;
-            this.tableLayoutMenuPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutMenuPanel.Location = new System.Drawing.Point(277, 81);
-            this.tableLayoutMenuPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutMenuPanel.Name = "tableLayoutMenuPanel";
-            this.tableLayoutMenuPanel.Size = new System.Drawing.Size(1620, 942);
-            this.tableLayoutMenuPanel.TabIndex = 7;
             // 
             // tableLayoutPanel2
             // 
@@ -100,12 +89,12 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("맑은 고딕", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(413, 17);
+            this.label2.Location = new System.Drawing.Point(437, 20);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(395, 45);
+            this.label2.Size = new System.Drawing.Size(346, 38);
             this.label2.TabIndex = 2;
             this.label2.Text = "판매관리 - 주문관리(영업)";
             // 
@@ -113,12 +102,12 @@
             // 
             this.txtUserInform.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtUserInform.AutoSize = true;
-            this.txtUserInform.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserInform.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtUserInform.ForeColor = System.Drawing.Color.White;
-            this.txtUserInform.Location = new System.Drawing.Point(1388, 0);
+            this.txtUserInform.Location = new System.Drawing.Point(1418, 2);
             this.txtUserInform.Margin = new System.Windows.Forms.Padding(4, 0, 71, 0);
             this.txtUserInform.Name = "txtUserInform";
-            this.txtUserInform.Size = new System.Drawing.Size(161, 79);
+            this.txtUserInform.Size = new System.Drawing.Size(131, 75);
             this.txtUserInform.TabIndex = 1;
             this.txtUserInform.Text = "사용자 ID: -\r\n사용자 이름 : -\r\n직책 : -";
             // 
@@ -142,12 +131,12 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(34, 1);
+            this.label1.Location = new System.Drawing.Point(34, 7);
             this.label1.Margin = new System.Windows.Forms.Padding(34, 0, 0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 76);
+            this.label1.Size = new System.Drawing.Size(110, 64);
             this.label1.TabIndex = 0;
             this.label1.Text = "지점정보\r\n서면점\r\n";
             // 
@@ -230,6 +219,17 @@
             this.btnMenuManage.TabIndex = 5;
             this.btnMenuManage.Text = "메뉴(재고) 관리";
             this.btnMenuManage.UseVisualStyleBackColor = false;
+            this.btnMenuManage.Click += new System.EventHandler(this.btnMenuManage_Click);
+            // 
+            // tableLayoutMenuPanel
+            // 
+            this.tableLayoutMenuPanel.BackgroundImage = global::DEUProject_CSharp_OutbackPOS.Properties.Resources._2145;
+            this.tableLayoutMenuPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutMenuPanel.Location = new System.Drawing.Point(277, 81);
+            this.tableLayoutMenuPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutMenuPanel.Name = "tableLayoutMenuPanel";
+            this.tableLayoutMenuPanel.Size = new System.Drawing.Size(1620, 942);
+            this.tableLayoutMenuPanel.TabIndex = 7;
             // 
             // PosMainForm
             // 
@@ -241,7 +241,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "아웃백스테이크하우스 POS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.PosMainForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -264,6 +263,6 @@
         private System.Windows.Forms.Button btnCustomerManage;
         private System.Windows.Forms.Button btnMenuManage;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel tableLayoutMenuPanel;
+        private CustomControl.DoubleBufferedPanel tableLayoutMenuPanel;
     }
 }

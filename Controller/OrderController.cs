@@ -14,7 +14,7 @@ namespace DEUProject_CSharp_OutbackPOS.Controller
         OrderRepository orderRepository = new OrderRepository();
         public void AddNewOrder(OutbackOrder order)
         {
-            //orderRepository.AddNewOrder();
+            orderRepository.AddNewOrder(order);
         }
     }
 }

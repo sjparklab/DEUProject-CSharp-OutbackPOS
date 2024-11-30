@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DEUProject_CSharp_OutbackPOS.Controller;
+﻿using DEUProject_CSharp_OutbackPOS.Controller;
+using DEUProject_CSharp_OutbackPOS.CustomControl;
 using DEUProject_CSharp_OutbackPOS.Data;
 using DEUProject_CSharp_OutbackPOS.Model;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System;
+using System.ComponentModel;
+using System.Data;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace DEUProject_CSharp_OutbackPOS.View
 {
@@ -19,14 +15,16 @@ namespace DEUProject_CSharp_OutbackPOS.View
         OrderController orderController = new OrderController();
         MenuRepository menuRepository = new MenuRepository();
         BindingList<OutbackOrderItem> currentOrderItems = new BindingList<OutbackOrderItem>();
+        CustomTablePanel selectedTable;
 
-        public OrderAndPayForm(PosMainForm refreshingForm, Panel table)
+        public OrderAndPayForm(PosMainForm refreshingForm, CustomTablePanel table)
         {
             InitializeComponent();
             LoadMenu();
             lbltableName.Text = table.Name;
             nowMenuGridView.AutoGenerateColumns = false;
             nowMenuGridView.DataSource = currentOrderItems;
+            selectedTable = table;
         }
 
         public void LoadMenu()
@@ -104,7 +102,10 @@ namespace DEUProject_CSharp_OutbackPOS.View
         {
             OutbackOrder order = new OutbackOrder
             {
-                outbackOrderItem = currentOrderItems
+                outbackOrderItem = currentOrderItems,
+                TableID = (int) selectedTable.Tag,
+                TableName = selectedTable.Name,
+
             };
 
             // 주문 처리 로직
