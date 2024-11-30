@@ -24,8 +24,8 @@ namespace DEUProject_CSharp_OutbackPOS.Model
             using (var connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
-                string query = "INSERT INTO TableLayout (Name, X, Y, Width, Height) " +
-                               "VALUES (@Name, @X, @Y, @Width, @Height)";
+                string query = "INSERT INTO TableLayout (Name, X, Y, Width, Height, BorderColorArgb) " +
+                               "VALUES (@Name, @X, @Y, @Width, @Height, @BorderColorArgb)";
                 using (var command = new SQLiteCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Name", table.Name);
@@ -33,6 +33,7 @@ namespace DEUProject_CSharp_OutbackPOS.Model
                     command.Parameters.AddWithValue("@Y", table.Y);
                     command.Parameters.AddWithValue("@Width", table.Width);
                     command.Parameters.AddWithValue("@Height", table.Height);
+                    command.Parameters.AddWithValue("@BorderColorArgb", table.BorderColorArgb);
                     command.ExecuteNonQuery();
                 }
             }
@@ -45,7 +46,7 @@ namespace DEUProject_CSharp_OutbackPOS.Model
             using (var connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
-                string query = "SELECT Id, Name, X, Y, Width, Height FROM TableLayout";
+                string query = "SELECT Id, Name, X, Y, Width, Height, BorderColorArgb FROM TableLayout";
                 using (var command = new SQLiteCommand(query, connection))
                 {
                     using (var reader = command.ExecuteReader())
@@ -60,6 +61,7 @@ namespace DEUProject_CSharp_OutbackPOS.Model
                                 Y = reader.GetInt32(3),
                                 Width = reader.GetInt32(4),
                                 Height = reader.GetInt32(5),
+                                BorderColorArgb = reader.GetInt32(6)
                             });
                         }
                     }

@@ -102,10 +102,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("맑은 고딕", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(474, 24);
+            this.label2.Location = new System.Drawing.Point(413, 17);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(272, 30);
+            this.label2.Size = new System.Drawing.Size(395, 45);
             this.label2.TabIndex = 2;
             this.label2.Text = "판매관리 - 주문관리(영업)";
             // 
@@ -115,10 +115,10 @@
             this.txtUserInform.AutoSize = true;
             this.txtUserInform.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserInform.ForeColor = System.Drawing.Color.White;
-            this.txtUserInform.Location = new System.Drawing.Point(1441, 9);
+            this.txtUserInform.Location = new System.Drawing.Point(1388, 0);
             this.txtUserInform.Margin = new System.Windows.Forms.Padding(4, 0, 71, 0);
             this.txtUserInform.Name = "txtUserInform";
-            this.txtUserInform.Size = new System.Drawing.Size(108, 60);
+            this.txtUserInform.Size = new System.Drawing.Size(161, 79);
             this.txtUserInform.TabIndex = 1;
             this.txtUserInform.Text = "사용자 ID: -\r\n사용자 이름 : -\r\n직책 : -";
             // 
@@ -144,10 +144,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(34, 14);
+            this.label1.Location = new System.Drawing.Point(34, 1);
             this.label1.Margin = new System.Windows.Forms.Padding(34, 0, 0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 50);
+            this.label1.Size = new System.Drawing.Size(129, 76);
             this.label1.TabIndex = 0;
             this.label1.Text = "지점정보\r\n서면점\r\n";
             // 
@@ -177,7 +177,7 @@
             // 
             this.btnTableManage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnTableManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
-            this.btnTableManage.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTableManage.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnTableManage.ForeColor = System.Drawing.Color.Black;
             this.btnTableManage.Location = new System.Drawing.Point(37, 43);
             this.btnTableManage.Margin = new System.Windows.Forms.Padding(0);
@@ -192,7 +192,7 @@
             // 
             this.btnAnalysisManage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAnalysisManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
-            this.btnAnalysisManage.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnalysisManage.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnAnalysisManage.ForeColor = System.Drawing.Color.Black;
             this.btnAnalysisManage.Location = new System.Drawing.Point(37, 747);
             this.btnAnalysisManage.Margin = new System.Windows.Forms.Padding(0);
@@ -206,7 +206,7 @@
             // 
             this.btnCustomerManage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCustomerManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
-            this.btnCustomerManage.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomerManage.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCustomerManage.ForeColor = System.Drawing.Color.Black;
             this.btnCustomerManage.Location = new System.Drawing.Point(37, 511);
             this.btnCustomerManage.Margin = new System.Windows.Forms.Padding(0);
@@ -221,7 +221,7 @@
             // 
             this.btnMenuManage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnMenuManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
-            this.btnMenuManage.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuManage.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnMenuManage.ForeColor = System.Drawing.Color.Black;
             this.btnMenuManage.Location = new System.Drawing.Point(37, 277);
             this.btnMenuManage.Margin = new System.Windows.Forms.Padding(0);

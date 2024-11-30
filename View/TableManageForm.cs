@@ -42,11 +42,11 @@ namespace DEUProject_CSharp_OutbackPOS.View
         {
             // 새 테이블 추가
             CustomTablePanel panel = tableController.CreateTablePanel(
-                "테이블 - " + tableLayoutPanel.Controls.Count,
+                "테이블 - " + (tableLayoutPanel.Controls.Count + 1),
                 new Point(tableLayoutPanel.Width / 2, tableLayoutPanel.Height / 2),
                 new Size(200, 200),
                 Color.Black, // 기본 테두리 색상
-                5            // 기본 테두리 두께
+                3          // 기본 테두리 두께
             );
 
             // 이벤트 연결

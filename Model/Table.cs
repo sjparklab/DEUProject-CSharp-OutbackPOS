@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DEUProject_CSharp_OutbackPOS.Model
 {
@@ -18,8 +19,21 @@ namespace DEUProject_CSharp_OutbackPOS.Model
         public bool IsOccupied { get; set; } // 테이블 점유 여부
         public int BorderColorArgb { get; set; } // Color 저장 (ARGB 값)
 
+        public Table() { }
+
         public Table(string name, int x, int y, int width, int height, Color borderColor) // 컬러 값 포함한 생성자
         {
+            this.Name = name;
+            this.X = x;
+            this.Y = y;
+            this.Width = width;
+            this.Height = height;
+            this.BorderColorArgb = borderColor.ToArgb(); // Color를 ARGB 값으로 변환
+        }
+
+        public Table(int Id, string name, int x, int y, int width, int height, Color borderColor) // ID 포함 생성자
+        {
+            this.Id = Id;
             this.Name = name;
             this.X = x;
             this.Y = y;
