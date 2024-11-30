@@ -110,6 +110,7 @@ namespace DEUProject_CSharp_OutbackPOS.View
 
             // 주문 처리 로직
             orderController.AddNewOrder(order);
+            this.Close();
         }
     }
 }

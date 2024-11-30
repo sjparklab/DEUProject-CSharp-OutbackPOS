@@ -2,6 +2,7 @@
 using DEUProject_CSharp_OutbackPOS.CustomControl;
 using DEUProject_CSharp_OutbackPOS.Model;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace DEUProject_CSharp_OutbackPOS.View
@@ -34,7 +35,20 @@ namespace DEUProject_CSharp_OutbackPOS.View
         private void LoadTables()
         {
             tableController.LoadTables(panel =>
-            {   // 이벤트 연결
+            {
+                var table = (Table)panel.Tag; // panel.Tag에 연결된 테이블 객체를 가져옵니다.
+
+                // 테이블이 점유된 경우 배경색 변경
+                if (table.IsOccupied)
+                {
+                    panel.BackColor = Color.LightGray;
+                }
+                else
+                {
+                    panel.BackColor = Color.White;
+                }
+
+                // 이벤트 연결
                 panel.MouseDown += TablePanel_MouseClick;
                 tableLayoutMenuPanel.Controls.Add(panel);
             });
