@@ -31,7 +31,7 @@ namespace DEUProject_CSharp_OutbackPOS.Model
             this.BorderColorArgb = borderColor.ToArgb(); // Color를 ARGB 값으로 변환
         }
 
-        public Table(int Id, string name, int x, int y, int width, int height, Color borderColor) // ID 포함 생성자
+        public Table(int Id, string name, int x, int y, int width, int height, Color borderColor, bool isOccupied) // ID 포함 생성자
         {
             this.Id = Id;
             this.Name = name;
@@ -40,6 +40,7 @@ namespace DEUProject_CSharp_OutbackPOS.Model
             this.Width = width;
             this.Height = height;
             this.BorderColorArgb = borderColor.ToArgb(); // Color를 ARGB 값으로 변환
+            IsOccupied = isOccupied;
         }
 
         // BorderColor를 Color 타입으로 반환

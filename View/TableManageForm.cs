@@ -71,6 +71,7 @@ namespace DEUProject_CSharp_OutbackPOS.View
                 this.Close();
             }
             refreshingForm.Refresh();
+            refreshingForm.LoadTables();
         }
 
         private void btnTableRemove_Click(object sender, EventArgs e)

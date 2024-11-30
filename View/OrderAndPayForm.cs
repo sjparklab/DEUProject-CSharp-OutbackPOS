@@ -5,6 +5,7 @@ using DEUProject_CSharp_OutbackPOS.Model;
 using System;
 using System.ComponentModel;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -13,18 +14,25 @@ namespace DEUProject_CSharp_OutbackPOS.View
     public partial class OrderAndPayForm : Form
     {
         OrderController orderController = new OrderController();
+        TableController tableController = new TableController();
         MenuRepository menuRepository = new MenuRepository();
         BindingList<OutbackOrderItem> currentOrderItems = new BindingList<OutbackOrderItem>();
+        BindingList<OutbackOrderItem> nowOrderedItems = new BindingList<OutbackOrderItem>();
         CustomTablePanel selectedTable;
+        PosMainForm posMainForm;
 
         public OrderAndPayForm(PosMainForm refreshingForm, CustomTablePanel table)
         {
             InitializeComponent();
             LoadMenu();
             lbltableName.Text = table.Name;
+            addMenuGridView.AutoGenerateColumns = false;
+            addMenuGridView.DataSource = currentOrderItems;
             nowMenuGridView.AutoGenerateColumns = false;
-            nowMenuGridView.DataSource = currentOrderItems;
+            nowMenuGridView.DataSource = nowOrderedItems;
             selectedTable = table;
+            posMainForm = refreshingForm;
+            LoadUnpaidOrderItems();
         }
 
         public void LoadMenu()
@@ -71,21 +79,20 @@ namespace DEUProject_CSharp_OutbackPOS.View
                 }
 
                 // DataGridView 갱신
-                nowMenuGridView.Refresh();
+                addMenuGridView.Refresh();
             }
         }
 
-        private void nowMenuGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        private void addMenuGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            Console.Write("Debugging TEST\n");
-            if (e.ColumnIndex >= 0 && nowMenuGridView.Columns[e.ColumnIndex].Name == "Quantity")
+            if (e.ColumnIndex >= 0 && addMenuGridView.Columns[e.ColumnIndex].Name == "Quantity")
             {
                 // 수정된 수량 가져오기
                 int rowIndex = e.RowIndex;
                 var orderItem = currentOrderItems[rowIndex];
 
                 // 새 수량 설정
-                int newQuantity = Convert.ToInt32(nowMenuGridView.Rows[rowIndex].Cells["Quantity"].Value);
+                int newQuantity = Convert.ToInt32(addMenuGridView.Rows[rowIndex].Cells["Quantity"].Value);
                 orderItem.Quantity = newQuantity;
 
                 if(orderItem.Quantity <= 0)
@@ -94,23 +101,91 @@ namespace DEUProject_CSharp_OutbackPOS.View
                 }
 
                 // UI 업데이트
-                nowMenuGridView.Refresh();
+                addMenuGridView.Refresh();
             }
         }
 
         private void btnTableOrder_Click(object sender, EventArgs e)
         {
+            Table table = (Table) selectedTable.Tag;
             OutbackOrder order = new OutbackOrder
             {
                 outbackOrderItem = currentOrderItems,
-                TableID = (int) selectedTable.Tag,
-                TableName = selectedTable.Name,
-
+                TableID = table.Id,
+                TableName = table.Name,
             };
 
             // 주문 처리 로직
             orderController.AddNewOrder(order);
+            table.IsOccupied = true;
+            tableController.UpdateTable(table);
+            posMainForm.LoadTables();
             this.Close();
+        }
+
+        private void btnTablePay_Click(object sender, EventArgs e)
+        {
+            var table = (Table)selectedTable.Tag; // 선택된 테이블 정보 가져오기
+
+            // 결제 처리
+            PaymentController paymentController = new PaymentController();
+            paymentController.ProcessPayment(table.Id, "Card"); // 결제 방식은 Card로 예시
+
+            // UI 업데이트
+            selectedTable.BackColor = Color.White;
+            selectedTable.Controls.Clear(); // 기존 UI 초기화
+            posMainForm.LoadTables(); // 테이블 다시 로드
+        }
+
+        private void LoadUnpaidOrderItems()
+        {
+            // 선택된 테이블 정보 가져오기
+            Table table = (Table)selectedTable.Tag;
+
+            // 미결제 주문 항목 가져오기
+            var unpaidOrderItems = orderController.GetUnpaidOrderItemsByTableId(table.Id);
+
+            // 기존 목록에 동일한 MenuID가 있으면 수량 증가, 없으면 추가
+            foreach (var item in unpaidOrderItems)
+            {
+                var existingItem = nowOrderedItems.FirstOrDefault(x => x.outbackMenuItem.MenuID == item.outbackMenuItem.MenuID);
+
+                if (existingItem != null)
+                {
+                    // 기존 항목이 있으면 수량 증가
+                    existingItem.Quantity += item.Quantity;
+                }
+                else
+                {
+                    // 새 항목 추가
+                    nowOrderedItems.Add(item);
+                }
+            }
+
+            // DataGridView 갱신
+            nowMenuGridView.Refresh();
+        }
+
+        private void nowMenuGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex >= 0 && nowMenuGridView.Columns[e.ColumnIndex].Name == "Quantity")
+            {
+                // 수정된 수량 가져오기
+                int rowIndex = e.RowIndex;
+                var orderItem = nowOrderedItems[rowIndex];
+
+                // 새 수량 설정
+                int newQuantity = Convert.ToInt32(nowMenuGridView.Rows[rowIndex].Cells["Quantity"].Value);
+                orderItem.Quantity = newQuantity;
+
+                if (orderItem.Quantity <= 0)
+                {
+                    nowOrderedItems.RemoveAt(rowIndex);
+                }
+
+                // UI 업데이트
+                nowMenuGridView.Refresh();
+            }
         }
     }
 }

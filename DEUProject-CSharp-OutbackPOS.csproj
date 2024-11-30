@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Controller\AuthController.cs" />
     <Compile Include="Controller\MenuController.cs" />
+    <Compile Include="Controller\PaymentController.cs" />
     <Compile Include="CustomControl\CustomTablePanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -65,6 +66,7 @@
     <Compile Include="Data\DatabaseHelper.cs" />
     <Compile Include="Data\MenuRepository.cs" />
     <Compile Include="Data\OrderRepository.cs" />
+    <Compile Include="Data\PaymentRepository.cs" />
     <Compile Include="Data\TableRepository.cs" />
     <Compile Include="Data\UserRepository.cs" />
     <Compile Include="Model\DrinkMenu.cs" />

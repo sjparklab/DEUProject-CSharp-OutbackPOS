@@ -12,9 +12,15 @@ namespace DEUProject_CSharp_OutbackPOS.Controller
     public class OrderController
     {
         OrderRepository orderRepository = new OrderRepository();
+
         public void AddNewOrder(OutbackOrder order)
         {
             orderRepository.AddNewOrder(order);
+        }
+
+        public List<OutbackOrderItem> GetUnpaidOrderItemsByTableId(int tableId)
+        {
+            return orderRepository.GetUnpaidOrderItemsByTableId(tableId);
         }
     }
 }

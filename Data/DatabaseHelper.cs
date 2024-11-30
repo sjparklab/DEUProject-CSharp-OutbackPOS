@@ -42,8 +42,10 @@ namespace DEUProject_CSharp_OutbackPOS.Data
                         Y INTEGER NOT NULL,
                         Width INTEGER NOT NULL,
                         Height INTEGER NOT NULL,
-                        BorderColorArgb INTEGER NOT NULL
+                        BorderColorArgb INTEGER NOT NULL,
+                        IsOccupied INTEGER NOT NULL DEFAULT 0
                     );
+
                     CREATE TABLE IF NOT EXISTS Users (
                         Id INTEGER PRIMARY KEY AUTOINCREMENT, 
                         UserId TEXT NOT NULL UNIQUE, 
@@ -51,6 +53,7 @@ namespace DEUProject_CSharp_OutbackPOS.Data
                         Name TEXT NOT NULL, 
                         Position TEXT NOT NULL
                     );
+
                     CREATE TABLE IF NOT EXISTS Menu (
                         MenuID INTEGER PRIMARY KEY AUTOINCREMENT,
                         Name TEXT NOT NULL,
@@ -72,11 +75,14 @@ namespace DEUProject_CSharp_OutbackPOS.Data
                         Body INTEGER,
                         Tannin INTEGER
                     );
+
                     CREATE TABLE IF NOT EXISTS Orders (
                         OrderID INTEGER PRIMARY KEY AUTOINCREMENT,
                         TableID INTEGER NOT NULL,
                         TableName TEXT NOT NULL,
-                        OrderTime TEXT NOT NULL
+                        OrderTime TEXT NOT NULL,
+                        PaymentID INTEGER,
+                        FOREIGN KEY (PaymentID) REFERENCES Payments(PaymentID)
                     );
 
                     CREATE TABLE IF NOT EXISTS OrderItems (
@@ -88,6 +94,14 @@ namespace DEUProject_CSharp_OutbackPOS.Data
                         Price REAL NOT NULL,
                         TotalPrice REAL NOT NULL,
                         FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
+                    );
+
+                    CREATE TABLE IF NOT EXISTS Payments (
+                        PaymentID INTEGER PRIMARY KEY AUTOINCREMENT, -- 고유 결제 ID
+                        TableID INTEGER NOT NULL, -- 테이블 ID
+                        TotalAmount REAL NOT NULL, -- 총 결제 금액
+                        PaymentMethod TEXT NOT NULL, -- 결제 방법 (예: 카드, 현금 등)
+                        PaymentTime TEXT NOT NULL -- 결제 시간
                     );
                 ";
 

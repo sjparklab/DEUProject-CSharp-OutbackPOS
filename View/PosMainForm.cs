@@ -32,16 +32,18 @@ namespace DEUProject_CSharp_OutbackPOS.View
             tableManageForm.Show();
         }
 
-        private void LoadTables()
+        public void LoadTables()
         {
+            tableLayoutMenuPanel.Controls.Clear();
+
             tableController.LoadTables(panel =>
             {
-                var table = (Table)panel.Tag; // panel.Tag에 연결된 테이블 객체를 가져옵니다.
+                Table table = (Table)panel.Tag; // panel.Tag에 연결된 테이블 객체를 가져옵니다.
 
                 // 테이블이 점유된 경우 배경색 변경
                 if (table.IsOccupied)
                 {
-                    panel.BackColor = Color.LightGray;
+                    panel.BackColor = Color.FromArgb(49, 130, 246);
                 }
                 else
                 {
