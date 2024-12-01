@@ -135,6 +135,8 @@ namespace DEUProject_CSharp_OutbackPOS.View
             selectedTable.BackColor = Color.White;
             selectedTable.Controls.Clear(); // 기존 UI 초기화
             posMainForm.LoadTables(); // 테이블 다시 로드
+            MessageBox.Show("결제가 완료되었습니다.");
+            this.Close();
         }
 
         private void LoadUnpaidOrderItems()
