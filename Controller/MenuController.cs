@@ -14,5 +14,9 @@ namespace DEUProject_CSharp_OutbackPOS.Controller
         {
             return menuRepository.GetAllMenus();
         }
+        public OutbackMenu GetMenuById(int menuID)
+        {
+            return menuRepository.GetMenuById(menuID);
+        }
     }
 }

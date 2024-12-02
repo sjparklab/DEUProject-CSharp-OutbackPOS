@@ -75,6 +75,74 @@ namespace DEUProject_CSharp_OutbackPOS.Data
             return menus;
         }
 
+        public OutbackMenu GetMenuById(int menuID)
+        {
+            OutbackMenu menu = null;
+
+            using (var connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT * FROM Menu WHERE MenuID = @MenuID";
+
+                using (var command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@MenuID", menuID);
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            string category = reader["Category"].ToString();
+
+                            switch (category)
+                            {
+                                case "SetMenu":
+                                    menu = new SetMenu
+                                    {
+                                        SteakOption = reader["SteakOption"].ToString(),
+                                        PremiumSidesOption = reader["PremiumSidesOption"].ToString(),
+                                        PastaOption = reader["PastaOption"].ToString(),
+                                        DrinkOption = reader["DrinkOption"].ToString()
+                                    };
+                                    break;
+
+                                case "DrinkMenu":
+                                    menu = new DrinkMenu
+                                    {
+                                        Size = reader["Size"].ToString(),
+                                        Category2 = reader["Category2"].ToString()
+                                    };
+                                    break;
+
+                                case "SteakMenu":
+                                    menu = new SteakMenu
+                                    {
+                                        Doneness = reader["Doneness"].ToString(),
+                                        CookingStyle = reader["CookingStyle"].ToString()
+                                    };
+                                    break;
+
+                                default:
+                                    menu = new OutbackMenu();
+                                    break;
+                            }
+
+                            // 공통 속성 설정
+                            menu.MenuID = Convert.ToInt32(reader["MenuID"]);
+                            menu.Name = reader["Name"].ToString();
+                            menu.Category = category;
+                            menu.Price = Convert.ToDecimal(reader["Price"]);
+                            menu.Stock = Convert.ToInt32(reader["Stock"]);
+                            menu.IngredientOrigin = reader["IngredientOrigin"].ToString();
+                        }
+                    }
+                }
+            }
+
+            return menu;
+        }
+
         // 메뉴 추가
         public void AddMenu(OutbackMenu menu)
         {
