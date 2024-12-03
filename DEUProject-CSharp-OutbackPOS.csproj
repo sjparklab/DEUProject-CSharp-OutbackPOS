@@ -63,12 +63,20 @@
     <Compile Include="CustomControl\DoubleBufferedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomException\DatabaseConnectionException.cs" />
+    <Compile Include="CustomException\DatabaseQueryException.cs" />
+    <Compile Include="CustomException\DatabaseReadException.cs" />
+    <Compile Include="CustomException\DatabaseException.cs" />
+    <Compile Include="CustomException\DatabaseWriteException.cs" />
     <Compile Include="Data\DatabaseHelper.cs" />
     <Compile Include="Data\MenuRepository.cs" />
     <Compile Include="Data\OrderRepository.cs" />
     <Compile Include="Data\PaymentRepository.cs" />
     <Compile Include="Data\TableRepository.cs" />
     <Compile Include="Data\UserRepository.cs" />
+    <Compile Include="CustomException\UnexpectedInputException.cs" />
+    <Compile Include="LoadedData\DataManager.cs" />
+    <Compile Include="Model\TableCollection.cs" />
     <Compile Include="Model\DrinkMenu.cs" />
     <Compile Include="Model\OutbackOrderItem.cs" />
     <Compile Include="Model\OutbackMenuItem.cs" />
@@ -187,5 +195,6 @@
   <ItemGroup>
     <None Include="Resources\2145.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

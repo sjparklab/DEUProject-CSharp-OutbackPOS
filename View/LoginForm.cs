@@ -44,5 +44,10 @@ namespace DEUProject_CSharp_OutbackPOS.View
             RegisterForm registerForm = new RegisterForm();
             registerForm.ShowDialog();
         }
+
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
     }
 }
