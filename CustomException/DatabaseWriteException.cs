@@ -11,11 +11,15 @@ namespace DEUProject_CSharp_OutbackPOS.CustomException
         public string AffectedTable { get; }
         public int? RowsAffected { get; }
 
-        public DatabaseWriteException(string message, string query = null, string affectedTable = null, int? rowsAffected = null)
+        public DatabaseWriteException(string message, string query = null, string affectedTable = null, int? rowsAffected = null, Exception innerException = null)
             : base(message, query)
         {
             AffectedTable = affectedTable;
             RowsAffected = rowsAffected;
+            if (innerException != null)
+            {
+                base.AddSuppressed(innerException);
+            }
         }
 
         public override string GetErrorDetails()

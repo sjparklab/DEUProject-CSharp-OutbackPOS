@@ -61,7 +61,7 @@ namespace DEUProject_CSharp_OutbackPOS.LoadedData
             {
                 while (isRunning)
                 {
-                    Thread.Sleep(10000); // 10초마다 저장
+                    Thread.Sleep(30000); // 30초마다 저장
                     SaveAllData();
                 }
             });

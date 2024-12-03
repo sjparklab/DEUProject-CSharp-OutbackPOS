@@ -10,10 +10,14 @@ namespace DEUProject_CSharp_OutbackPOS.CustomException
     {
         public string ResourceName { get; }
 
-        public DatabaseReadException(string message, string query = null, string resourceName = null)
+        public DatabaseReadException(string message, string query = null, string resourceName = null, Exception innerException = null)
             : base(message, query)
         {
             ResourceName = resourceName;
+            if (innerException != null)
+            {
+                base.AddSuppressed(innerException);
+            }
         }
 
         public override string GetErrorDetails()
