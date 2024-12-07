@@ -36,17 +36,6 @@
             this.menuID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStock = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.doubleBufferedPanel1 = new DEUProject_CSharp_OutbackPOS.CustomControl.DoubleBufferedPanel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.detailCmBoxMainCategory = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.detailTxtBoxMenuName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnMainCategoryAdd = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.detailTxtBoxMenuID = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.cmBoxOrigin = new System.Windows.Forms.ComboBox();
@@ -68,25 +57,37 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btnMenuSave = new System.Windows.Forms.Button();
             this.btnMenuSearch = new System.Windows.Forms.Button();
-            this.detailTxtBoxMenuPrice = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.btnMenuDelete = new System.Windows.Forms.Button();
+            this.btnNewMenu = new System.Windows.Forms.Button();
+            this.doubleBufferedPanel1 = new DEUProject_CSharp_OutbackPOS.CustomControl.DoubleBufferedPanel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.detailCmBoxOrigin = new System.Windows.Forms.ComboBox();
+            this.txtBoxIngredientOriginAdd = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnAddCategory = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.detailTxtBoxMenuStock = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.detailCmBoxOrigin = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.detailCmBoxMainCategory = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.detailTxtBoxMenuPrice = new System.Windows.Forms.TextBox();
+            this.txtBoxAddCategory = new System.Windows.Forms.TextBox();
+            this.detailTxtBoxMenuName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnMainAddOrigin = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.detailTxtBoxMenuID = new System.Windows.Forms.TextBox();
             this.menuManageMainLayout.SuspendLayout();
             this.tableLayoutPanelTitle.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.doubleBufferedPanel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.doubleBufferedPanel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuManageMainLayout
@@ -131,10 +132,10 @@
             this.txtTitle.AutoSize = true;
             this.txtTitle.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTitle.ForeColor = System.Drawing.Color.White;
-            this.txtTitle.Location = new System.Drawing.Point(900, 28);
+            this.txtTitle.Location = new System.Drawing.Point(866, 21);
             this.txtTitle.Margin = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(145, 25);
+            this.txtTitle.Size = new System.Drawing.Size(213, 38);
             this.txtTitle.TabIndex = 0;
             this.txtTitle.Text = "메뉴(재고) 관리";
             // 
@@ -188,128 +189,6 @@
             // 
             this.menuName.Text = "메뉴명";
             this.menuName.Width = 300;
-            // 
-            // doubleBufferedPanel1
-            // 
-            this.doubleBufferedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(235)))));
-            this.doubleBufferedPanel1.Controls.Add(this.groupBox1);
-            this.doubleBufferedPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.doubleBufferedPanel1.Location = new System.Drawing.Point(475, 3);
-            this.doubleBufferedPanel1.Name = "doubleBufferedPanel1";
-            this.doubleBufferedPanel1.Size = new System.Drawing.Size(1412, 742);
-            this.doubleBufferedPanel1.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox3.Location = new System.Drawing.Point(967, 151);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(240, 23);
-            this.textBox3.TabIndex = 20;
-            // 
-            // detailCmBoxMainCategory
-            // 
-            this.detailCmBoxMainCategory.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.detailCmBoxMainCategory.FormattingEnabled = true;
-            this.detailCmBoxMainCategory.Location = new System.Drawing.Point(967, 88);
-            this.detailCmBoxMainCategory.Name = "detailCmBoxMainCategory";
-            this.detailCmBoxMainCategory.Size = new System.Drawing.Size(345, 23);
-            this.detailCmBoxMainCategory.TabIndex = 16;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(890, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 15);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "주 카테고리";
-            // 
-            // detailTxtBoxMenuName
-            // 
-            this.detailTxtBoxMenuName.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.detailTxtBoxMenuName.Location = new System.Drawing.Point(400, 32);
-            this.detailTxtBoxMenuName.Name = "detailTxtBoxMenuName";
-            this.detailTxtBoxMenuName.Size = new System.Drawing.Size(424, 23);
-            this.detailTxtBoxMenuName.TabIndex = 18;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(351, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 15);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "메뉴명";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.detailCmBoxOrigin);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.detailTxtBoxMenuStock);
-            this.groupBox1.Controls.Add(this.detailCmBoxMainCategory);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.detailTxtBoxMenuPrice);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.detailTxtBoxMenuName);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.btnMainCategoryAdd);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.detailTxtBoxMenuID);
-            this.groupBox1.Location = new System.Drawing.Point(27, 19);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1355, 696);
-            this.groupBox1.TabIndex = 22;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "메뉴/재고 관리";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(862, 154);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 15);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "주 카테고리 추가";
-            // 
-            // btnMainCategoryAdd
-            // 
-            this.btnMainCategoryAdd.Location = new System.Drawing.Point(707, 151);
-            this.btnMainCategoryAdd.Name = "btnMainCategoryAdd";
-            this.btnMainCategoryAdd.Size = new System.Drawing.Size(117, 24);
-            this.btnMainCategoryAdd.TabIndex = 17;
-            this.btnMainCategoryAdd.Text = "추가";
-            this.btnMainCategoryAdd.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(40, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "메뉴ID";
-            // 
-            // detailTxtBoxMenuID
-            // 
-            this.detailTxtBoxMenuID.Enabled = false;
-            this.detailTxtBoxMenuID.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.detailTxtBoxMenuID.Location = new System.Drawing.Point(90, 32);
-            this.detailTxtBoxMenuID.Name = "detailTxtBoxMenuID";
-            this.detailTxtBoxMenuID.Size = new System.Drawing.Size(182, 23);
-            this.detailTxtBoxMenuID.TabIndex = 16;
             // 
             // tableLayoutPanel3
             // 
@@ -368,47 +247,48 @@
             // cmBoxOrigin
             // 
             this.cmBoxOrigin.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cmBoxOrigin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmBoxOrigin.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cmBoxOrigin.FormattingEnabled = true;
-            this.cmBoxOrigin.Location = new System.Drawing.Point(1319, 48);
+            this.cmBoxOrigin.Location = new System.Drawing.Point(1319, 43);
             this.cmBoxOrigin.Name = "cmBoxOrigin";
-            this.cmBoxOrigin.Size = new System.Drawing.Size(182, 23);
+            this.cmBoxOrigin.Size = new System.Drawing.Size(182, 33);
             this.cmBoxOrigin.TabIndex = 15;
             // 
             // txtBoxMaxStockSearch
             // 
             this.txtBoxMaxStockSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBoxMaxStockSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtBoxMaxStockSearch.Location = new System.Drawing.Point(1131, 48);
+            this.txtBoxMaxStockSearch.Location = new System.Drawing.Point(1131, 44);
             this.txtBoxMaxStockSearch.Name = "txtBoxMaxStockSearch";
-            this.txtBoxMaxStockSearch.Size = new System.Drawing.Size(182, 23);
+            this.txtBoxMaxStockSearch.Size = new System.Drawing.Size(182, 31);
             this.txtBoxMaxStockSearch.TabIndex = 14;
             // 
             // txtBoxMinStockSearch
             // 
             this.txtBoxMinStockSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBoxMinStockSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtBoxMinStockSearch.Location = new System.Drawing.Point(943, 48);
+            this.txtBoxMinStockSearch.Location = new System.Drawing.Point(943, 44);
             this.txtBoxMinStockSearch.Name = "txtBoxMinStockSearch";
-            this.txtBoxMinStockSearch.Size = new System.Drawing.Size(182, 23);
+            this.txtBoxMinStockSearch.Size = new System.Drawing.Size(182, 31);
             this.txtBoxMinStockSearch.TabIndex = 13;
             // 
             // txtBoxMaxPriceSearch
             // 
             this.txtBoxMaxPriceSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBoxMaxPriceSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtBoxMaxPriceSearch.Location = new System.Drawing.Point(755, 48);
+            this.txtBoxMaxPriceSearch.Location = new System.Drawing.Point(755, 44);
             this.txtBoxMaxPriceSearch.Name = "txtBoxMaxPriceSearch";
-            this.txtBoxMaxPriceSearch.Size = new System.Drawing.Size(182, 23);
+            this.txtBoxMaxPriceSearch.Size = new System.Drawing.Size(182, 31);
             this.txtBoxMaxPriceSearch.TabIndex = 12;
             // 
             // txtBoxMenuNameSearch
             // 
             this.txtBoxMenuNameSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBoxMenuNameSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtBoxMenuNameSearch.Location = new System.Drawing.Point(191, 48);
+            this.txtBoxMenuNameSearch.Location = new System.Drawing.Point(191, 44);
             this.txtBoxMenuNameSearch.Name = "txtBoxMenuNameSearch";
-            this.txtBoxMenuNameSearch.Size = new System.Drawing.Size(182, 23);
+            this.txtBoxMenuNameSearch.Size = new System.Drawing.Size(182, 31);
             this.txtBoxMenuNameSearch.TabIndex = 9;
             // 
             // lblOrigin
@@ -416,9 +296,9 @@
             this.lblOrigin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblOrigin.AutoSize = true;
             this.lblOrigin.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblOrigin.Location = new System.Drawing.Point(1384, 7);
+            this.lblOrigin.Location = new System.Drawing.Point(1371, 2);
             this.lblOrigin.Name = "lblOrigin";
-            this.lblOrigin.Size = new System.Drawing.Size(54, 20);
+            this.lblOrigin.Size = new System.Drawing.Size(79, 30);
             this.lblOrigin.TabIndex = 7;
             this.lblOrigin.Text = "원산지";
             // 
@@ -427,9 +307,9 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(1185, 7);
+            this.label7.Location = new System.Drawing.Point(1167, 2);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 20);
+            this.label7.Size = new System.Drawing.Size(109, 30);
             this.label7.TabIndex = 6;
             this.label7.Text = "최대 재고";
             // 
@@ -438,9 +318,9 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(997, 7);
+            this.label6.Location = new System.Drawing.Point(979, 2);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 20);
+            this.label6.Size = new System.Drawing.Size(109, 30);
             this.label6.TabIndex = 5;
             this.label6.Text = "최소 재고";
             // 
@@ -449,9 +329,9 @@
             this.lblMaxPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMaxPrice.AutoSize = true;
             this.lblMaxPrice.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblMaxPrice.Location = new System.Drawing.Point(809, 7);
+            this.lblMaxPrice.Location = new System.Drawing.Point(791, 2);
             this.lblMaxPrice.Name = "lblMaxPrice";
-            this.lblMaxPrice.Size = new System.Drawing.Size(74, 20);
+            this.lblMaxPrice.Size = new System.Drawing.Size(109, 30);
             this.lblMaxPrice.TabIndex = 4;
             this.lblMaxPrice.Text = "최대 가격";
             // 
@@ -460,9 +340,9 @@
             this.lblMinPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMinPrice.AutoSize = true;
             this.lblMinPrice.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblMinPrice.Location = new System.Drawing.Point(621, 7);
+            this.lblMinPrice.Location = new System.Drawing.Point(603, 2);
             this.lblMinPrice.Name = "lblMinPrice";
-            this.lblMinPrice.Size = new System.Drawing.Size(74, 20);
+            this.lblMinPrice.Size = new System.Drawing.Size(109, 30);
             this.lblMinPrice.TabIndex = 3;
             this.lblMinPrice.Text = "최소 가격";
             // 
@@ -471,9 +351,9 @@
             this.lblMenuMainCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMenuMainCategory.AutoSize = true;
             this.lblMenuMainCategory.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblMenuMainCategory.Location = new System.Drawing.Point(425, 7);
+            this.lblMenuMainCategory.Location = new System.Drawing.Point(404, 2);
             this.lblMenuMainCategory.Name = "lblMenuMainCategory";
-            this.lblMenuMainCategory.Size = new System.Drawing.Size(89, 20);
+            this.lblMenuMainCategory.Size = new System.Drawing.Size(131, 30);
             this.lblMenuMainCategory.TabIndex = 2;
             this.lblMenuMainCategory.Text = "주 카테고리";
             // 
@@ -482,9 +362,9 @@
             this.lblMenuNameSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMenuNameSearch.AutoSize = true;
             this.lblMenuNameSearch.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblMenuNameSearch.Location = new System.Drawing.Point(255, 7);
+            this.lblMenuNameSearch.Location = new System.Drawing.Point(242, 2);
             this.lblMenuNameSearch.Name = "lblMenuNameSearch";
-            this.lblMenuNameSearch.Size = new System.Drawing.Size(54, 20);
+            this.lblMenuNameSearch.Size = new System.Drawing.Size(79, 30);
             this.lblMenuNameSearch.TabIndex = 1;
             this.lblMenuNameSearch.Text = "메뉴명";
             // 
@@ -493,9 +373,9 @@
             this.lblMenuID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMenuID.AutoSize = true;
             this.lblMenuID.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblMenuID.Location = new System.Drawing.Point(67, 7);
+            this.lblMenuID.Location = new System.Drawing.Point(54, 2);
             this.lblMenuID.Name = "lblMenuID";
-            this.lblMenuID.Size = new System.Drawing.Size(54, 20);
+            this.lblMenuID.Size = new System.Drawing.Size(79, 30);
             this.lblMenuID.TabIndex = 0;
             this.lblMenuID.Text = "메뉴ID";
             // 
@@ -503,28 +383,29 @@
             // 
             this.txtBoxMenuIDSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBoxMenuIDSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtBoxMenuIDSearch.Location = new System.Drawing.Point(3, 48);
+            this.txtBoxMenuIDSearch.Location = new System.Drawing.Point(3, 44);
             this.txtBoxMenuIDSearch.Name = "txtBoxMenuIDSearch";
-            this.txtBoxMenuIDSearch.Size = new System.Drawing.Size(182, 23);
+            this.txtBoxMenuIDSearch.Size = new System.Drawing.Size(182, 31);
             this.txtBoxMenuIDSearch.TabIndex = 8;
             // 
             // cmBoxMainCategorySelect
             // 
             this.cmBoxMainCategorySelect.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cmBoxMainCategorySelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmBoxMainCategorySelect.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cmBoxMainCategorySelect.FormattingEnabled = true;
-            this.cmBoxMainCategorySelect.Location = new System.Drawing.Point(379, 48);
+            this.cmBoxMainCategorySelect.Location = new System.Drawing.Point(379, 43);
             this.cmBoxMainCategorySelect.Name = "cmBoxMainCategorySelect";
-            this.cmBoxMainCategorySelect.Size = new System.Drawing.Size(182, 23);
+            this.cmBoxMainCategorySelect.Size = new System.Drawing.Size(182, 33);
             this.cmBoxMainCategorySelect.TabIndex = 10;
             // 
             // txtBoxMinPriceSearch
             // 
             this.txtBoxMinPriceSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBoxMinPriceSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtBoxMinPriceSearch.Location = new System.Drawing.Point(567, 48);
+            this.txtBoxMinPriceSearch.Location = new System.Drawing.Point(567, 44);
             this.txtBoxMinPriceSearch.Name = "txtBoxMinPriceSearch";
-            this.txtBoxMinPriceSearch.Size = new System.Drawing.Size(182, 23);
+            this.txtBoxMinPriceSearch.Size = new System.Drawing.Size(182, 31);
             this.txtBoxMinPriceSearch.TabIndex = 11;
             // 
             // tableLayoutPanel4
@@ -535,11 +416,14 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.btnMenuSave, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnMenuSearch, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnMenuDelete, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.btnNewMenu, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(1515, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(372, 173);
             this.tableLayoutPanel4.TabIndex = 8;
             // 
@@ -549,10 +433,11 @@
             this.btnMenuSave.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnMenuSave.Location = new System.Drawing.Point(189, 3);
             this.btnMenuSave.Name = "btnMenuSave";
-            this.btnMenuSave.Size = new System.Drawing.Size(180, 167);
+            this.btnMenuSave.Size = new System.Drawing.Size(180, 80);
             this.btnMenuSave.TabIndex = 1;
             this.btnMenuSave.Text = "저장";
             this.btnMenuSave.UseVisualStyleBackColor = true;
+            this.btnMenuSave.Click += new System.EventHandler(this.btnMenuSave_Click);
             // 
             // btnMenuSearch
             // 
@@ -560,46 +445,121 @@
             this.btnMenuSearch.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnMenuSearch.Location = new System.Drawing.Point(3, 3);
             this.btnMenuSearch.Name = "btnMenuSearch";
-            this.btnMenuSearch.Size = new System.Drawing.Size(180, 167);
+            this.btnMenuSearch.Size = new System.Drawing.Size(180, 80);
             this.btnMenuSearch.TabIndex = 0;
             this.btnMenuSearch.Text = "검색";
             this.btnMenuSearch.UseVisualStyleBackColor = true;
+            this.btnMenuSearch.Click += new System.EventHandler(this.btnMenuSearch_Click);
             // 
-            // detailTxtBoxMenuPrice
+            // btnMenuDelete
             // 
-            this.detailTxtBoxMenuPrice.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.detailTxtBoxMenuPrice.Location = new System.Drawing.Point(90, 90);
-            this.detailTxtBoxMenuPrice.Name = "detailTxtBoxMenuPrice";
-            this.detailTxtBoxMenuPrice.Size = new System.Drawing.Size(182, 23);
-            this.detailTxtBoxMenuPrice.TabIndex = 22;
+            this.btnMenuDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMenuDelete.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMenuDelete.Location = new System.Drawing.Point(189, 89);
+            this.btnMenuDelete.Name = "btnMenuDelete";
+            this.btnMenuDelete.Size = new System.Drawing.Size(180, 81);
+            this.btnMenuDelete.TabIndex = 2;
+            this.btnMenuDelete.Text = "삭제";
+            this.btnMenuDelete.UseVisualStyleBackColor = true;
+            this.btnMenuDelete.Click += new System.EventHandler(this.btnMenuDelete_Click);
             // 
-            // label5
+            // btnNewMenu
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(53, 96);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 15);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "가격";
+            this.btnNewMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNewMenu.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnNewMenu.Location = new System.Drawing.Point(3, 89);
+            this.btnNewMenu.Name = "btnNewMenu";
+            this.btnNewMenu.Size = new System.Drawing.Size(180, 81);
+            this.btnNewMenu.TabIndex = 3;
+            this.btnNewMenu.Text = "신규";
+            this.btnNewMenu.UseVisualStyleBackColor = true;
+            this.btnNewMenu.Click += new System.EventHandler(this.btnNewMenu_Click);
             // 
-            // label8
+            // doubleBufferedPanel1
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.Location = new System.Drawing.Point(363, 93);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 15);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "재고";
+            this.doubleBufferedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(235)))));
+            this.doubleBufferedPanel1.Controls.Add(this.groupBox1);
+            this.doubleBufferedPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.doubleBufferedPanel1.Location = new System.Drawing.Point(475, 3);
+            this.doubleBufferedPanel1.Name = "doubleBufferedPanel1";
+            this.doubleBufferedPanel1.Size = new System.Drawing.Size(1412, 742);
+            this.doubleBufferedPanel1.TabIndex = 1;
             // 
-            // detailTxtBoxMenuStock
+            // groupBox1
             // 
-            this.detailTxtBoxMenuStock.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.detailTxtBoxMenuStock.Location = new System.Drawing.Point(400, 88);
-            this.detailTxtBoxMenuStock.Name = "detailTxtBoxMenuStock";
-            this.detailTxtBoxMenuStock.Size = new System.Drawing.Size(301, 23);
-            this.detailTxtBoxMenuStock.TabIndex = 24;
+            this.groupBox1.Controls.Add(this.detailCmBoxOrigin);
+            this.groupBox1.Controls.Add(this.txtBoxIngredientOriginAdd);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.btnAddCategory);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.detailTxtBoxMenuStock);
+            this.groupBox1.Controls.Add(this.detailCmBoxMainCategory);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.detailTxtBoxMenuPrice);
+            this.groupBox1.Controls.Add(this.txtBoxAddCategory);
+            this.groupBox1.Controls.Add(this.detailTxtBoxMenuName);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.btnMainAddOrigin);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.detailTxtBoxMenuID);
+            this.groupBox1.Location = new System.Drawing.Point(27, 19);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1355, 696);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "메뉴/재고 관리";
+            // 
+            // detailCmBoxOrigin
+            // 
+            this.detailCmBoxOrigin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.detailCmBoxOrigin.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.detailCmBoxOrigin.FormattingEnabled = true;
+            this.detailCmBoxOrigin.Location = new System.Drawing.Point(90, 151);
+            this.detailCmBoxOrigin.Name = "detailCmBoxOrigin";
+            this.detailCmBoxOrigin.Size = new System.Drawing.Size(182, 33);
+            this.detailCmBoxOrigin.TabIndex = 32;
+            // 
+            // txtBoxIngredientOriginAdd
+            // 
+            this.txtBoxIngredientOriginAdd.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtBoxIngredientOriginAdd.Location = new System.Drawing.Point(400, 151);
+            this.txtBoxIngredientOriginAdd.Name = "txtBoxIngredientOriginAdd";
+            this.txtBoxIngredientOriginAdd.Size = new System.Drawing.Size(301, 31);
+            this.txtBoxIngredientOriginAdd.TabIndex = 30;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label10.Location = new System.Drawing.Point(323, 154);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(108, 25);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "원산지 추가";
+            // 
+            // btnAddCategory
+            // 
+            this.btnAddCategory.Location = new System.Drawing.Point(1213, 151);
+            this.btnAddCategory.Name = "btnAddCategory";
+            this.btnAddCategory.Size = new System.Drawing.Size(99, 22);
+            this.btnAddCategory.TabIndex = 29;
+            this.btnAddCategory.Text = "추가";
+            this.btnAddCategory.UseVisualStyleBackColor = true;
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label9.Location = new System.Drawing.Point(41, 154);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 25);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "원산지";
             // 
             // button1
             // 
@@ -610,61 +570,126 @@
             this.button1.Text = "입/출고 관리";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label9
+            // label8
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label9.Location = new System.Drawing.Point(41, 154);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 15);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "원산지";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.Location = new System.Drawing.Point(363, 93);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 25);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "재고";
             // 
-            // textBox1
+            // detailTxtBoxMenuStock
             // 
-            this.textBox1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(400, 151);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(301, 23);
-            this.textBox1.TabIndex = 30;
+            this.detailTxtBoxMenuStock.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.detailTxtBoxMenuStock.Location = new System.Drawing.Point(400, 88);
+            this.detailTxtBoxMenuStock.Name = "detailTxtBoxMenuStock";
+            this.detailTxtBoxMenuStock.Size = new System.Drawing.Size(301, 31);
+            this.detailTxtBoxMenuStock.TabIndex = 24;
             // 
-            // label10
+            // detailCmBoxMainCategory
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label10.Location = new System.Drawing.Point(323, 154);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 15);
-            this.label10.TabIndex = 31;
-            this.label10.Text = "원산지 추가";
+            this.detailCmBoxMainCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.detailCmBoxMainCategory.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.detailCmBoxMainCategory.FormattingEnabled = true;
+            this.detailCmBoxMainCategory.Location = new System.Drawing.Point(967, 88);
+            this.detailCmBoxMainCategory.Name = "detailCmBoxMainCategory";
+            this.detailCmBoxMainCategory.Size = new System.Drawing.Size(345, 33);
+            this.detailCmBoxMainCategory.TabIndex = 16;
             // 
-            // button2
+            // label5
             // 
-            this.button2.Location = new System.Drawing.Point(1213, 151);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 22);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "추가";
-            this.button2.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(53, 96);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 25);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "가격";
             // 
-            // detailCmBoxOrigin
+            // detailTxtBoxMenuPrice
             // 
-            this.detailCmBoxOrigin.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.detailCmBoxOrigin.FormattingEnabled = true;
-            this.detailCmBoxOrigin.Location = new System.Drawing.Point(90, 151);
-            this.detailCmBoxOrigin.Name = "detailCmBoxOrigin";
-            this.detailCmBoxOrigin.Size = new System.Drawing.Size(182, 23);
-            this.detailCmBoxOrigin.TabIndex = 32;
+            this.detailTxtBoxMenuPrice.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.detailTxtBoxMenuPrice.Location = new System.Drawing.Point(90, 90);
+            this.detailTxtBoxMenuPrice.Name = "detailTxtBoxMenuPrice";
+            this.detailTxtBoxMenuPrice.Size = new System.Drawing.Size(182, 31);
+            this.detailTxtBoxMenuPrice.TabIndex = 22;
             // 
-            // button3
+            // txtBoxAddCategory
             // 
-            this.button3.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button3.Location = new System.Drawing.Point(967, 32);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(345, 23);
-            this.button3.TabIndex = 33;
-            this.button3.Text = "신규";
-            this.button3.UseVisualStyleBackColor = true;
+            this.txtBoxAddCategory.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtBoxAddCategory.Location = new System.Drawing.Point(967, 151);
+            this.txtBoxAddCategory.Name = "txtBoxAddCategory";
+            this.txtBoxAddCategory.Size = new System.Drawing.Size(240, 31);
+            this.txtBoxAddCategory.TabIndex = 20;
+            // 
+            // detailTxtBoxMenuName
+            // 
+            this.detailTxtBoxMenuName.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.detailTxtBoxMenuName.Location = new System.Drawing.Point(400, 32);
+            this.detailTxtBoxMenuName.Name = "detailTxtBoxMenuName";
+            this.detailTxtBoxMenuName.Size = new System.Drawing.Size(424, 31);
+            this.detailTxtBoxMenuName.TabIndex = 18;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(890, 93);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 25);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "주 카테고리";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(351, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 25);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "메뉴명";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(862, 154);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(150, 25);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "주 카테고리 추가";
+            // 
+            // btnMainAddOrigin
+            // 
+            this.btnMainAddOrigin.Location = new System.Drawing.Point(707, 151);
+            this.btnMainAddOrigin.Name = "btnMainAddOrigin";
+            this.btnMainAddOrigin.Size = new System.Drawing.Size(117, 24);
+            this.btnMainAddOrigin.TabIndex = 17;
+            this.btnMainAddOrigin.Text = "추가";
+            this.btnMainAddOrigin.UseVisualStyleBackColor = true;
+            this.btnMainAddOrigin.Click += new System.EventHandler(this.btnMainAddOrigin_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(40, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "메뉴ID";
+            // 
+            // detailTxtBoxMenuID
+            // 
+            this.detailTxtBoxMenuID.Enabled = false;
+            this.detailTxtBoxMenuID.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.detailTxtBoxMenuID.Location = new System.Drawing.Point(90, 32);
+            this.detailTxtBoxMenuID.Name = "detailTxtBoxMenuID";
+            this.detailTxtBoxMenuID.Size = new System.Drawing.Size(182, 31);
+            this.detailTxtBoxMenuID.TabIndex = 16;
             // 
             // MenuManageForm
             // 
@@ -678,13 +703,13 @@
             this.tableLayoutPanelTitle.ResumeLayout(false);
             this.tableLayoutPanelTitle.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.doubleBufferedPanel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
+            this.doubleBufferedPanel1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -724,23 +749,24 @@
         private System.Windows.Forms.TextBox detailTxtBoxMenuID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtBoxAddCategory;
         private System.Windows.Forms.ComboBox detailCmBoxMainCategory;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox detailTxtBoxMenuName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnMainCategoryAdd;
+        private System.Windows.Forms.Button btnMainAddOrigin;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox detailTxtBoxMenuPrice;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox detailTxtBoxMenuStock;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxIngredientOriginAdd;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAddCategory;
         private System.Windows.Forms.ComboBox detailCmBoxOrigin;
+        private System.Windows.Forms.Button btnMenuDelete;
+        private System.Windows.Forms.Button btnNewMenu;
     }
 }

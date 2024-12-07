@@ -68,7 +68,6 @@
             this.groupBox1.Size = new System.Drawing.Size(523, 666);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.groupBox1_PreviewKeyDown);
             // 
             // txtBoxPosition
             // 

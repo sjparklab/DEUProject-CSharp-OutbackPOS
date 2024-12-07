@@ -1,4 +1,5 @@
-﻿using DEUProject_CSharp_OutbackPOS.Model;
+﻿using DEUProject_CSharp_OutbackPOS.Data;
+using DEUProject_CSharp_OutbackPOS.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace DEUProject_CSharp_OutbackPOS.LoadedData
         public TableCollection Tables { get; private set; } = new TableCollection();
         public List<User> Users { get; private set; } = new List<User>();
         public TableRepository tableRepository;
+        public OrderRepository orderRepository;
         private static bool isRunning = true; // 스레드 실행 상태
 
         public static DataManager Instance
@@ -45,7 +47,7 @@ namespace DEUProject_CSharp_OutbackPOS.LoadedData
         {
             // 리포지토리 초기화
             tableRepository = new TableRepository();
-
+            orderRepository = new OrderRepository();
             // 테이블 데이터 로드
             var loadedTables = tableRepository.GetAllTables();
             foreach (var table in loadedTables)

@@ -8,26 +8,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DEUProject_CSharp_OutbackPOS.LoadedData;
 
 namespace DEUProject_CSharp_OutbackPOS.Controller
 {
     public class TableController
     {
-        private readonly TableRepository tableRepository;
-        private readonly OrderRepository orderRepository;
+        private readonly DataManager dataManager = DataManager.Instance;
         private readonly DoubleBufferedPanel tableLayoutPanel;
 
         public TableController()
         {
-            tableRepository = new TableRepository();
-            orderRepository = new OrderRepository(); // OrderRepository 추가
             tableLayoutPanel = new DoubleBufferedPanel();
         }
 
-        public TableController(TableRepository repository, DoubleBufferedPanel layoutPanel)
+        public TableController(DoubleBufferedPanel layoutPanel)
         {
-            tableRepository = repository;
-            orderRepository = new OrderRepository(); // OrderRepository 추가
             tableLayoutPanel = layoutPanel;
         }
 
@@ -65,20 +61,24 @@ namespace DEUProject_CSharp_OutbackPOS.Controller
             return tablePanel;
         }
 
-        // 테이블 데이터 저장
-        public void SaveTables()
+        // 테이블 데이터 저장  
+        public void SaveTablesLayout()
         {
-            tableRepository.ClearAllTables();
+            dataManager.Tables.Clear();
             foreach (CustomTablePanel panel in tableLayoutPanel.Controls)
             {
-                Table table = new Table(panel.Name, panel.Location.X, panel.Location.Y, panel.Width, panel.Height, panel.BorderColor);
-                tableRepository.AddTable(table);
+                Table table = new Table(panel.Name, panel.Location.X, panel.Location.Y, panel.Width, panel.Height, panel.BorderColor)
+                {
+                    IsOccupied = panel.Tag is Table t && t.IsOccupied
+                };
+                dataManager.Tables.Add(table);
             }
+            dataManager.SaveAllData();
         }
 
         public void LoadTables(Action<CustomTablePanel> addPanelAction)
         {
-            List<Table> tables = tableRepository.GetAllTables();
+            var tables = dataManager.Tables.GetAll();
 
             foreach (Table table in tables)
             {
@@ -94,7 +94,7 @@ namespace DEUProject_CSharp_OutbackPOS.Controller
                 panel.Tag = table;
 
                 // 미결제 주문 정보 가져오기
-                var unpaidOrders = orderRepository.GetUnpaidOrdersByTableId(table.Id);
+                var unpaidOrders = dataManager.orderRepository.GetUnpaidOrdersByTableId(table.Id);
 
                 if (unpaidOrders.Any())
                 {
@@ -128,7 +128,18 @@ namespace DEUProject_CSharp_OutbackPOS.Controller
 
         public void UpdateTable(Table table)
         {
-            tableRepository.UpdateTable(table);
+            var existingTable = dataManager.Tables[table.Id];
+            if (existingTable != null)
+            {
+                existingTable.Name = table.Name;
+                existingTable.X = table.X;
+                existingTable.Y = table.Y;
+                existingTable.Width = table.Width;
+                existingTable.Height = table.Height;
+                existingTable.SetBorderColor(table.GetBorderColor());
+                existingTable.IsOccupied = table.IsOccupied;
+            }
+            dataManager.SaveAllData();
         }
     }
 }

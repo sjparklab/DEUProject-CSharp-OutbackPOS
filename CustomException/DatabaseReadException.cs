@@ -14,10 +14,6 @@ namespace DEUProject_CSharp_OutbackPOS.CustomException
             : base(message, query)
         {
             ResourceName = resourceName;
-            if (innerException != null)
-            {
-                base.AddSuppressed(innerException);
-            }
         }
 
         public override string GetErrorDetails()

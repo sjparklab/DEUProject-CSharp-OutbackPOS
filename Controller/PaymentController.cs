@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using DEUProject_CSharp_OutbackPOS.Data;
 using DEUProject_CSharp_OutbackPOS.Model;
+using DEUProject_CSharp_OutbackPOS.LoadedData;
 
 namespace DEUProject_CSharp_OutbackPOS.Controller
 {
@@ -8,7 +9,6 @@ namespace DEUProject_CSharp_OutbackPOS.Controller
     {
         PaymentRepository paymentRepository = new PaymentRepository();
         OrderRepository orderRepository = new OrderRepository();
-        TableRepository tableRepository = new TableRepository();
 
         public void ProcessPayment(int tableId, string paymentMethod)
         {
@@ -32,9 +32,12 @@ namespace DEUProject_CSharp_OutbackPOS.Controller
             }
 
             // 5. 테이블 상태 초기화
-            Table table = tableRepository.GetTableById(tableId);
-            table.IsOccupied = false;
-            tableRepository.UpdateTable(table);
+            Table table = DataManager.Instance.Tables[tableId];
+            if (table != null)
+            {
+                table.IsOccupied = false;
+                DataManager.Instance.SaveAllData();
+            }
         }
     }
 }

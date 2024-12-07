@@ -23,6 +23,10 @@ namespace DEUProject_CSharp_OutbackPOS.LoadedData
             return tables; // IEnumerable로 반환
         }
 
+        public void Clear()
+        {
+            tables.Clear();
+        }
 
         // ID로 테이블 검색 (인덱서)
         public Table this[int id]

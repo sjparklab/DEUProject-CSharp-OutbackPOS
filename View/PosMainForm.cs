@@ -12,7 +12,6 @@ namespace DEUProject_CSharp_OutbackPOS.View
         public string Id { get; set; }
         public string UserName { get; set; }
         public string Position { get; set; }
-        TableRepository tableRepository = new TableRepository();
         TableController tableController;
 
         public PosMainForm(User user)
@@ -21,7 +20,7 @@ namespace DEUProject_CSharp_OutbackPOS.View
             this.UserName = user.UserName;
             this.Position = user.Position;
             InitializeComponent();
-            tableController = new TableController(new TableRepository(), tableLayoutMenuPanel);
+            tableController = new TableController(tableLayoutMenuPanel);
             txtUserInform.Text = $"사용자 ID: {Id}\n사용자 이름: {UserName}\n직책: {Position}";
             LoadTables();
         }

@@ -1,9 +1,9 @@
 ﻿using DEUProject_CSharp_OutbackPOS.Controller;
-using DEUProject_CSharp_OutbackPOS.CustomControl;
 using DEUProject_CSharp_OutbackPOS.Model;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using DEUProject_CSharp_OutbackPOS.CustomControl;
 
 namespace DEUProject_CSharp_OutbackPOS.View
 {
@@ -18,7 +18,7 @@ namespace DEUProject_CSharp_OutbackPOS.View
         {
             InitializeComponent();
             this.refreshingForm = refreshingForm;
-            tableController = new TableController(new TableRepository(), tableLayoutPanel);
+            tableController = new TableController(tableLayoutPanel);
             LoadTables();
         }
 
@@ -57,7 +57,7 @@ namespace DEUProject_CSharp_OutbackPOS.View
         private void btnTableLayoutSave_Click(object sender, EventArgs e)
         {
             // 테이블 저장
-            tableController.SaveTables();
+            tableController.SaveTablesLayout();
 
             DialogResult result = MessageBox.Show(
                 "테이블 저장에 성공했습니다! 테이블 관리창을 닫으시겠습니까?",
