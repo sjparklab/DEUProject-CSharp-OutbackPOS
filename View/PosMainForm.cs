@@ -71,5 +71,11 @@ namespace DEUProject_CSharp_OutbackPOS.View
             MenuManageForm menuManageForm = new MenuManageForm();
             menuManageForm.Show();
         }
+
+        private void btnReceiptManage_Click(object sender, EventArgs e)
+        {
+            ReceiptForm receiptForm = new ReceiptForm();
+            receiptForm.Show();
+        }
     }
 }

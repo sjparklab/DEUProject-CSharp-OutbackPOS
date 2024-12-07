@@ -269,5 +269,72 @@ namespace DEUProject_CSharp_OutbackPOS.Data
                 }
             }
         }
+
+        public List<OutbackOrder> GetOrdersByPaymentId(int paymentId)
+        {
+            var orders = new List<OutbackOrder>();
+
+            using (var connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+                using (var command = new SQLiteCommand(connection))
+                {
+                    command.CommandText = "SELECT * FROM Orders WHERE PaymentID = @PaymentID";
+                    command.Parameters.AddWithValue("@PaymentID", paymentId);
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var order = new OutbackOrder
+                            {
+                                OrderID = Convert.ToInt32(reader["OrderID"]),
+                                TableID = Convert.ToInt32(reader["TableID"]),
+                                TableName = reader["TableName"].ToString(),
+                                outbackOrderItem = GetOrderItemsByOrderId(Convert.ToInt32(reader["OrderID"]))
+                            };
+                            orders.Add(order);
+                        }
+                    }
+                }
+            }
+
+            return orders;
+        }
+
+        private BindingList<OutbackOrderItem> GetOrderItemsByOrderId(int orderId)
+        {
+            var items = new BindingList<OutbackOrderItem>();
+
+            using (var connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+                using (var command = new SQLiteCommand(connection))
+                {
+                    command.CommandText = "SELECT * FROM OrderItems WHERE OrderID = @OrderID";
+                    command.Parameters.AddWithValue("@OrderID", orderId);
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var item = new OutbackOrderItem
+                            {
+                                outbackMenuItem = new OutbackMenuItem
+                                {
+                                    MenuID = Convert.ToInt32(reader["MenuID"]),
+                                    MenuName = reader["MenuName"].ToString(),
+                                    Price = Convert.ToDecimal(reader["Price"])
+                                },
+                                Quantity = Convert.ToInt32(reader["Quantity"])
+                            };
+                            items.Add(item);
+                        }
+                    }
+                }
+            }
+
+            return items;
+        }
     }
 }

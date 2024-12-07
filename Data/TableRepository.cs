@@ -23,11 +23,11 @@ namespace DEUProject_CSharp_OutbackPOS.Model
                     }
                 }
             }
-            catch (SQLiteException ex)
+            catch (SQLiteException)
             {
                 throw new DatabaseQueryException("Failed to clear all tables.", clearTableQuery, 100);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw new DatabaseConnectionException("Failed to connect to the database.", connectionString);
             }
@@ -56,11 +56,11 @@ namespace DEUProject_CSharp_OutbackPOS.Model
                     }
                 }
             }
-            catch (SQLiteException ex)
+            catch (SQLiteException)
             {
                 throw new DatabaseWriteException("Failed to add table.");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw new DatabaseConnectionException("Failed to connect to the database.", connectionString);
             }
@@ -96,11 +96,11 @@ namespace DEUProject_CSharp_OutbackPOS.Model
                     }
                 }
             }
-            catch (SQLiteException ex)
+            catch (SQLiteException)
             {
                 throw new DatabaseReadException("Failed to retrieve tables.");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw new DatabaseConnectionException("Failed to connect to the database." , connectionString);
             }
@@ -117,7 +117,7 @@ namespace DEUProject_CSharp_OutbackPOS.Model
                     AddTable(table);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw new DatabaseWriteException("Failed to save all tables.");
             }

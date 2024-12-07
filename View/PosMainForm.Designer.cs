@@ -36,7 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btnTableManage = new System.Windows.Forms.Button();
-            this.btnAnalysisManage = new System.Windows.Forms.Button();
+            this.btnReceiptManage = new System.Windows.Forms.Button();
             this.btnCustomerManage = new System.Windows.Forms.Button();
             this.btnMenuManage = new System.Windows.Forms.Button();
             this.tableLayoutMenuPanel = new DEUProject_CSharp_OutbackPOS.CustomControl.DoubleBufferedPanel();
@@ -147,7 +147,7 @@
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Controls.Add(this.btnTableManage, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.btnAnalysisManage, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.btnReceiptManage, 0, 3);
             this.tableLayoutPanel4.Controls.Add(this.btnCustomerManage, 0, 2);
             this.tableLayoutPanel4.Controls.Add(this.btnMenuManage, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -177,19 +177,20 @@
             this.btnTableManage.UseVisualStyleBackColor = false;
             this.btnTableManage.Click += new System.EventHandler(this.btnTableManage_Click);
             // 
-            // btnAnalysisManage
+            // btnReceiptManage
             // 
-            this.btnAnalysisManage.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAnalysisManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
-            this.btnAnalysisManage.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnAnalysisManage.ForeColor = System.Drawing.Color.Black;
-            this.btnAnalysisManage.Location = new System.Drawing.Point(37, 747);
-            this.btnAnalysisManage.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAnalysisManage.Name = "btnAnalysisManage";
-            this.btnAnalysisManage.Size = new System.Drawing.Size(200, 150);
-            this.btnAnalysisManage.TabIndex = 7;
-            this.btnAnalysisManage.Text = "통계 관리";
-            this.btnAnalysisManage.UseVisualStyleBackColor = false;
+            this.btnReceiptManage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnReceiptManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.btnReceiptManage.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnReceiptManage.ForeColor = System.Drawing.Color.Black;
+            this.btnReceiptManage.Location = new System.Drawing.Point(37, 747);
+            this.btnReceiptManage.Margin = new System.Windows.Forms.Padding(0);
+            this.btnReceiptManage.Name = "btnReceiptManage";
+            this.btnReceiptManage.Size = new System.Drawing.Size(200, 150);
+            this.btnReceiptManage.TabIndex = 7;
+            this.btnReceiptManage.Text = "영수증 관리";
+            this.btnReceiptManage.UseVisualStyleBackColor = false;
+            this.btnReceiptManage.Click += new System.EventHandler(this.btnReceiptManage_Click);
             // 
             // btnCustomerManage
             // 
@@ -259,7 +260,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button btnTableManage;
-        private System.Windows.Forms.Button btnAnalysisManage;
+        private System.Windows.Forms.Button btnReceiptManage;
         private System.Windows.Forms.Button btnCustomerManage;
         private System.Windows.Forms.Button btnMenuManage;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
