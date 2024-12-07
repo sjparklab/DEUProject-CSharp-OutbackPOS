@@ -9,6 +9,7 @@ namespace DEUProject_CSharp_OutbackPOS.CustomControl
 {
     public class DoubleBufferedPanel : Panel
     {
+        // 그리기용 패널
         public DoubleBufferedPanel()
         {
             this.DoubleBuffered = true;

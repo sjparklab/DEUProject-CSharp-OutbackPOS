@@ -36,29 +36,6 @@
             this.menuID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStock = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.cmBoxOrigin = new System.Windows.Forms.ComboBox();
-            this.txtBoxMaxStockSearch = new System.Windows.Forms.TextBox();
-            this.txtBoxMinStockSearch = new System.Windows.Forms.TextBox();
-            this.txtBoxMaxPriceSearch = new System.Windows.Forms.TextBox();
-            this.txtBoxMenuNameSearch = new System.Windows.Forms.TextBox();
-            this.lblOrigin = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblMaxPrice = new System.Windows.Forms.Label();
-            this.lblMinPrice = new System.Windows.Forms.Label();
-            this.lblMenuMainCategory = new System.Windows.Forms.Label();
-            this.lblMenuNameSearch = new System.Windows.Forms.Label();
-            this.lblMenuID = new System.Windows.Forms.Label();
-            this.txtBoxMenuIDSearch = new System.Windows.Forms.TextBox();
-            this.cmBoxMainCategorySelect = new System.Windows.Forms.ComboBox();
-            this.txtBoxMinPriceSearch = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnMenuSave = new System.Windows.Forms.Button();
-            this.btnMenuSearch = new System.Windows.Forms.Button();
-            this.btnMenuDelete = new System.Windows.Forms.Button();
-            this.btnNewMenu = new System.Windows.Forms.Button();
             this.doubleBufferedPanel1 = new DEUProject_CSharp_OutbackPOS.CustomControl.DoubleBufferedPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.detailCmBoxOrigin = new System.Windows.Forms.ComboBox();
@@ -80,14 +57,29 @@
             this.btnMainAddOrigin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.detailTxtBoxMenuID = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnMenuSave = new System.Windows.Forms.Button();
+            this.btnMenuSearch = new System.Windows.Forms.Button();
+            this.btnMenuDelete = new System.Windows.Forms.Button();
+            this.btnNewMenu = new System.Windows.Forms.Button();
+            this.cmBoxMainCategorySelect = new System.Windows.Forms.ComboBox();
+            this.txtBoxMenuIDSearch = new System.Windows.Forms.TextBox();
+            this.lblMenuID = new System.Windows.Forms.Label();
+            this.lblMenuNameSearch = new System.Windows.Forms.Label();
+            this.lblMenuMainCategory = new System.Windows.Forms.Label();
+            this.lblOrigin = new System.Windows.Forms.Label();
+            this.txtBoxMenuNameSearch = new System.Windows.Forms.TextBox();
+            this.cmBoxOrigin = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.menuManageMainLayout.SuspendLayout();
             this.tableLayoutPanelTitle.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             this.doubleBufferedPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuManageMainLayout
@@ -189,291 +181,6 @@
             // 
             this.menuName.Text = "메뉴명";
             this.menuName.Width = 300;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 1, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 86);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1890, 179);
-            this.tableLayoutPanel3.TabIndex = 7;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(235)))));
-            this.tableLayoutPanel2.ColumnCount = 8;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.Controls.Add(this.cmBoxOrigin, 7, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtBoxMaxStockSearch, 6, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtBoxMinStockSearch, 5, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtBoxMaxPriceSearch, 4, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtBoxMenuNameSearch, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lblOrigin, 7, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label7, 6, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label6, 5, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lblMaxPrice, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lblMinPrice, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lblMenuMainCategory, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lblMenuNameSearch, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lblMenuID, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txtBoxMenuIDSearch, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.cmBoxMainCategorySelect, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtBoxMinPriceSearch, 3, 1);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1506, 173);
-            this.tableLayoutPanel2.TabIndex = 7;
-            // 
-            // cmBoxOrigin
-            // 
-            this.cmBoxOrigin.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cmBoxOrigin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmBoxOrigin.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.cmBoxOrigin.FormattingEnabled = true;
-            this.cmBoxOrigin.Location = new System.Drawing.Point(1319, 43);
-            this.cmBoxOrigin.Name = "cmBoxOrigin";
-            this.cmBoxOrigin.Size = new System.Drawing.Size(182, 33);
-            this.cmBoxOrigin.TabIndex = 15;
-            // 
-            // txtBoxMaxStockSearch
-            // 
-            this.txtBoxMaxStockSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBoxMaxStockSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtBoxMaxStockSearch.Location = new System.Drawing.Point(1131, 44);
-            this.txtBoxMaxStockSearch.Name = "txtBoxMaxStockSearch";
-            this.txtBoxMaxStockSearch.Size = new System.Drawing.Size(182, 31);
-            this.txtBoxMaxStockSearch.TabIndex = 14;
-            // 
-            // txtBoxMinStockSearch
-            // 
-            this.txtBoxMinStockSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBoxMinStockSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtBoxMinStockSearch.Location = new System.Drawing.Point(943, 44);
-            this.txtBoxMinStockSearch.Name = "txtBoxMinStockSearch";
-            this.txtBoxMinStockSearch.Size = new System.Drawing.Size(182, 31);
-            this.txtBoxMinStockSearch.TabIndex = 13;
-            // 
-            // txtBoxMaxPriceSearch
-            // 
-            this.txtBoxMaxPriceSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBoxMaxPriceSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtBoxMaxPriceSearch.Location = new System.Drawing.Point(755, 44);
-            this.txtBoxMaxPriceSearch.Name = "txtBoxMaxPriceSearch";
-            this.txtBoxMaxPriceSearch.Size = new System.Drawing.Size(182, 31);
-            this.txtBoxMaxPriceSearch.TabIndex = 12;
-            // 
-            // txtBoxMenuNameSearch
-            // 
-            this.txtBoxMenuNameSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBoxMenuNameSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtBoxMenuNameSearch.Location = new System.Drawing.Point(191, 44);
-            this.txtBoxMenuNameSearch.Name = "txtBoxMenuNameSearch";
-            this.txtBoxMenuNameSearch.Size = new System.Drawing.Size(182, 31);
-            this.txtBoxMenuNameSearch.TabIndex = 9;
-            // 
-            // lblOrigin
-            // 
-            this.lblOrigin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblOrigin.AutoSize = true;
-            this.lblOrigin.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblOrigin.Location = new System.Drawing.Point(1371, 2);
-            this.lblOrigin.Name = "lblOrigin";
-            this.lblOrigin.Size = new System.Drawing.Size(79, 30);
-            this.lblOrigin.TabIndex = 7;
-            this.lblOrigin.Text = "원산지";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(1167, 2);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 30);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "최대 재고";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(979, 2);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 30);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "최소 재고";
-            // 
-            // lblMaxPrice
-            // 
-            this.lblMaxPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblMaxPrice.AutoSize = true;
-            this.lblMaxPrice.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblMaxPrice.Location = new System.Drawing.Point(791, 2);
-            this.lblMaxPrice.Name = "lblMaxPrice";
-            this.lblMaxPrice.Size = new System.Drawing.Size(109, 30);
-            this.lblMaxPrice.TabIndex = 4;
-            this.lblMaxPrice.Text = "최대 가격";
-            // 
-            // lblMinPrice
-            // 
-            this.lblMinPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblMinPrice.AutoSize = true;
-            this.lblMinPrice.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblMinPrice.Location = new System.Drawing.Point(603, 2);
-            this.lblMinPrice.Name = "lblMinPrice";
-            this.lblMinPrice.Size = new System.Drawing.Size(109, 30);
-            this.lblMinPrice.TabIndex = 3;
-            this.lblMinPrice.Text = "최소 가격";
-            // 
-            // lblMenuMainCategory
-            // 
-            this.lblMenuMainCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblMenuMainCategory.AutoSize = true;
-            this.lblMenuMainCategory.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblMenuMainCategory.Location = new System.Drawing.Point(404, 2);
-            this.lblMenuMainCategory.Name = "lblMenuMainCategory";
-            this.lblMenuMainCategory.Size = new System.Drawing.Size(131, 30);
-            this.lblMenuMainCategory.TabIndex = 2;
-            this.lblMenuMainCategory.Text = "주 카테고리";
-            // 
-            // lblMenuNameSearch
-            // 
-            this.lblMenuNameSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblMenuNameSearch.AutoSize = true;
-            this.lblMenuNameSearch.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblMenuNameSearch.Location = new System.Drawing.Point(242, 2);
-            this.lblMenuNameSearch.Name = "lblMenuNameSearch";
-            this.lblMenuNameSearch.Size = new System.Drawing.Size(79, 30);
-            this.lblMenuNameSearch.TabIndex = 1;
-            this.lblMenuNameSearch.Text = "메뉴명";
-            // 
-            // lblMenuID
-            // 
-            this.lblMenuID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblMenuID.AutoSize = true;
-            this.lblMenuID.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblMenuID.Location = new System.Drawing.Point(54, 2);
-            this.lblMenuID.Name = "lblMenuID";
-            this.lblMenuID.Size = new System.Drawing.Size(79, 30);
-            this.lblMenuID.TabIndex = 0;
-            this.lblMenuID.Text = "메뉴ID";
-            // 
-            // txtBoxMenuIDSearch
-            // 
-            this.txtBoxMenuIDSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBoxMenuIDSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtBoxMenuIDSearch.Location = new System.Drawing.Point(3, 44);
-            this.txtBoxMenuIDSearch.Name = "txtBoxMenuIDSearch";
-            this.txtBoxMenuIDSearch.Size = new System.Drawing.Size(182, 31);
-            this.txtBoxMenuIDSearch.TabIndex = 8;
-            // 
-            // cmBoxMainCategorySelect
-            // 
-            this.cmBoxMainCategorySelect.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cmBoxMainCategorySelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmBoxMainCategorySelect.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.cmBoxMainCategorySelect.FormattingEnabled = true;
-            this.cmBoxMainCategorySelect.Location = new System.Drawing.Point(379, 43);
-            this.cmBoxMainCategorySelect.Name = "cmBoxMainCategorySelect";
-            this.cmBoxMainCategorySelect.Size = new System.Drawing.Size(182, 33);
-            this.cmBoxMainCategorySelect.TabIndex = 10;
-            // 
-            // txtBoxMinPriceSearch
-            // 
-            this.txtBoxMinPriceSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBoxMinPriceSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtBoxMinPriceSearch.Location = new System.Drawing.Point(567, 44);
-            this.txtBoxMinPriceSearch.Name = "txtBoxMinPriceSearch";
-            this.txtBoxMinPriceSearch.Size = new System.Drawing.Size(182, 31);
-            this.txtBoxMinPriceSearch.TabIndex = 11;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(235)))));
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.btnMenuSave, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.btnMenuSearch, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.btnMenuDelete, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.btnNewMenu, 0, 1);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(1515, 3);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(372, 173);
-            this.tableLayoutPanel4.TabIndex = 8;
-            // 
-            // btnMenuSave
-            // 
-            this.btnMenuSave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMenuSave.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnMenuSave.Location = new System.Drawing.Point(189, 3);
-            this.btnMenuSave.Name = "btnMenuSave";
-            this.btnMenuSave.Size = new System.Drawing.Size(180, 80);
-            this.btnMenuSave.TabIndex = 1;
-            this.btnMenuSave.Text = "저장";
-            this.btnMenuSave.UseVisualStyleBackColor = true;
-            this.btnMenuSave.Click += new System.EventHandler(this.btnMenuSave_Click);
-            // 
-            // btnMenuSearch
-            // 
-            this.btnMenuSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMenuSearch.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnMenuSearch.Location = new System.Drawing.Point(3, 3);
-            this.btnMenuSearch.Name = "btnMenuSearch";
-            this.btnMenuSearch.Size = new System.Drawing.Size(180, 80);
-            this.btnMenuSearch.TabIndex = 0;
-            this.btnMenuSearch.Text = "검색";
-            this.btnMenuSearch.UseVisualStyleBackColor = true;
-            this.btnMenuSearch.Click += new System.EventHandler(this.btnMenuSearch_Click);
-            // 
-            // btnMenuDelete
-            // 
-            this.btnMenuDelete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMenuDelete.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnMenuDelete.Location = new System.Drawing.Point(189, 89);
-            this.btnMenuDelete.Name = "btnMenuDelete";
-            this.btnMenuDelete.Size = new System.Drawing.Size(180, 81);
-            this.btnMenuDelete.TabIndex = 2;
-            this.btnMenuDelete.Text = "삭제";
-            this.btnMenuDelete.UseVisualStyleBackColor = true;
-            this.btnMenuDelete.Click += new System.EventHandler(this.btnMenuDelete_Click);
-            // 
-            // btnNewMenu
-            // 
-            this.btnNewMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNewMenu.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnNewMenu.Location = new System.Drawing.Point(3, 89);
-            this.btnNewMenu.Name = "btnNewMenu";
-            this.btnNewMenu.Size = new System.Drawing.Size(180, 81);
-            this.btnNewMenu.TabIndex = 3;
-            this.btnNewMenu.Text = "신규";
-            this.btnNewMenu.UseVisualStyleBackColor = true;
-            this.btnNewMenu.Click += new System.EventHandler(this.btnNewMenu_Click);
             // 
             // doubleBufferedPanel1
             // 
@@ -691,6 +398,203 @@
             this.detailTxtBoxMenuID.Size = new System.Drawing.Size(182, 31);
             this.detailTxtBoxMenuID.TabIndex = 16;
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 86);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1890, 179);
+            this.tableLayoutPanel3.TabIndex = 7;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(235)))));
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.btnMenuSave, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnMenuSearch, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnMenuDelete, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.btnNewMenu, 0, 1);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(1515, 3);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(372, 173);
+            this.tableLayoutPanel4.TabIndex = 8;
+            // 
+            // btnMenuSave
+            // 
+            this.btnMenuSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMenuSave.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMenuSave.Location = new System.Drawing.Point(189, 3);
+            this.btnMenuSave.Name = "btnMenuSave";
+            this.btnMenuSave.Size = new System.Drawing.Size(180, 80);
+            this.btnMenuSave.TabIndex = 1;
+            this.btnMenuSave.Text = "저장";
+            this.btnMenuSave.UseVisualStyleBackColor = true;
+            this.btnMenuSave.Click += new System.EventHandler(this.btnMenuSave_Click);
+            // 
+            // btnMenuSearch
+            // 
+            this.btnMenuSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMenuSearch.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMenuSearch.Location = new System.Drawing.Point(3, 3);
+            this.btnMenuSearch.Name = "btnMenuSearch";
+            this.btnMenuSearch.Size = new System.Drawing.Size(180, 80);
+            this.btnMenuSearch.TabIndex = 0;
+            this.btnMenuSearch.Text = "검색";
+            this.btnMenuSearch.UseVisualStyleBackColor = true;
+            this.btnMenuSearch.Click += new System.EventHandler(this.btnMenuSearch_Click);
+            // 
+            // btnMenuDelete
+            // 
+            this.btnMenuDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMenuDelete.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMenuDelete.Location = new System.Drawing.Point(189, 89);
+            this.btnMenuDelete.Name = "btnMenuDelete";
+            this.btnMenuDelete.Size = new System.Drawing.Size(180, 81);
+            this.btnMenuDelete.TabIndex = 2;
+            this.btnMenuDelete.Text = "삭제";
+            this.btnMenuDelete.UseVisualStyleBackColor = true;
+            this.btnMenuDelete.Click += new System.EventHandler(this.btnMenuDelete_Click);
+            // 
+            // btnNewMenu
+            // 
+            this.btnNewMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNewMenu.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnNewMenu.Location = new System.Drawing.Point(3, 89);
+            this.btnNewMenu.Name = "btnNewMenu";
+            this.btnNewMenu.Size = new System.Drawing.Size(180, 81);
+            this.btnNewMenu.TabIndex = 3;
+            this.btnNewMenu.Text = "신규";
+            this.btnNewMenu.UseVisualStyleBackColor = true;
+            this.btnNewMenu.Click += new System.EventHandler(this.btnNewMenu_Click);
+            // 
+            // cmBoxMainCategorySelect
+            // 
+            this.cmBoxMainCategorySelect.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cmBoxMainCategorySelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmBoxMainCategorySelect.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cmBoxMainCategorySelect.FormattingEnabled = true;
+            this.cmBoxMainCategorySelect.Location = new System.Drawing.Point(379, 43);
+            this.cmBoxMainCategorySelect.Name = "cmBoxMainCategorySelect";
+            this.cmBoxMainCategorySelect.Size = new System.Drawing.Size(182, 33);
+            this.cmBoxMainCategorySelect.TabIndex = 10;
+            // 
+            // txtBoxMenuIDSearch
+            // 
+            this.txtBoxMenuIDSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBoxMenuIDSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtBoxMenuIDSearch.Location = new System.Drawing.Point(3, 44);
+            this.txtBoxMenuIDSearch.Name = "txtBoxMenuIDSearch";
+            this.txtBoxMenuIDSearch.Size = new System.Drawing.Size(182, 31);
+            this.txtBoxMenuIDSearch.TabIndex = 8;
+            // 
+            // lblMenuID
+            // 
+            this.lblMenuID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblMenuID.AutoSize = true;
+            this.lblMenuID.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblMenuID.Location = new System.Drawing.Point(54, 2);
+            this.lblMenuID.Name = "lblMenuID";
+            this.lblMenuID.Size = new System.Drawing.Size(79, 30);
+            this.lblMenuID.TabIndex = 0;
+            this.lblMenuID.Text = "메뉴ID";
+            // 
+            // lblMenuNameSearch
+            // 
+            this.lblMenuNameSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblMenuNameSearch.AutoSize = true;
+            this.lblMenuNameSearch.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblMenuNameSearch.Location = new System.Drawing.Point(242, 2);
+            this.lblMenuNameSearch.Name = "lblMenuNameSearch";
+            this.lblMenuNameSearch.Size = new System.Drawing.Size(79, 30);
+            this.lblMenuNameSearch.TabIndex = 1;
+            this.lblMenuNameSearch.Text = "메뉴명";
+            // 
+            // lblMenuMainCategory
+            // 
+            this.lblMenuMainCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblMenuMainCategory.AutoSize = true;
+            this.lblMenuMainCategory.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblMenuMainCategory.Location = new System.Drawing.Point(404, 2);
+            this.lblMenuMainCategory.Name = "lblMenuMainCategory";
+            this.lblMenuMainCategory.Size = new System.Drawing.Size(131, 30);
+            this.lblMenuMainCategory.TabIndex = 2;
+            this.lblMenuMainCategory.Text = "주 카테고리";
+            // 
+            // lblOrigin
+            // 
+            this.lblOrigin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblOrigin.AutoSize = true;
+            this.lblOrigin.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblOrigin.Location = new System.Drawing.Point(618, 2);
+            this.lblOrigin.Name = "lblOrigin";
+            this.lblOrigin.Size = new System.Drawing.Size(79, 30);
+            this.lblOrigin.TabIndex = 7;
+            this.lblOrigin.Text = "원산지";
+            // 
+            // txtBoxMenuNameSearch
+            // 
+            this.txtBoxMenuNameSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBoxMenuNameSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtBoxMenuNameSearch.Location = new System.Drawing.Point(191, 44);
+            this.txtBoxMenuNameSearch.Name = "txtBoxMenuNameSearch";
+            this.txtBoxMenuNameSearch.Size = new System.Drawing.Size(182, 31);
+            this.txtBoxMenuNameSearch.TabIndex = 9;
+            // 
+            // cmBoxOrigin
+            // 
+            this.cmBoxOrigin.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cmBoxOrigin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmBoxOrigin.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cmBoxOrigin.FormattingEnabled = true;
+            this.cmBoxOrigin.Location = new System.Drawing.Point(567, 43);
+            this.cmBoxOrigin.Name = "cmBoxOrigin";
+            this.cmBoxOrigin.Size = new System.Drawing.Size(182, 33);
+            this.cmBoxOrigin.TabIndex = 15;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(235)))));
+            this.tableLayoutPanel2.ColumnCount = 8;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.Controls.Add(this.txtBoxMenuNameSearch, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblMenuMainCategory, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblMenuNameSearch, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblMenuID, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txtBoxMenuIDSearch, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.cmBoxMainCategorySelect, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.cmBoxOrigin, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblOrigin, 3, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1506, 173);
+            this.tableLayoutPanel2.TabIndex = 7;
+            // 
             // MenuManageForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -703,13 +607,13 @@
             this.tableLayoutPanelTitle.ResumeLayout(false);
             this.tableLayoutPanelTitle.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
             this.doubleBufferedPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -725,27 +629,10 @@
         private System.Windows.Forms.ColumnHeader menuName;
         private System.Windows.Forms.ColumnHeader menuStock;
         private CustomControl.DoubleBufferedPanel doubleBufferedPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label lblMenuID;
-        private System.Windows.Forms.Label lblOrigin;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblMaxPrice;
-        private System.Windows.Forms.Label lblMinPrice;
-        private System.Windows.Forms.Label lblMenuMainCategory;
-        private System.Windows.Forms.Label lblMenuNameSearch;
-        private System.Windows.Forms.TextBox txtBoxMenuIDSearch;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TextBox txtBoxMenuNameSearch;
-        private System.Windows.Forms.ComboBox cmBoxMainCategorySelect;
-        private System.Windows.Forms.TextBox txtBoxMaxPriceSearch;
-        private System.Windows.Forms.TextBox txtBoxMinPriceSearch;
-        private System.Windows.Forms.TextBox txtBoxMaxStockSearch;
-        private System.Windows.Forms.TextBox txtBoxMinStockSearch;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button btnMenuSave;
         private System.Windows.Forms.Button btnMenuSearch;
-        private System.Windows.Forms.ComboBox cmBoxOrigin;
         private System.Windows.Forms.TextBox detailTxtBoxMenuID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
@@ -768,5 +655,14 @@
         private System.Windows.Forms.ComboBox detailCmBoxOrigin;
         private System.Windows.Forms.Button btnMenuDelete;
         private System.Windows.Forms.Button btnNewMenu;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TextBox txtBoxMenuNameSearch;
+        private System.Windows.Forms.Label lblMenuMainCategory;
+        private System.Windows.Forms.Label lblMenuNameSearch;
+        private System.Windows.Forms.Label lblMenuID;
+        private System.Windows.Forms.TextBox txtBoxMenuIDSearch;
+        private System.Windows.Forms.ComboBox cmBoxMainCategorySelect;
+        private System.Windows.Forms.ComboBox cmBoxOrigin;
+        private System.Windows.Forms.Label lblOrigin;
     }
 }

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace DEUProject_CSharp_OutbackPOS.Data
 {
+    // 결제정보 통신용 리포지토리
     public class PaymentRepository
     {
         private readonly OrderRepository orderRepository = new OrderRepository();

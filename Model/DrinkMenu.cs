@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DEUProject_CSharp_OutbackPOS.Model
 {
+    // 음료 메뉴 상속
     public class DrinkMenu : OutbackMenu
     {
         public string Size { get; set; }

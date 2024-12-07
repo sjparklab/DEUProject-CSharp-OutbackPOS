@@ -8,10 +8,6 @@ namespace DEUProject_CSharp_OutbackPOS.Controller
     public class AuthController
     {
         UserRepository userRepository = new UserRepository();
-        public string Id { get; set; }
-        public string Pw { get; set; }
-        public string Name { get; set; }
-        public string Position { get; set; }
 
         public bool Register(string UserId, string Password, string Name, string Position = "관리자")
         {

@@ -19,7 +19,7 @@ namespace DEUProject_CSharp_OutbackPOS.CustomControl
             base.OnPaint(e);
 
             Graphics g = e.Graphics;
-            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None; // 안티앨리어싱 끄기
 
             // 테두리 영역 설정
             Rectangle rect = new Rectangle(
@@ -36,6 +36,7 @@ namespace DEUProject_CSharp_OutbackPOS.CustomControl
             }
         }
 
+        // 메소드 전파용 이벤트 핸들러
         public void HandleMouseDown(MouseEventArgs e)
         {
             base.OnMouseDown(e); // 내부적으로 protected 메서드를 호출
@@ -44,11 +45,6 @@ namespace DEUProject_CSharp_OutbackPOS.CustomControl
         public void HandleMouseMove(MouseEventArgs e)
         {
             base.OnMouseMove(e);
-        }
-
-        public void HandleMouseUp(MouseEventArgs e)
-        {
-            base.OnMouseUp(e);
         }
 
         public void HandleMouseClick(MouseEventArgs e)

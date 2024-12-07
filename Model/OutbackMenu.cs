@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DEUProject_CSharp_OutbackPOS.Model
 {
+    // 상속용 부모 클래스
     public class OutbackMenu
     {
         public int MenuID { get; set; }       // 메뉴 ID (Primary Key)

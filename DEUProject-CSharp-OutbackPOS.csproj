@@ -77,7 +77,6 @@
     <Compile Include="CustomException\UnexpectedInputException.cs" />
     <Compile Include="LoadedData\DataManager.cs" />
     <Compile Include="Model\Payment.cs" />
-    <Compile Include="Model\ReceiptData.cs" />
     <Compile Include="Model\TableCollection.cs" />
     <Compile Include="Model\DrinkMenu.cs" />
     <Compile Include="Model\OutbackOrderItem.cs" />

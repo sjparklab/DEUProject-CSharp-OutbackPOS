@@ -23,6 +23,7 @@ namespace DEUProject_CSharp_OutbackPOS.View
             LoadReceiptData();
         }
 
+        //결제내역 전체 조회
         public void LoadReceiptData()
         {
             var payments = paymentController.GetAllPayments();
@@ -49,6 +50,7 @@ namespace DEUProject_CSharp_OutbackPOS.View
             ReceiptDataGridView.DataSource = receiptData;
         }
 
+        // 결제내역 삭제 버튼
         private void btnReceiptRemove_Click(object sender, EventArgs e)
         {
             if (ReceiptDataGridView.SelectedRows.Count > 0)

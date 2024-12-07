@@ -21,6 +21,7 @@ namespace DEUProject_CSharp_OutbackPOS.View
         CustomTablePanel selectedTable;
         PosMainForm posMainForm;
 
+        // 초기화 및 데이터 생성, 메인폼 연결
         public OrderAndPayForm(PosMainForm refreshingForm, CustomTablePanel table)
         {
             InitializeComponent();

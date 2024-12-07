@@ -67,10 +67,9 @@ namespace DEUProject_CSharp_OutbackPOS.View
 
             if (result == DialogResult.Yes)
             {
-                refreshingForm.Refresh();
+                refreshingForm.LoadTables();
                 this.Close();
             }
-            refreshingForm.Refresh();
             refreshingForm.LoadTables();
         }
 
@@ -111,29 +110,52 @@ namespace DEUProject_CSharp_OutbackPOS.View
         private void TablePanel_MouseClick(object sender, MouseEventArgs e)
         {
             selectedTablePanel = (CustomTablePanel)sender;
-            txtBoxTableName.Text = ((Table)selectedTablePanel.Tag).Name;
+            if (selectedTablePanel.Tag is Table table)
+            {
+                txtBoxTableName.Text = table.Name;
+            }
+            else
+            {
+                txtBoxTableName.Text = selectedTablePanel.Name;
+            }
         }
 
         private void txtBoxTableName_TextChanged_1(object sender, EventArgs e)
         {
             if (selectedTablePanel != null)
             {
-                // 테이블 데이터 업데이트
-                var table = (Table)selectedTablePanel.Tag;
-                table.Name = txtBoxTableName.Text;
-                tableController.UpdateTable(table);
-
-                // 패널의 자식 컨트롤 중 Label 검색
-                foreach (Control control in selectedTablePanel.Controls)
+                if (selectedTablePanel.Tag is Table table)
                 {
-                    if (control is Label label)
+                    // 테이블 데이터 업데이트
+                    table.Name = txtBoxTableName.Text;
+                    tableController.UpdateTable(table);
+
+                    // 패널의 자식 컨트롤 중 Label 검색
+                    foreach (Control control in selectedTablePanel.Controls)
                     {
-                        label.Text = txtBoxTableName.Text; // 레이블 텍스트 업데이트
-                        break; // 첫 번째 Label만 처리하고 종료
+                        if (control is Label label)
+                        {
+                            label.Text = txtBoxTableName.Text; // 레이블 텍스트 업데이트
+                            break; // 첫 번째 Label만 처리하고 종료
+                        }
+                    }
+                }
+                else
+                {
+                    // selectedTablePanel.Tag가 Table이 아닌 경우
+                    selectedTablePanel.Name = txtBoxTableName.Text;
+
+                    // 패널의 자식 컨트롤 중 Label 검색
+                    foreach (Control control in selectedTablePanel.Controls)
+                    {
+                        if (control is Label label)
+                        {
+                            label.Text = txtBoxTableName.Text; // 레이블 텍스트 업데이트
+                            break; // 첫 번째 Label만 처리하고 종료
+                        }
                     }
                 }
 
-                // 이미 있는 패널에 대해 실시간 업데이트만 수행
                 selectedTablePanel.Invalidate(); // 패널 다시 그리기
             }
         }

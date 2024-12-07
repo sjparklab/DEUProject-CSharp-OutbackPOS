@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace DEUProject_CSharp_OutbackPOS.Model
 {
+    // 테이블 메뉴 정보
     public class Table
     {
         public int Id { get; set; } // Primary Key

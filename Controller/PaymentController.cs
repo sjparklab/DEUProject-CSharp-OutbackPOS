@@ -43,8 +43,6 @@ namespace DEUProject_CSharp_OutbackPOS.Controller
 
         public List<Payment> GetAllPayments()
         {
-            // 모든 결제 정보를 가져오는 로직을 여기에 추가하세요.
-            // 예를 들어, 데이터베이스에서 결제 정보를 조회하여 반환합니다.
             return paymentRepository.GetAllPayments();
         }
 

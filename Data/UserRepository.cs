@@ -8,6 +8,7 @@ using DEUProject_CSharp_OutbackPOS.Model;
 
 namespace DEUProject_CSharp_OutbackPOS.Data
 {
+    // 사용자 정보 조회 Repository
     public class UserRepository
     {
         public List<User> GetAllUsers()

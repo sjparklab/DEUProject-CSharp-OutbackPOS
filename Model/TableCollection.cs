@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace DEUProject_CSharp_OutbackPOS.LoadedData
 {
+    // 테이블 정보 저장
     public class TableCollection
     {
         public List<Table> tables = new List<Table>();

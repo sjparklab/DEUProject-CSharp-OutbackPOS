@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DEUProject_CSharp_OutbackPOS.Model
 {
+    // 사용자 정보
     public class User
     {
         public int Id { get; set; }

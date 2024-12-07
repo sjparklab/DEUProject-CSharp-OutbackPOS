@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DEUProject_CSharp_OutbackPOS.Model
 {
+    // 와인 메뉴 정보
     public class WineMenu : DrinkMenu
     {
         public int? Acidity { get; set; }

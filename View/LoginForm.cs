@@ -23,7 +23,8 @@ namespace DEUProject_CSharp_OutbackPOS.View
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e) // 로그인 버튼 눌렀을 때 동작
+        //로그인 버튼 누를 시 컨트롤러 전달
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             User loggedInUser = authSystem.Login(txtBoxId.Text, txtBoxPW.Text);
             if (loggedInUser != null)
@@ -43,11 +44,6 @@ namespace DEUProject_CSharp_OutbackPOS.View
         {
             RegisterForm registerForm = new RegisterForm();
             registerForm.ShowDialog();
-        }
-
-        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-
         }
     }
 }

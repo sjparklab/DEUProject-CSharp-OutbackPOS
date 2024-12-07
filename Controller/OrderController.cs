@@ -18,6 +18,7 @@ namespace DEUProject_CSharp_OutbackPOS.Controller
             orderRepository.AddNewOrder(order);
         }
 
+        // 미결제 주문 조회
         public List<OutbackOrderItem> GetUnpaidOrderItemsByTableId(int tableId)
         {
             return orderRepository.GetUnpaidOrderItemsByTableId(tableId);

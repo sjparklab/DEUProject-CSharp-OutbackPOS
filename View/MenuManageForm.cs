@@ -243,6 +243,7 @@ namespace DEUProject_CSharp_OutbackPOS.View
             }
         }
 
+        //초기화 로직
         private void btnNewMenu_Click(object sender, EventArgs e)
         {
             detailTxtBoxMenuID.Clear();

@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace DEUProject_CSharp_OutbackPOS.CustomException
 {
+    // 입력 오류 예외처리
     public class UnexpectedInputException : ApplicationException
     {
         public int ErrorCode { get; }

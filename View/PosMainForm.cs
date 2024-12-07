@@ -55,23 +55,21 @@ namespace DEUProject_CSharp_OutbackPOS.View
             });
         }
 
+        // 테이블 클릭 이벤트 연결
         private void TablePanel_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAndPayForm orderAndPayForm = new OrderAndPayForm(this, (CustomTablePanel) sender);
             orderAndPayForm.Show();
         }
 
-        private void btnCustomerManage_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        // 메뉴 관리 페이지 열기
         private void btnMenuManage_Click(object sender, EventArgs e)
         {
             MenuManageForm menuManageForm = new MenuManageForm();
             menuManageForm.Show();
         }
 
+        // 영수증 관리 페이지 열기
         private void btnReceiptManage_Click(object sender, EventArgs e)
         {
             ReceiptForm receiptForm = new ReceiptForm();

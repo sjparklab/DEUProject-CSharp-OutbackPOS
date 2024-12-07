@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace DEUProject_CSharp_OutbackPOS.LoadedData
 {
+    //싱글톤형 공유 데이터 클래스
     public class DataManager
     {
         private static DataManager instance;

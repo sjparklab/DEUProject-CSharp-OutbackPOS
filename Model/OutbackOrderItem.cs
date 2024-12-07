@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace DEUProject_CSharp_OutbackPOS.Model
 {
+    // 주문 갯수와 가격 정보를 담은 주문 데이터
     public class OutbackOrderItem
     {
         public OutbackMenuItem outbackMenuItem { get; set; } // 메뉴 정보와 연결

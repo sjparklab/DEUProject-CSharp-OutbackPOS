@@ -54,6 +54,7 @@ namespace DEUProject_CSharp_OutbackPOS.View
             }
         }
 
+        // 회원가입 폼 입력검증
         private void ValidateInputs()
         {
             string userID = txtBoxId.Text;

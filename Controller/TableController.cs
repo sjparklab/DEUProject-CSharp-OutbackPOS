@@ -69,6 +69,7 @@ namespace DEUProject_CSharp_OutbackPOS.Controller
             {
                 Table table = new Table(panel.Name, panel.Location.X, panel.Location.Y, panel.Width, panel.Height, panel.BorderColor)
                 {
+                    Id = panel.Tag is Table t1 ? t1.Id : 0,
                     IsOccupied = panel.Tag is Table t && t.IsOccupied
                 };
                 dataManager.Tables.Add(table);
@@ -102,6 +103,7 @@ namespace DEUProject_CSharp_OutbackPOS.Controller
                     StringBuilder labelText = new StringBuilder();
                     foreach (var order in unpaidOrders)
                     {
+
                         foreach (var orderItem in order.outbackOrderItem)
                         {
                             labelText.AppendLine($"{orderItem.MenuName} x {orderItem.Quantity}");
@@ -110,6 +112,8 @@ namespace DEUProject_CSharp_OutbackPOS.Controller
 
                     // 레이블 텍스트 업데이트
                     panel.Controls[0].Text = labelText.ToString();
+
+                    Console.WriteLine("\n\n\n"+ panel.Controls[0].Text+"\n\n\n");
                 }
                 else
                 {
@@ -126,6 +130,7 @@ namespace DEUProject_CSharp_OutbackPOS.Controller
             tableLayoutPanel.Controls.Remove(panel);
         }
 
+        // 테이블 ID 기준 테이블 수정
         public void UpdateTable(Table table)
         {
             var existingTable = dataManager.Tables[table.Id];

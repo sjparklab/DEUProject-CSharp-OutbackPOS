@@ -204,6 +204,20 @@ namespace DEUProject_CSharp_OutbackPOS.Data
                         command.Parameters.AddWithValue("@Doneness", DBNull.Value);
                         command.Parameters.AddWithValue("@CookingStyle", DBNull.Value);
                     }
+                    if (menu is WineMenu wineMenu)
+                    {
+                        command.Parameters.AddWithValue("@Acidity", wineMenu.Acidity ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@Sweetness", wineMenu.Sweetness ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@Body", wineMenu.Body ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@Tannin", wineMenu.Tannin ?? (object)DBNull.Value);
+                    }
+                    else
+                    {
+                        command.Parameters.AddWithValue("@Acidity", DBNull.Value);
+                        command.Parameters.AddWithValue("@Sweetness", DBNull.Value);
+                        command.Parameters.AddWithValue("@Body", DBNull.Value);
+                        command.Parameters.AddWithValue("@Tannin", DBNull.Value);
+                    }
 
                     command.ExecuteNonQuery();
                 }
