@@ -111,15 +111,48 @@ namespace DEUProject_CSharp_OutbackPOS.Model
         {
             try
             {
-                ClearAllTables();
-                foreach (var table in tables)
+                using (var connection = new SQLiteConnection(connectionString))
                 {
-                    AddTable(table);
+                    connection.Open();
+                    using (var transaction = connection.BeginTransaction())
+                    {
+                        foreach (var table in tables)
+                        {
+                            string upsertTableQuery = @"
+                                INSERT INTO TableLayout (Id, Name, X, Y, Width, Height, IsOccupied, BorderColorArgb)
+                                VALUES (@Id, @Name, @X, @Y, @Width, @Height, @IsOccupied, @BorderColorArgb)
+                                ON CONFLICT(Id) DO UPDATE SET
+                                    Name = excluded.Name,
+                                    X = excluded.X,
+                                    Y = excluded.Y,
+                                    Width = excluded.Width,
+                                    Height = excluded.Height,
+                                    IsOccupied = excluded.IsOccupied,
+                                    BorderColorArgb = excluded.BorderColorArgb;";
+                            using (var command = new SQLiteCommand(upsertTableQuery, connection))
+                            {
+                                command.Parameters.AddWithValue("@Id", table.Id);
+                                command.Parameters.AddWithValue("@Name", table.Name);
+                                command.Parameters.AddWithValue("@X", table.X);
+                                command.Parameters.AddWithValue("@Y", table.Y);
+                                command.Parameters.AddWithValue("@Width", table.Width);
+                                command.Parameters.AddWithValue("@Height", table.Height);
+                                command.Parameters.AddWithValue("@IsOccupied", table.IsOccupied ? 1 : 0);
+                                command.Parameters.AddWithValue("@BorderColorArgb", table.BorderColorArgb);
+                                command.ExecuteNonQuery();
+                            }
+                        }
+                        transaction.Commit();
+                    }
                 }
+            }
+            catch (SQLiteException)
+            {
+                throw new DatabaseWriteException("Failed to save all tables.");
             }
             catch (Exception)
             {
-                throw new DatabaseWriteException("Failed to save all tables.");
+                throw new DatabaseConnectionException("Failed to connect to the database.", connectionString);
             }
         }
     }

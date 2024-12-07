@@ -53,7 +53,7 @@ namespace DEUProject_CSharp_OutbackPOS.Controller
             // 레이블 이벤트 연결
             tableNameLabel.MouseDown += (sender, e) => tablePanel.HandleMouseDown(e);
             tableNameLabel.MouseMove += (sender, e) => tablePanel.HandleMouseMove(e);
-            tableNameLabel.MouseUp += (sender, e) => tablePanel.HandleMouseUp(e);
+            tableNameLabel.MouseClick += (sender, e) => tablePanel.HandleMouseClick(e);
 
             // 레이블 패널에 추가
             tablePanel.Controls.Add(tableNameLabel);

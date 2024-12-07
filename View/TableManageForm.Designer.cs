@@ -43,10 +43,10 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxTableName = new System.Windows.Forms.TextBox();
             this.btnTableAdd = new System.Windows.Forms.Button();
-            this.tableLayoutPanel = new DEUProject_CSharp_OutbackPOS.CustomControl.DoubleBufferedPanel();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.tableLayoutPanel = new DEUProject_CSharp_OutbackPOS.CustomControl.DoubleBufferedPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanelTitle.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -241,7 +241,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtBoxTableName);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
@@ -258,12 +258,13 @@
             this.label1.Text = "테이블명";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // txtBoxTableName
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 28);
-            this.textBox1.TabIndex = 0;
+            this.txtBoxTableName.Location = new System.Drawing.Point(3, 60);
+            this.txtBoxTableName.Name = "txtBoxTableName";
+            this.txtBoxTableName.Size = new System.Drawing.Size(162, 28);
+            this.txtBoxTableName.TabIndex = 0;
+            this.txtBoxTableName.TextChanged += new System.EventHandler(this.txtBoxTableName_TextChanged_1);
             // 
             // btnTableAdd
             // 
@@ -326,7 +327,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxTableName;
         private System.Windows.Forms.Button btnTableRemove;
         private CustomControl.DoubleBufferedPanel tableLayoutPanel;
         private System.Windows.Forms.Button btnTableBorderColor;

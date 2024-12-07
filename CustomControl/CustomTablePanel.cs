@@ -50,5 +50,10 @@ namespace DEUProject_CSharp_OutbackPOS.CustomControl
         {
             base.OnMouseUp(e);
         }
+
+        public void HandleMouseClick(MouseEventArgs e)
+        {
+            base.OnMouseClick(e);
+        }
     }
 }

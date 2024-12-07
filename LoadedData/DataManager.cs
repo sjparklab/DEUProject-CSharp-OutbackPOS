@@ -13,6 +13,7 @@ namespace DEUProject_CSharp_OutbackPOS.LoadedData
     {
         private static DataManager instance;
         private static readonly object lockObject = new object(); // 동기화 전용 객체
+        private bool autoSaveThreadRunning = false;
 
         // 데이터 저장소
         public TableCollection Tables { get; private set; } = new TableCollection();
@@ -59,16 +60,20 @@ namespace DEUProject_CSharp_OutbackPOS.LoadedData
         // 자동 저장 스레드 시작
         private void StartAutoSave()
         {
+            if (autoSaveThreadRunning) return; // 이미 실행 중이면 재호출 방지
+            autoSaveThreadRunning = true;
+
             var autoSaveThread = new Thread(() =>
             {
                 while (isRunning)
                 {
                     Thread.Sleep(30000); // 30초마다 저장
+                    Console.WriteLine("자동 저장 중...");
                     SaveAllData();
                 }
             });
 
-            autoSaveThread.IsBackground = true; // 백그라운드 스레드 설정
+            autoSaveThread.IsBackground = true;
             autoSaveThread.Start();
         }
 
@@ -86,7 +91,6 @@ namespace DEUProject_CSharp_OutbackPOS.LoadedData
             lock (lockObject)
             {
                 tableRepository.SaveAllTables(Tables.GetAll());
-                // TODO: Users와 다른 데이터도 저장 로직 추가 가능
                 Console.WriteLine("모든 데이터가 저장되었습니다.");
             }
         }
