@@ -168,7 +168,7 @@
             // PaymentId
             // 
             this.PaymentId.DataPropertyName = "PaymentId";
-            this.PaymentId.HeaderText = "ID";
+            this.PaymentId.HeaderText = "Payment ID";
             this.PaymentId.MinimumWidth = 8;
             this.PaymentId.Name = "PaymentId";
             this.PaymentId.ReadOnly = true;

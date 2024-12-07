@@ -138,7 +138,7 @@ namespace DEUProject_CSharp_OutbackPOS.Data
                         using (var command = new SQLiteCommand(insertAccountsQuery, connection))
                         {
                             // 비밀번호 암호화 또는 기본 비밀번호 설정
-                            command.Parameters.AddWithValue("@PasswordAdmin", BCrypt.Net.BCrypt.HashPassword("admin123"));
+                            command.Parameters.AddWithValue("@PasswordAdmin", BCrypt.Net.BCrypt.HashPassword("1234"));
                             command.Parameters.AddWithValue("@PasswordEmployee1", BCrypt.Net.BCrypt.HashPassword("employee1"));
                             command.Parameters.AddWithValue("@PasswordEmployee2", BCrypt.Net.BCrypt.HashPassword("employee2"));
                             command.Parameters.AddWithValue("@PasswordEmployee3", BCrypt.Net.BCrypt.HashPassword("employee3"));

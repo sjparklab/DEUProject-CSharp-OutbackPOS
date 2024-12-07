@@ -79,7 +79,7 @@ namespace DEUProject_CSharp_OutbackPOS.LoadedData
         }
 
 
-        // Graceful Shutdown: 스레드 종료
+        // 스레드 종료
         public void StopAutoSave()
         {
             isRunning = false;

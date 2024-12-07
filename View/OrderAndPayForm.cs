@@ -43,10 +43,20 @@ namespace DEUProject_CSharp_OutbackPOS.View
             menuGrid.DataSource = menus;
             var uniqueCategories = menus
                 .Select(item => item.Category)
-                .Distinct() // 중복제거               
+                .Distinct()
                 .ToList();
+            uniqueCategories.Insert(0, "All"); // Add "All" category
 
             categoryComboBox.DataSource = uniqueCategories;
+
+            var uniqueIngredientOrigins = menus
+                .Select(item => item.IngredientOrigin)
+                .Where(origin => !string.IsNullOrEmpty(origin))
+                .Distinct()
+                .ToList();
+            uniqueIngredientOrigins.Insert(0, "All"); // Add "All" ingredient origin
+
+            comboBoxIngredientOrigin.DataSource = uniqueIngredientOrigins;
         }
 
         private void menuGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -190,5 +200,26 @@ namespace DEUProject_CSharp_OutbackPOS.View
                 nowMenuGridView.Refresh();
             }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string id = txtBoxID.Text;
+            decimal price;
+            decimal.TryParse(txtBoxPrice.Text, out price);
+            string category1 = categoryComboBox.SelectedItem?.ToString();
+            string origin = comboBoxIngredientOrigin.SelectedItem?.ToString();
+
+            var menus = menuRepository.GetAllMenus();
+
+            var filteredMenus = menus.Where(menu =>
+                (string.IsNullOrEmpty(id) || menu.MenuID.ToString().Contains(id)) &&
+                (price == 0 || menu.Price <= price) &&
+                ((category1 == "All" || category1 == null) || (string.IsNullOrEmpty(category1) || menu.Category == category1)) &&
+                ((origin == "All" || origin == null) || (string.IsNullOrEmpty(origin) || menu.IngredientOrigin == origin))
+            ).ToList();
+
+            menuGrid.DataSource = filteredMenus;
+        }
+
     }
 }

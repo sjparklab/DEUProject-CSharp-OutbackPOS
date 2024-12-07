@@ -54,11 +54,9 @@
             this.menuSearch = new System.Windows.Forms.TableLayoutPanel();
             this.menuGrid = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.lblCat2 = new System.Windows.Forms.Label();
-            this.category2ComboBox = new System.Windows.Forms.ComboBox();
+            this.comboBoxIngredientOrigin = new System.Windows.Forms.ComboBox();
             this.lblPrice = new System.Windows.Forms.Label();
             this.txtBoxID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -67,6 +65,8 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.메뉴삭제ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtBoxPrice = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanelTitle.SuspendLayout();
             this.orderpayLayout.SuspendLayout();
@@ -403,11 +403,11 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.txtBoxPrice);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.lblCat2);
-            this.groupBox1.Controls.Add(this.category2ComboBox);
+            this.groupBox1.Controls.Add(this.comboBoxIngredientOrigin);
             this.groupBox1.Controls.Add(this.lblPrice);
             this.groupBox1.Controls.Add(this.txtBoxID);
             this.groupBox1.Controls.Add(this.label2);
@@ -422,14 +422,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "메뉴 검색";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(720, 68);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(191, 36);
-            this.textBox1.TabIndex = 16;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -438,14 +430,6 @@
             this.label3.Size = new System.Drawing.Size(72, 28);
             this.label3.TabIndex = 11;
             this.label3.Text = "원산지";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(266, 68);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(191, 36);
-            this.comboBox2.TabIndex = 10;
             // 
             // lblCat2
             // 
@@ -456,14 +440,13 @@
             this.lblCat2.TabIndex = 9;
             this.lblCat2.Text = "세부카테고리";
             // 
-            // category2ComboBox
+            // comboBoxIngredientOrigin
             // 
-            this.category2ComboBox.Enabled = false;
-            this.category2ComboBox.FormattingEnabled = true;
-            this.category2ComboBox.Location = new System.Drawing.Point(943, 68);
-            this.category2ComboBox.Name = "category2ComboBox";
-            this.category2ComboBox.Size = new System.Drawing.Size(191, 36);
-            this.category2ComboBox.TabIndex = 8;
+            this.comboBoxIngredientOrigin.FormattingEnabled = true;
+            this.comboBoxIngredientOrigin.Location = new System.Drawing.Point(943, 68);
+            this.comboBoxIngredientOrigin.Name = "comboBoxIngredientOrigin";
+            this.comboBoxIngredientOrigin.Size = new System.Drawing.Size(191, 36);
+            this.comboBoxIngredientOrigin.TabIndex = 8;
             // 
             // lblPrice
             // 
@@ -516,6 +499,7 @@
             this.btnSearch.TabIndex = 0;
             this.btnSearch.Text = "검색";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // contextMenuStrip1
             // 
@@ -530,6 +514,22 @@
             this.메뉴삭제ToolStripMenuItem.Name = "메뉴삭제ToolStripMenuItem";
             this.메뉴삭제ToolStripMenuItem.Size = new System.Drawing.Size(162, 32);
             this.메뉴삭제ToolStripMenuItem.Text = "메뉴 삭제";
+            // 
+            // txtBoxPrice
+            // 
+            this.txtBoxPrice.Location = new System.Drawing.Point(266, 68);
+            this.txtBoxPrice.Multiline = true;
+            this.txtBoxPrice.Name = "txtBoxPrice";
+            this.txtBoxPrice.Size = new System.Drawing.Size(191, 36);
+            this.txtBoxPrice.TabIndex = 17;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(720, 68);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(191, 36);
+            this.comboBox1.TabIndex = 18;
             // 
             // OrderAndPayForm
             // 
@@ -586,11 +586,9 @@
         private System.Windows.Forms.TableLayoutPanel menuSearch;
         private System.Windows.Forms.DataGridView menuGrid;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label lblCat2;
-        private System.Windows.Forms.ComboBox category2ComboBox;
+        private System.Windows.Forms.ComboBox comboBoxIngredientOrigin;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.TextBox txtBoxID;
         private System.Windows.Forms.Label label2;
@@ -598,5 +596,7 @@
         private System.Windows.Forms.ComboBox categoryComboBox;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridView nowMenuGridView;
+        private System.Windows.Forms.TextBox txtBoxPrice;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
