@@ -140,7 +140,7 @@ namespace DEUProject_CSharp_OutbackPOS.View
 
             // 결제 처리
             PaymentController paymentController = new PaymentController();
-            paymentController.ProcessPayment(table.Id, "Card"); // 결제 방식은 Card로 예시
+            paymentController.ProcessPayment(table.Id, "Card"); // 결제 방식은 Card로
 
             // UI 업데이트
             selectedTable.BackColor = Color.White;
